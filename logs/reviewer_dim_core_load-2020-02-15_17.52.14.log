@@ -1,0 +1,44 @@
+###################################################################################################################################
+###################################################################################################################################
+Load to ODS in progress
+###################################################################################################################################
+###################################################################################################################################
+begin;
+BEGIN
+        CREATE TEMPORARY TABLE REVIEWTEMP AS
+	SELECT reviewerid, reviewername, odsupdatetd FROM (
+	SELECT reviewerid, reviewername, odsupdatetd, ROW_NUMBER() OVER( PARTITION BY reviewerid order by reviewername desc) as row_num 
+	FROM "STAGE_DB".reviews
+	WHERE odsupdatetd > (SELECT LAST_LOAD_TD 
+				FROM "META_DB".CONTROL_TBL 
+				WHERE SCHEMA_NM = 'CORE_DB' 
+				AND TABLE_NM = 'REVIEWER_DIM')
+		)sub_REVIEWS 
+	WHERE row_num = 1; 
+SELECT 0
+	CREATE INDEX REVIEWTEMP_LOAD ON REVIEWTEMP(reviewerid);	
+CREATE INDEX
+								
+	UPDATE "CORE_DB".REVIEWER_DIM
+	SET REVIEWER_NM = REVIEWTEMP.reviewername
+	, MODIFIED_TD = current_timestamp(0)
+	FROM REVIEWTEMP
+	WHERE REVIEWER_DIM.REVIEWER_ID = REVIEWTEMP.reviewerid;
+UPDATE 0
+		 
+        INSERT INTO "CORE_DB".REVIEWER_DIM
+        SELECT REVIEWTEMP.reviewerid, REVIEWTEMP.reviewername, current_timestamp(0), current_timestamp(0)
+        FROM REVIEWTEMP
+        LEFT OUTER JOIN "CORE_DB".REVIEWER_DIM
+        ON REVIEWER_DIM.REVIEWER_ID = REVIEWTEMP.reviewerid
+        WHERE REVIEWER_DIM.REVIEWER_ID IS NULL
+        ;
+INSERT 0 0
+	UPDATE "META_DB".CONTROL_TBL
+	SET LAST_LOAD_TD = MAXREVIEWTEMP.maxodsupdatetd
+	FROM (SELECT max(odsupdatetd) as maxodsupdatetd FROM REVIEWTEMP) MAXREVIEWTEMP
+	WHERE CONTROL_TBL.SCHEMA_NM = 'CORE_DB' 
+	AND CONTROL_TBL.TABLE_NM = 'REVIEWER_DIM';
+UPDATE 1
+commit;
+COMMIT

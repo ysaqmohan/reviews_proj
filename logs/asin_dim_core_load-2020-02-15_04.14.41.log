@@ -1,0 +1,31 @@
+###################################################################################################################################
+###################################################################################################################################
+Load to ODS in progress
+###################################################################################################################################
+###################################################################################################################################
+begin;
+BEGIN
+	CREATE TEMPORARY TABLE ASINTEMP AS
+	SELECT distinct asin, title, brand
+	FROM "STAGE_DB".prodmeta
+	WHERE odsupdatetd > (SELECT LAST_LOAD_TD
+		FROM "META_DB".CONTROL_TBL
+		WHERE SCHEMA_NM = 'CORE_DB'
+		AND TABLE_NM = 'ASIN_DIM');
+SELECT 76487
+	UPDATE "CORE_DB".ASIN_DIM
+	SET ASIN_NM = ASINTEMP.title
+	, BRAND_NM = ASINTEMP.brand
+	, MODIFIED_TD = current_timestamp(0)
+	FROM ASINTEMP
+	WHERE ASIN_DIM.ASIN_ID = ASINTEMP.asin;
+UPDATE 0
+	INSERT "CORE_DB".ASIN_DIM
+	SELECT ASINTEMP.asin, ASINTEMP.title, ASINTEMP.brand current_timestamp(0), current_timestamp(0)
+	FROM ASINTEMP
+	LEFT OUTER JOIN "CORE_DB".ASIN_DIM
+	ON ASIN_DIM.ASIN_ID = ASINTEMP.asin
+	WHERE ASIN_DIM.ASIN_ID IS NULL	;
+ERROR:  syntax error at or near ""CORE_DB""
+LINE 1: INSERT "CORE_DB".ASIN_DIM
+               ^

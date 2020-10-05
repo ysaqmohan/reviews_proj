@@ -1,0 +1,171 @@
+###################################################################################################################################
+###################################################################################################################################
+Load to stage in progress
+###################################################################################################################################
+###################################################################################################################################
+20/02/14 20:36:31 WARN Utils: Your hostname, DESKTOP-502C4I4 resolves to a loopback address: 127.0.1.1; using 192.168.1.25 instead (on interface wifi0)
+20/02/14 20:36:31 WARN Utils: Set SPARK_LOCAL_IP if you need to bind to another address
+20/02/14 20:36:31 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+Using Spark's default log4j profile: org/apache/spark/log4j-defaults.properties
+20/02/14 20:36:32 INFO SparkContext: Running Spark version 2.4.5
+20/02/14 20:36:33 INFO SparkContext: Submitted application: ProdMeta
+20/02/14 20:36:33 INFO SecurityManager: Changing view acls to: devetluser
+20/02/14 20:36:33 INFO SecurityManager: Changing modify acls to: devetluser
+20/02/14 20:36:33 INFO SecurityManager: Changing view acls groups to: 
+20/02/14 20:36:33 INFO SecurityManager: Changing modify acls groups to: 
+20/02/14 20:36:33 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(devetluser); groups with view permissions: Set(); users  with modify permissions: Set(devetluser); groups with modify permissions: Set()
+20/02/14 20:36:33 INFO Utils: Successfully started service 'sparkDriver' on port 9696.
+20/02/14 20:36:33 INFO SparkEnv: Registering MapOutputTracker
+20/02/14 20:36:33 INFO SparkEnv: Registering BlockManagerMaster
+20/02/14 20:36:33 INFO BlockManagerMasterEndpoint: Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+20/02/14 20:36:33 INFO BlockManagerMasterEndpoint: BlockManagerMasterEndpoint up
+20/02/14 20:36:33 INFO DiskBlockManager: Created local directory at /tmp/blockmgr-0211fc15-57b3-49ff-8b88-4704b2e429cf
+20/02/14 20:36:33 INFO MemoryStore: MemoryStore started with capacity 366.3 MB
+20/02/14 20:36:33 INFO SparkEnv: Registering OutputCommitCoordinator
+20/02/14 20:36:34 INFO Utils: Successfully started service 'SparkUI' on port 4040.
+20/02/14 20:36:34 INFO SparkUI: Bound SparkUI to 0.0.0.0, and started at http://192.168.1.25:4040
+20/02/14 20:36:34 INFO Executor: Starting executor ID driver on host localhost
+20/02/14 20:36:34 INFO Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 9698.
+20/02/14 20:36:34 INFO NettyBlockTransferService: Server created on 192.168.1.25:9698
+20/02/14 20:36:34 INFO BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+20/02/14 20:36:34 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, 192.168.1.25, 9698, None)
+20/02/14 20:36:34 INFO BlockManagerMasterEndpoint: Registering block manager 192.168.1.25:9698 with 366.3 MB RAM, BlockManagerId(driver, 192.168.1.25, 9698, None)
+20/02/14 20:36:34 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, 192.168.1.25, 9698, None)
+20/02/14 20:36:34 INFO BlockManager: Initialized BlockManager: BlockManagerId(driver, 192.168.1.25, 9698, None)
+20/02/14 20:36:35 INFO SharedState: Setting hive.metastore.warehouse.dir ('null') to the value of spark.sql.warehouse.dir ('file:/edw/Reviews/SourceCode/python/spark-warehouse').
+20/02/14 20:36:35 INFO SharedState: Warehouse path is 'file:/edw/Reviews/SourceCode/python/spark-warehouse'.
+20/02/14 20:36:36 INFO StateStoreCoordinatorRef: Registered StateStoreCoordinator endpoint
+20/02/14 20:36:36 INFO InMemoryFileIndex: It took 53 ms to list leaf files for 1 paths.
+20/02/14 20:36:36 INFO InMemoryFileIndex: It took 2 ms to list leaf files for 1 paths.
+20/02/14 20:36:39 INFO FileSourceStrategy: Pruning directories with: 
+20/02/14 20:36:39 INFO FileSourceStrategy: Post-Scan Filters: 
+20/02/14 20:36:39 INFO FileSourceStrategy: Output Data Schema: struct<value: string>
+20/02/14 20:36:39 INFO FileSourceScanExec: Pushed Filters: 
+20/02/14 20:36:40 INFO CodeGenerator: Code generated in 323.94 ms
+20/02/14 20:36:41 INFO MemoryStore: Block broadcast_0 stored as values in memory (estimated size 282.5 KB, free 366.0 MB)
+20/02/14 20:36:41 INFO MemoryStore: Block broadcast_0_piece0 stored as bytes in memory (estimated size 23.3 KB, free 366.0 MB)
+20/02/14 20:36:41 INFO BlockManagerInfo: Added broadcast_0_piece0 in memory on 192.168.1.25:9698 (size: 23.3 KB, free: 366.3 MB)
+20/02/14 20:36:41 INFO SparkContext: Created broadcast 0 from json at NativeMethodAccessorImpl.java:0
+20/02/14 20:36:41 INFO FileSourceScanExec: Planning scan with bin packing, max size: 37736794 bytes, open cost is considered as scanning 4194304 bytes.
+20/02/14 20:36:41 INFO SparkContext: Starting job: json at NativeMethodAccessorImpl.java:0
+20/02/14 20:36:41 INFO DAGScheduler: Got job 0 (json at NativeMethodAccessorImpl.java:0) with 4 output partitions
+20/02/14 20:36:41 INFO DAGScheduler: Final stage: ResultStage 0 (json at NativeMethodAccessorImpl.java:0)
+20/02/14 20:36:41 INFO DAGScheduler: Parents of final stage: List()
+20/02/14 20:36:41 INFO DAGScheduler: Missing parents: List()
+20/02/14 20:36:41 INFO DAGScheduler: Submitting ResultStage 0 (MapPartitionsRDD[3] at json at NativeMethodAccessorImpl.java:0), which has no missing parents
+20/02/14 20:36:41 INFO MemoryStore: Block broadcast_1 stored as values in memory (estimated size 11.6 KB, free 366.0 MB)
+20/02/14 20:36:41 INFO MemoryStore: Block broadcast_1_piece0 stored as bytes in memory (estimated size 6.7 KB, free 366.0 MB)
+20/02/14 20:36:41 INFO BlockManagerInfo: Added broadcast_1_piece0 in memory on 192.168.1.25:9698 (size: 6.7 KB, free: 366.3 MB)
+20/02/14 20:36:41 INFO SparkContext: Created broadcast 1 from broadcast at DAGScheduler.scala:1163
+20/02/14 20:36:41 INFO DAGScheduler: Submitting 4 missing tasks from ResultStage 0 (MapPartitionsRDD[3] at json at NativeMethodAccessorImpl.java:0) (first 15 tasks are for partitions Vector(0, 1, 2, 3))
+20/02/14 20:36:41 INFO TaskSchedulerImpl: Adding task set 0.0 with 4 tasks
+20/02/14 20:36:41 INFO TaskSetManager: Starting task 0.0 in stage 0.0 (TID 0, localhost, executor driver, partition 0, PROCESS_LOCAL, 8265 bytes)
+20/02/14 20:36:41 INFO TaskSetManager: Starting task 1.0 in stage 0.0 (TID 1, localhost, executor driver, partition 1, PROCESS_LOCAL, 8265 bytes)
+20/02/14 20:36:41 INFO TaskSetManager: Starting task 2.0 in stage 0.0 (TID 2, localhost, executor driver, partition 2, PROCESS_LOCAL, 8265 bytes)
+20/02/14 20:36:41 INFO TaskSetManager: Starting task 3.0 in stage 0.0 (TID 3, localhost, executor driver, partition 3, PROCESS_LOCAL, 8265 bytes)
+20/02/14 20:36:41 INFO Executor: Running task 2.0 in stage 0.0 (TID 2)
+20/02/14 20:36:41 INFO Executor: Running task 1.0 in stage 0.0 (TID 1)
+20/02/14 20:36:41 INFO Executor: Running task 0.0 in stage 0.0 (TID 0)
+20/02/14 20:36:41 INFO Executor: Running task 3.0 in stage 0.0 (TID 3)
+20/02/14 20:36:41 INFO FileScanRDD: Reading File path: file:///edw/Reviews/SourceCode/data/ProdMeta.json, range: 0-37736794, partition values: [empty row]
+20/02/14 20:36:41 INFO FileScanRDD: Reading File path: file:///edw/Reviews/SourceCode/data/ProdMeta.json, range: 113210382-146752875, partition values: [empty row]
+20/02/14 20:36:41 INFO FileScanRDD: Reading File path: file:///edw/Reviews/SourceCode/data/ProdMeta.json, range: 75473588-113210382, partition values: [empty row]
+20/02/14 20:36:41 INFO FileScanRDD: Reading File path: file:///edw/Reviews/SourceCode/data/ProdMeta.json, range: 37736794-75473588, partition values: [empty row]
+20/02/14 20:36:41 INFO CodeGenerator: Code generated in 17.6522 ms
+20/02/14 20:36:42 INFO Executor: Finished task 3.0 in stage 0.0 (TID 3). 2727 bytes result sent to driver
+20/02/14 20:36:42 INFO Executor: Finished task 0.0 in stage 0.0 (TID 0). 2824 bytes result sent to driver
+20/02/14 20:36:42 INFO Executor: Finished task 2.0 in stage 0.0 (TID 2). 2760 bytes result sent to driver
+20/02/14 20:36:42 INFO Executor: Finished task 1.0 in stage 0.0 (TID 1). 2733 bytes result sent to driver
+20/02/14 20:36:42 INFO TaskSetManager: Finished task 3.0 in stage 0.0 (TID 3) in 1298 ms on localhost (executor driver) (1/4)
+20/02/14 20:36:42 INFO TaskSetManager: Finished task 0.0 in stage 0.0 (TID 0) in 1325 ms on localhost (executor driver) (2/4)
+20/02/14 20:36:42 INFO TaskSetManager: Finished task 1.0 in stage 0.0 (TID 1) in 1311 ms on localhost (executor driver) (3/4)
+20/02/14 20:36:42 INFO TaskSetManager: Finished task 2.0 in stage 0.0 (TID 2) in 1310 ms on localhost (executor driver) (4/4)
+20/02/14 20:36:42 INFO TaskSchedulerImpl: Removed TaskSet 0.0, whose tasks have all completed, from pool 
+20/02/14 20:36:42 INFO DAGScheduler: ResultStage 0 (json at NativeMethodAccessorImpl.java:0) finished in 1.513 s
+20/02/14 20:36:42 INFO DAGScheduler: Job 0 finished: json at NativeMethodAccessorImpl.java:0, took 1.605355 s
+20/02/14 20:36:43 INFO FileSourceStrategy: Pruning directories with: 
+20/02/14 20:36:43 INFO FileSourceStrategy: Post-Scan Filters: isnotnull(asin#7)
+20/02/14 20:36:43 INFO FileSourceStrategy: Output Data Schema: struct<asin: string, brand: string, categories: array<array<string>>, price: double, title: string ... 3 more fields>
+20/02/14 20:36:43 INFO FileSourceScanExec: Pushed Filters: IsNotNull(asin)
+20/02/14 20:36:43 INFO CodeGenerator: Code generated in 29.4834 ms
+20/02/14 20:36:43 INFO MemoryStore: Block broadcast_2 stored as values in memory (estimated size 282.5 KB, free 365.7 MB)
+20/02/14 20:36:43 INFO MemoryStore: Block broadcast_2_piece0 stored as bytes in memory (estimated size 23.3 KB, free 365.7 MB)
+20/02/14 20:36:43 INFO BlockManagerInfo: Added broadcast_2_piece0 in memory on 192.168.1.25:9698 (size: 23.3 KB, free: 366.2 MB)
+20/02/14 20:36:43 INFO SparkContext: Created broadcast 2 from jdbc at NativeMethodAccessorImpl.java:0
+20/02/14 20:36:43 INFO FileSourceScanExec: Planning scan with bin packing, max size: 37736794 bytes, open cost is considered as scanning 4194304 bytes.
+20/02/14 20:36:44 INFO SparkContext: Starting job: jdbc at NativeMethodAccessorImpl.java:0
+20/02/14 20:36:44 INFO DAGScheduler: Got job 1 (jdbc at NativeMethodAccessorImpl.java:0) with 4 output partitions
+20/02/14 20:36:44 INFO DAGScheduler: Final stage: ResultStage 1 (jdbc at NativeMethodAccessorImpl.java:0)
+20/02/14 20:36:44 INFO DAGScheduler: Parents of final stage: List()
+20/02/14 20:36:44 INFO DAGScheduler: Missing parents: List()
+20/02/14 20:36:44 INFO DAGScheduler: Submitting ResultStage 1 (MapPartitionsRDD[8] at jdbc at NativeMethodAccessorImpl.java:0), which has no missing parents
+20/02/14 20:36:44 INFO MemoryStore: Block broadcast_3 stored as values in memory (estimated size 21.5 KB, free 365.7 MB)
+20/02/14 20:36:44 INFO MemoryStore: Block broadcast_3_piece0 stored as bytes in memory (estimated size 11.1 KB, free 365.7 MB)
+20/02/14 20:36:44 INFO BlockManagerInfo: Added broadcast_3_piece0 in memory on 192.168.1.25:9698 (size: 11.1 KB, free: 366.2 MB)
+20/02/14 20:36:44 INFO SparkContext: Created broadcast 3 from broadcast at DAGScheduler.scala:1163
+20/02/14 20:36:44 INFO DAGScheduler: Submitting 4 missing tasks from ResultStage 1 (MapPartitionsRDD[8] at jdbc at NativeMethodAccessorImpl.java:0) (first 15 tasks are for partitions Vector(0, 1, 2, 3))
+20/02/14 20:36:44 INFO TaskSchedulerImpl: Adding task set 1.0 with 4 tasks
+20/02/14 20:36:44 INFO TaskSetManager: Starting task 0.0 in stage 1.0 (TID 4, localhost, executor driver, partition 0, PROCESS_LOCAL, 8265 bytes)
+20/02/14 20:36:44 INFO TaskSetManager: Starting task 1.0 in stage 1.0 (TID 5, localhost, executor driver, partition 1, PROCESS_LOCAL, 8265 bytes)
+20/02/14 20:36:44 INFO TaskSetManager: Starting task 2.0 in stage 1.0 (TID 6, localhost, executor driver, partition 2, PROCESS_LOCAL, 8265 bytes)
+20/02/14 20:36:44 INFO TaskSetManager: Starting task 3.0 in stage 1.0 (TID 7, localhost, executor driver, partition 3, PROCESS_LOCAL, 8265 bytes)
+20/02/14 20:36:44 INFO Executor: Running task 0.0 in stage 1.0 (TID 4)
+20/02/14 20:36:44 INFO Executor: Running task 2.0 in stage 1.0 (TID 6)
+20/02/14 20:36:44 INFO Executor: Running task 1.0 in stage 1.0 (TID 5)
+20/02/14 20:36:44 INFO Executor: Running task 3.0 in stage 1.0 (TID 7)
+20/02/14 20:36:44 INFO CodeGenerator: Code generated in 26.0076 ms
+20/02/14 20:36:44 INFO FileScanRDD: Reading File path: file:///edw/Reviews/SourceCode/data/ProdMeta.json, range: 113210382-146752875, partition values: [empty row]
+20/02/14 20:36:44 INFO FileScanRDD: Reading File path: file:///edw/Reviews/SourceCode/data/ProdMeta.json, range: 0-37736794, partition values: [empty row]
+20/02/14 20:36:44 INFO FileScanRDD: Reading File path: file:///edw/Reviews/SourceCode/data/ProdMeta.json, range: 75473588-113210382, partition values: [empty row]
+20/02/14 20:36:44 INFO FileScanRDD: Reading File path: file:///edw/Reviews/SourceCode/data/ProdMeta.json, range: 37736794-75473588, partition values: [empty row]
+20/02/14 20:36:44 INFO CodeGenerator: Code generated in 28.8647 ms
+20/02/14 20:36:46 INFO Executor: Finished task 3.0 in stage 1.0 (TID 7). 1542 bytes result sent to driver
+20/02/14 20:36:46 INFO TaskSetManager: Finished task 3.0 in stage 1.0 (TID 7) in 2360 ms on localhost (executor driver) (1/4)
+20/02/14 20:36:46 INFO Executor: Finished task 1.0 in stage 1.0 (TID 5). 1456 bytes result sent to driver
+20/02/14 20:36:46 INFO TaskSetManager: Finished task 1.0 in stage 1.0 (TID 5) in 2765 ms on localhost (executor driver) (2/4)
+20/02/14 20:36:46 INFO Executor: Finished task 2.0 in stage 1.0 (TID 6). 1456 bytes result sent to driver
+20/02/14 20:36:46 INFO TaskSetManager: Finished task 2.0 in stage 1.0 (TID 6) in 2841 ms on localhost (executor driver) (3/4)
+20/02/14 20:36:47 INFO Executor: Finished task 0.0 in stage 1.0 (TID 4). 1499 bytes result sent to driver
+20/02/14 20:36:47 INFO TaskSetManager: Finished task 0.0 in stage 1.0 (TID 4) in 2913 ms on localhost (executor driver) (4/4)
+20/02/14 20:36:47 INFO TaskSchedulerImpl: Removed TaskSet 1.0, whose tasks have all completed, from pool 
+20/02/14 20:36:47 INFO DAGScheduler: ResultStage 1 (jdbc at NativeMethodAccessorImpl.java:0) finished in 2.956 s
+20/02/14 20:36:47 INFO DAGScheduler: Job 1 finished: jdbc at NativeMethodAccessorImpl.java:0, took 2.961690 s
+20/02/14 20:36:47 INFO SparkContext: Invoking stop() from shutdown hook
+20/02/14 20:36:47 INFO SparkUI: Stopped Spark web UI at http://192.168.1.25:4040
+20/02/14 20:36:47 INFO MapOutputTrackerMasterEndpoint: MapOutputTrackerMasterEndpoint stopped!
+20/02/14 20:36:47 INFO MemoryStore: MemoryStore cleared
+20/02/14 20:36:47 INFO BlockManager: BlockManager stopped
+20/02/14 20:36:47 INFO BlockManagerMaster: BlockManagerMaster stopped
+20/02/14 20:36:47 INFO OutputCommitCoordinator$OutputCommitCoordinatorEndpoint: OutputCommitCoordinator stopped!
+20/02/14 20:36:47 INFO SparkContext: Successfully stopped SparkContext
+20/02/14 20:36:47 INFO ShutdownHookManager: Shutdown hook called
+20/02/14 20:36:47 INFO ShutdownHookManager: Deleting directory /tmp/spark-8b2062fc-7b40-4645-bb19-44f7ca16a955/pyspark-53dd841e-f083-4da2-808a-9e2488698303
+20/02/14 20:36:47 INFO ShutdownHookManager: Deleting directory /tmp/spark-eee25bd3-c41f-4a9e-be7e-3d3e7068e356
+20/02/14 20:36:47 INFO ShutdownHookManager: Deleting directory /tmp/spark-8b2062fc-7b40-4645-bb19-44f7ca16a955
+###################################################################################################################################
+###################################################################################################################################
+Load to ODS in progress
+###################################################################################################################################
+###################################################################################################################################
+begin;
+BEGIN
+	UPDATE "STAGE_DB".PRODMETA
+	SET brand = PS.brand
+	, price = PS.price
+	, title = PS.title
+	, categories = PS.categories
+	, odsUpdateTd = current_timestamp(0)
+	FROM "WORK_DB".PRODMETA_WT PS
+	WHERE PRODMETA.asin = PS.asin;
+UPDATE 0
+	INSERT INTO "STAGE_DB".PRODMETA
+	SELECT PS.asin, PS.brand, PS.price, PS.title, PS.categories, current_timestamp(0), current_timestamp(0)
+	FROM "WORK_DB".PRODMETA_WT PS
+	LEFT OUTER JOIN "STAGE_DB".PRODMETA PM
+	ON PS.asin = PM.asin
+	WHERE PM.asin IS NULL;
+INSERT 0 76487
+	TRUNCATE "WORK_DB".PRODMETA_WT;
+TRUNCATE TABLE
+commit;
+COMMIT

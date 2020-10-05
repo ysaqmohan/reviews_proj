@@ -1,0 +1,24 @@
+###################################################################################################################################
+###################################################################################################################################
+Load to ODS in progress
+###################################################################################################################################
+###################################################################################################################################
+begin;
+BEGIN
+	CREATE TEMPORARY TABLE ASINTEMP_inter AS
+	SELECT asin, title, brand, categories, odsaddtd
+	FROM "STAGE_DB".prodmeta
+	WHERE odsaddtd > (SELECT LAST_LOAD_TD
+		FROM "META_DB".CONTROL_TBL
+		WHERE SCHEMA_NM = 'CORE_DB'
+		AND TABLE_NM = 'ASIN_DIM');
+SELECT 0
+	CREATE TEMPORARY TABLE ASINTEMP AS
+	SELECT inter.asin, inter.title, inter.brand, cdm.category_id, inter.odsaddtd
+	FROM ASINTEMP_inter inter cdm
+	LEFT OUTER JOIN "CORE_DB".CATEGORY_DIM
+	ON inter.categories = cdm.category_nm
+	WHERE cdm.category_nm IS NOT NULL;
+ERROR:  syntax error at or near "cdm"
+LINE 3:  FROM ASINTEMP_inter inter cdm
+                                   ^

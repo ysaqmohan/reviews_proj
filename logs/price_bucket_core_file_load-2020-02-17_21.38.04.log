@@ -1,0 +1,59 @@
+###################################################################################################################################
+###################################################################################################################################
+Load to core in progress
+###################################################################################################################################
+###################################################################################################################################
+begin;
+BEGIN
+	CREATE TEMPORARY TABLE PRICE_BUCKET_TEMP AS
+	SELECT PB.price_bucket_nm, c_dim.category_id, PB.bucket_floor_am, PB.bucket_ceiling_am
+	FROM "WORK_DB".PRICE_BUCKET_WT PB
+	INNER JOIN "CORE_DB".category_dim c_dim
+	ON trim(PB.category_nm) = trim(c_dim.category_nm);
+SELECT 410
+	UPDATE "CORE_DB".price_bucket_dim
+	SET bucket_floor_am = tmp.bucket_floor_am 
+	, bucket_ceiling_am = tmp.bucket_ceiling_am
+	, effective_end_dt = current_date - 1
+	, active_in = 'N'
+	, modified_td = current_timestamp(0)
+	FROM PRICE_BUCKET_TEMP tmp 
+	WHERE trim("CORE_DB".price_bucket_dim.price_bucket_nm) = trim(tmp.price_bucket_nm)
+	AND "CORE_DB".price_bucket_dim.category_id = tmp.category_id;
+UPDATE 0
+	INSERT INTO "CORE_DB".price_bucket_dim
+	SELECT PB.price_bucket_id, PB.price_bucket_nm, PB.category_id, TMP.bucket_floor_am, 
+	TMP.bucket_ceiling_am, current_date, '2045-12-31' ,'Y', current_timestamp(0), current_timestamp(0)
+	FROM PRICE_BUCKET_TEMP TMP
+	INNER JOIN "CORE_DB".price_bucket_dim PB
+	ON TMP.price_bucket_nm = PB.price_bucket_nm
+	AND TMP.category_id = PB.category_id;
+INSERT 0 0
+	INSERT INTO "CORE_DB".price_bucket_dim
+	SELECT CLK.MAX_PRICE_BUCKET_ID + ROW_NUMBER() OVER(ORDER BY TMP.price_bucket_nm, TMP.category_id) AS price_bucket_id
+	, TMP.price_bucket_nm, TMP.category_id, TMP.bucket_floor_am
+	, TMP.bucket_ceiling_am, current_date, '2045-12-31' ,'Y', current_timestamp(0), current_timestamp(0)
+	FROM PRICE_BUCKET_TEMP TMP
+	LEFT OUTER JOIN "CORE_DB".price_bucket_dim PB
+	ON TMP.price_bucket_nm = PB.price_bucket_nm
+	AND TMP.category_id = PB.category_id
+	INNER JOIN "META_DB".CLOCK_PRICE_BUCKET CLK
+	ON MAX_PRICE_BUCKET_ID >= 0
+	WHERE PB.price_bucket_nm IS NULL;
+INSERT 0 410
+	UPDATE "META_DB".CLOCK_PRICE_BUCKET
+	SET MAX_PRICE_BUCKET_ID = (SELECT coalesce(max(price_bucket_id),0) FROM "CORE_DB".price_bucket_dim);
+UPDATE 1
+	TRUNCATE "WORK_DB".PRICE_BUCKET_WT;
+TRUNCATE TABLE
+commit;
+COMMIT
+###################################################################################################################################
+File archival in progress
+###################################################################################################################################
+###################################################################################################################################
+###################################################################################################################################
+###################################################################################################################################
+Job completed successfully
+###################################################################################################################################
+###################################################################################################################################

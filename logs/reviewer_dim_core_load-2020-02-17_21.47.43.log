@@ -1,0 +1,52 @@
+###################################################################################################################################
+###################################################################################################################################
+Load to ODS in progress
+###################################################################################################################################
+###################################################################################################################################
+begin;
+BEGIN
+        CREATE TEMPORARY TABLE REVIEWTEMP AS
+	SELECT reviewerid, reviewername, odsaddtd FROM (
+	SELECT reviewerid, reviewername, odsaddtd, ROW_NUMBER() OVER( PARTITION BY reviewerid order by reviewdate desc, reviewername desc) as row_num 
+	FROM "STAGE_DB".reviews
+	WHERE odsaddtd > (SELECT LAST_LOAD_TD 
+				FROM "META_DB".CONTROL_TBL 
+				WHERE SCHEMA_NM = 'CORE_DB' 
+				AND TABLE_NM = 'REVIEWER_DIM')
+		)sub_REVIEWS 
+	WHERE row_num = 1; 
+SELECT 1489396
+	CREATE INDEX REVIEWTEMP_LOAD ON REVIEWTEMP(reviewerid);
+CREATE INDEX
+	ANALYZE REVIEWTEMP;	
+ANALYZE
+								
+	UPDATE "CORE_DB".REVIEWER_DIM
+	SET REVIEWER_NM = REVIEWTEMP.reviewername
+	, MODIFIED_TD = current_timestamp(0)
+	FROM REVIEWTEMP
+	WHERE REVIEWER_DIM.REVIEWER_ID = REVIEWTEMP.reviewerid;
+UPDATE 0
+		 
+        INSERT INTO "CORE_DB".REVIEWER_DIM
+        SELECT REVIEWTEMP.reviewerid, REVIEWTEMP.reviewername, current_timestamp(0), current_timestamp(0)
+        FROM REVIEWTEMP
+        LEFT OUTER JOIN "CORE_DB".REVIEWER_DIM
+        ON REVIEWER_DIM.REVIEWER_ID = REVIEWTEMP.reviewerid
+        WHERE REVIEWER_DIM.REVIEWER_ID IS NULL
+        ;
+INSERT 0 1489396
+	UPDATE "META_DB".CONTROL_TBL
+	SET LAST_LOAD_TD = MAXREVIEWTEMP.maxodsaddtd
+	FROM (SELECT max(odsaddtd) as maxodsaddtd , count(*) as cnt FROM REVIEWTEMP) MAXREVIEWTEMP
+	WHERE CONTROL_TBL.SCHEMA_NM = 'CORE_DB' 
+	AND CONTROL_TBL.TABLE_NM = 'REVIEWER_DIM'
+	AND MAXREVIEWTEMP.cnt <> 0;
+UPDATE 1
+commit;
+COMMIT
+###################################################################################################################################
+###################################################################################################################################
+Job completed successfully
+###################################################################################################################################
+###################################################################################################################################

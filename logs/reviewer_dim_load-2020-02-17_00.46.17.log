@@ -1,0 +1,53 @@
+###################################################################################################################################
+###################################################################################################################################
+Load to ODS in progress
+###################################################################################################################################
+###################################################################################################################################
+20/02/17 00:46:19 WARN Utils: Your hostname, DESKTOP-502C4I4 resolves to a loopback address: 127.0.1.1; using 192.168.1.25 instead (on interface wifi0)
+20/02/17 00:46:19 WARN Utils: Set SPARK_LOCAL_IP if you need to bind to another address
+20/02/17 00:46:19 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+Using Spark's default log4j profile: org/apache/spark/log4j-defaults.properties
+20/02/17 00:46:21 INFO SparkContext: Running Spark version 2.4.5
+20/02/17 00:46:21 INFO SparkContext: Submitted application: ReviewsOdsSession
+20/02/17 00:46:21 INFO SecurityManager: Changing view acls to: devetluser
+20/02/17 00:46:21 INFO SecurityManager: Changing modify acls to: devetluser
+20/02/17 00:46:21 INFO SecurityManager: Changing view acls groups to: 
+20/02/17 00:46:21 INFO SecurityManager: Changing modify acls groups to: 
+20/02/17 00:46:21 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(devetluser); groups with view permissions: Set(); users  with modify permissions: Set(devetluser); groups with modify permissions: Set()
+20/02/17 00:46:21 INFO Utils: Successfully started service 'sparkDriver' on port 7635.
+20/02/17 00:46:21 INFO SparkEnv: Registering MapOutputTracker
+20/02/17 00:46:21 INFO SparkEnv: Registering BlockManagerMaster
+20/02/17 00:46:21 INFO BlockManagerMasterEndpoint: Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+20/02/17 00:46:21 INFO BlockManagerMasterEndpoint: BlockManagerMasterEndpoint up
+20/02/17 00:46:21 INFO DiskBlockManager: Created local directory at /tmp/blockmgr-a84bd131-e8e9-48c7-83c0-f75386156d3b
+20/02/17 00:46:21 INFO MemoryStore: MemoryStore started with capacity 366.3 MB
+20/02/17 00:46:21 INFO SparkEnv: Registering OutputCommitCoordinator
+20/02/17 00:46:22 INFO Utils: Successfully started service 'SparkUI' on port 4040.
+20/02/17 00:46:22 INFO SparkUI: Bound SparkUI to 0.0.0.0, and started at http://192.168.1.25:4040
+20/02/17 00:46:22 INFO Executor: Starting executor ID driver on host localhost
+20/02/17 00:46:22 INFO Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 7637.
+20/02/17 00:46:22 INFO NettyBlockTransferService: Server created on 192.168.1.25:7637
+20/02/17 00:46:22 INFO BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+20/02/17 00:46:22 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, 192.168.1.25, 7637, None)
+20/02/17 00:46:22 INFO BlockManagerMasterEndpoint: Registering block manager 192.168.1.25:7637 with 366.3 MB RAM, BlockManagerId(driver, 192.168.1.25, 7637, None)
+20/02/17 00:46:22 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, 192.168.1.25, 7637, None)
+20/02/17 00:46:22 INFO BlockManager: Initialized BlockManager: BlockManagerId(driver, 192.168.1.25, 7637, None)
+20/02/17 00:46:23 INFO SharedState: Setting hive.metastore.warehouse.dir ('null') to the value of spark.sql.warehouse.dir ('file:/edw/Reviews/SourceCode/bash/spark-warehouse').
+20/02/17 00:46:23 INFO SharedState: Warehouse path is 'file:/edw/Reviews/SourceCode/bash/spark-warehouse'.
+20/02/17 00:46:24 INFO StateStoreCoordinatorRef: Registered StateStoreCoordinator endpoint
+Traceback (most recent call last):
+  File "/edw/Reviews/SourceCode/python/reviewer_dim_load.py", line 28, in <module>
+    Reviews_Core_df.show(n=20)
+NameError: name 'Reviews_Core_df' is not defined
+20/02/17 00:46:26 INFO SparkContext: Invoking stop() from shutdown hook
+20/02/17 00:46:26 INFO SparkUI: Stopped Spark web UI at http://192.168.1.25:4040
+20/02/17 00:46:26 INFO MapOutputTrackerMasterEndpoint: MapOutputTrackerMasterEndpoint stopped!
+20/02/17 00:46:26 INFO MemoryStore: MemoryStore cleared
+20/02/17 00:46:26 INFO BlockManager: BlockManager stopped
+20/02/17 00:46:26 INFO BlockManagerMaster: BlockManagerMaster stopped
+20/02/17 00:46:26 INFO OutputCommitCoordinator$OutputCommitCoordinatorEndpoint: OutputCommitCoordinator stopped!
+20/02/17 00:46:26 INFO SparkContext: Successfully stopped SparkContext
+20/02/17 00:46:26 INFO ShutdownHookManager: Shutdown hook called
+20/02/17 00:46:26 INFO ShutdownHookManager: Deleting directory /tmp/spark-be11c372-d607-49a5-96d4-ede07342d035
+20/02/17 00:46:26 INFO ShutdownHookManager: Deleting directory /tmp/spark-71de7e07-3896-4067-8237-aeba650cb269/pyspark-8d7225cc-6692-4f90-a7d3-a4c14ff9341c
+20/02/17 00:46:26 INFO ShutdownHookManager: Deleting directory /tmp/spark-71de7e07-3896-4067-8237-aeba650cb269

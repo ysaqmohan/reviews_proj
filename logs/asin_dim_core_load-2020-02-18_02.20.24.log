@@ -1,0 +1,55 @@
+###################################################################################################################################
+###################################################################################################################################
+Load to ODS in progress
+###################################################################################################################################
+###################################################################################################################################
+begin;
+BEGIN
+	CREATE TEMPORARY TABLE ASINTEMP_inter AS
+	SELECT asin, title, brand, categories, odsaddtd
+	FROM "STAGE_DB".prodmeta
+	WHERE odsaddtd > (SELECT LAST_LOAD_TD
+		FROM "META_DB".CONTROL_TBL
+		WHERE SCHEMA_NM = 'CORE_DB'
+		AND TABLE_NM = 'ASIN_DIM');
+SELECT 8403388
+	CREATE TEMPORARY TABLE ASINTEMP AS
+	SELECT inter.asin, inter.title, inter.brand, cdm.category_id, inter.odsaddtd
+	FROM ASINTEMP_inter inter 
+	LEFT OUTER JOIN "CORE_DB".CATEGORY_DIM cdm
+	ON inter.categories = cdm.category_nm
+	WHERE cdm.category_nm IS NOT NULL;
+SELECT 8180156
+	CREATE INDEX ASINTEMP_LOAD ON ASINTEMP(asin);
+CREATE INDEX
+	ANALYZE ASINTEMP_LOAD;
+WARNING:  skipping "asintemp_load" --- cannot analyze non-tables or special system tables
+ANALYZE
+	UPDATE "CORE_DB".ASIN_DIM
+	SET ASIN_NM = ASINTEMP.title
+	, BRAND_NM = ASINTEMP.brand
+	, CATEGORY_ID = ASINTEMP.CATEGORY_ID
+	, MODIFIED_TD = current_timestamp(0)
+	FROM ASINTEMP
+	WHERE ASIN_DIM.ASIN_ID = ASINTEMP.asin;
+UPDATE 0
+	INSERT INTO "CORE_DB".ASIN_DIM
+	SELECT ASINTEMP.asin, ASINTEMP.title, ASINTEMP.brand, ASINTEMP.CATEGORY_ID, current_timestamp(0), current_timestamp(0)
+	FROM ASINTEMP
+	LEFT OUTER JOIN "CORE_DB".ASIN_DIM
+	ON ASIN_DIM.ASIN_ID = ASINTEMP.asin
+	WHERE ASIN_DIM.ASIN_ID IS NULL	;
+INSERT 0 8180156
+	UPDATE "META_DB".CONTROL_TBL
+	SET LAST_LOAD_TD = MAXASINTEMP.maxaddtd
+	FROM (SELECT max(odsaddtd) as maxaddtd , count(*) as cnt FROM ASINTEMP) MAXASINTEMP
+	WHERE SCHEMA_NM = 'CORE_DB' AND TABLE_NM = 'ASIN_DIM'
+	AND MAXASINTEMP.cnt <> 0;
+UPDATE 1
+commit;
+COMMIT
+###################################################################################################################################
+###################################################################################################################################
+Job completed successfully
+###################################################################################################################################
+###################################################################################################################################

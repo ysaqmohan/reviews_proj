@@ -1,0 +1,928 @@
+###################################################################################################################################
+###################################################################################################################################
+Load to stage in progress
+###################################################################################################################################
+###################################################################################################################################
+20/02/14 10:38:14 WARN Utils: Your hostname, DESKTOP-502C4I4 resolves to a loopback address: 127.0.1.1; using 192.168.1.25 instead (on interface wifi0)
+20/02/14 10:38:14 WARN Utils: Set SPARK_LOCAL_IP if you need to bind to another address
+20/02/14 10:38:16 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+Using Spark's default log4j profile: org/apache/spark/log4j-defaults.properties
+20/02/14 10:38:25 INFO SparkContext: Running Spark version 2.4.5
+20/02/14 10:38:25 INFO SparkContext: Submitted application: MySession
+20/02/14 10:38:26 INFO SecurityManager: Changing view acls to: devetluser
+20/02/14 10:38:26 INFO SecurityManager: Changing modify acls to: devetluser
+20/02/14 10:38:26 INFO SecurityManager: Changing view acls groups to: 
+20/02/14 10:38:26 INFO SecurityManager: Changing modify acls groups to: 
+20/02/14 10:38:26 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(devetluser); groups with view permissions: Set(); users  with modify permissions: Set(devetluser); groups with modify permissions: Set()
+20/02/14 10:38:27 INFO Utils: Successfully started service 'sparkDriver' on port 2829.
+20/02/14 10:38:27 INFO SparkEnv: Registering MapOutputTracker
+20/02/14 10:38:27 INFO SparkEnv: Registering BlockManagerMaster
+20/02/14 10:38:27 INFO BlockManagerMasterEndpoint: Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+20/02/14 10:38:27 INFO BlockManagerMasterEndpoint: BlockManagerMasterEndpoint up
+20/02/14 10:38:27 INFO DiskBlockManager: Created local directory at /tmp/blockmgr-02ad5ce2-57d0-4f2b-ac5e-f37893aa47c5
+20/02/14 10:38:27 INFO MemoryStore: MemoryStore started with capacity 366.3 MB
+20/02/14 10:38:27 INFO SparkEnv: Registering OutputCommitCoordinator
+20/02/14 10:38:28 INFO Utils: Successfully started service 'SparkUI' on port 4040.
+20/02/14 10:38:28 INFO SparkUI: Bound SparkUI to 0.0.0.0, and started at http://192.168.1.25:4040
+20/02/14 10:38:28 INFO Executor: Starting executor ID driver on host localhost
+20/02/14 10:38:29 INFO Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 2833.
+20/02/14 10:38:29 INFO NettyBlockTransferService: Server created on 192.168.1.25:2833
+20/02/14 10:38:29 INFO BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+20/02/14 10:38:29 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, 192.168.1.25, 2833, None)
+20/02/14 10:38:29 INFO BlockManagerMasterEndpoint: Registering block manager 192.168.1.25:2833 with 366.3 MB RAM, BlockManagerId(driver, 192.168.1.25, 2833, None)
+20/02/14 10:38:29 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, 192.168.1.25, 2833, None)
+20/02/14 10:38:29 INFO BlockManager: Initialized BlockManager: BlockManagerId(driver, 192.168.1.25, 2833, None)
+20/02/14 10:38:31 INFO SharedState: Setting hive.metastore.warehouse.dir ('null') to the value of spark.sql.warehouse.dir ('file:/edw/Reviews/SourceCode/bash/spark-warehouse').
+20/02/14 10:38:31 INFO SharedState: Warehouse path is 'file:/edw/Reviews/SourceCode/bash/spark-warehouse'.
+20/02/14 10:38:34 INFO StateStoreCoordinatorRef: Registered StateStoreCoordinator endpoint
+20/02/14 10:38:36 INFO InMemoryFileIndex: It took 267 ms to list leaf files for 1 paths.
+20/02/14 10:38:36 INFO InMemoryFileIndex: It took 2 ms to list leaf files for 1 paths.
+20/02/14 10:38:41 INFO FileSourceStrategy: Pruning directories with: 
+20/02/14 10:38:41 INFO FileSourceStrategy: Post-Scan Filters: 
+20/02/14 10:38:41 INFO FileSourceStrategy: Output Data Schema: struct<value: string>
+20/02/14 10:38:41 INFO FileSourceScanExec: Pushed Filters: 
+20/02/14 10:38:42 INFO CodeGenerator: Code generated in 458.2219 ms
+20/02/14 10:38:43 INFO MemoryStore: Block broadcast_0 stored as values in memory (estimated size 282.7 KB, free 366.0 MB)
+20/02/14 10:38:43 INFO MemoryStore: Block broadcast_0_piece0 stored as bytes in memory (estimated size 23.3 KB, free 366.0 MB)
+20/02/14 10:38:43 INFO BlockManagerInfo: Added broadcast_0_piece0 in memory on 192.168.1.25:2833 (size: 23.3 KB, free: 366.3 MB)
+20/02/14 10:38:43 INFO SparkContext: Created broadcast 0 from json at NativeMethodAccessorImpl.java:0
+20/02/14 10:38:43 INFO FileSourceScanExec: Planning scan with bin packing, max size: 134217728 bytes, open cost is considered as scanning 4194304 bytes.
+20/02/14 10:38:43 INFO SparkContext: Starting job: json at NativeMethodAccessorImpl.java:0
+20/02/14 10:38:43 INFO DAGScheduler: Got job 0 (json at NativeMethodAccessorImpl.java:0) with 70 output partitions
+20/02/14 10:38:43 INFO DAGScheduler: Final stage: ResultStage 0 (json at NativeMethodAccessorImpl.java:0)
+20/02/14 10:38:43 INFO DAGScheduler: Parents of final stage: List()
+20/02/14 10:38:43 INFO DAGScheduler: Missing parents: List()
+20/02/14 10:38:43 INFO DAGScheduler: Submitting ResultStage 0 (MapPartitionsRDD[3] at json at NativeMethodAccessorImpl.java:0), which has no missing parents
+20/02/14 10:38:43 INFO MemoryStore: Block broadcast_1 stored as values in memory (estimated size 11.6 KB, free 366.0 MB)
+20/02/14 10:38:43 INFO MemoryStore: Block broadcast_1_piece0 stored as bytes in memory (estimated size 6.7 KB, free 366.0 MB)
+20/02/14 10:38:43 INFO BlockManagerInfo: Added broadcast_1_piece0 in memory on 192.168.1.25:2833 (size: 6.7 KB, free: 366.3 MB)
+20/02/14 10:38:43 INFO SparkContext: Created broadcast 1 from broadcast at DAGScheduler.scala:1163
+20/02/14 10:38:43 INFO DAGScheduler: Submitting 70 missing tasks from ResultStage 0 (MapPartitionsRDD[3] at json at NativeMethodAccessorImpl.java:0) (first 15 tasks are for partitions Vector(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14))
+20/02/14 10:38:43 INFO TaskSchedulerImpl: Adding task set 0.0 with 70 tasks
+20/02/14 10:38:44 INFO TaskSetManager: Starting task 0.0 in stage 0.0 (TID 0, localhost, executor driver, partition 0, PROCESS_LOCAL, 8267 bytes)
+20/02/14 10:38:44 INFO TaskSetManager: Starting task 1.0 in stage 0.0 (TID 1, localhost, executor driver, partition 1, PROCESS_LOCAL, 8267 bytes)
+20/02/14 10:38:44 INFO TaskSetManager: Starting task 2.0 in stage 0.0 (TID 2, localhost, executor driver, partition 2, PROCESS_LOCAL, 8267 bytes)
+20/02/14 10:38:44 INFO TaskSetManager: Starting task 3.0 in stage 0.0 (TID 3, localhost, executor driver, partition 3, PROCESS_LOCAL, 8267 bytes)
+20/02/14 10:38:44 INFO Executor: Running task 2.0 in stage 0.0 (TID 2)
+20/02/14 10:38:44 INFO Executor: Running task 3.0 in stage 0.0 (TID 3)
+20/02/14 10:38:44 INFO Executor: Running task 0.0 in stage 0.0 (TID 0)
+20/02/14 10:38:44 INFO Executor: Running task 1.0 in stage 0.0 (TID 1)
+20/02/14 10:38:44 INFO FileScanRDD: Reading File path: file:///edw/Reviews/SourceCode/data/AmzReviews.json, range: 0-134217728, partition values: [empty row]
+20/02/14 10:38:44 INFO FileScanRDD: Reading File path: file:///edw/Reviews/SourceCode/data/AmzReviews.json, range: 134217728-268435456, partition values: [empty row]
+20/02/14 10:38:44 INFO FileScanRDD: Reading File path: file:///edw/Reviews/SourceCode/data/AmzReviews.json, range: 402653184-536870912, partition values: [empty row]
+20/02/14 10:38:44 INFO FileScanRDD: Reading File path: file:///edw/Reviews/SourceCode/data/AmzReviews.json, range: 268435456-402653184, partition values: [empty row]
+20/02/14 10:38:44 INFO CodeGenerator: Code generated in 21.9187 ms
+20/02/14 10:39:07 INFO Executor: Finished task 3.0 in stage 0.0 (TID 3). 2350 bytes result sent to driver
+20/02/14 10:39:07 INFO Executor: Finished task 2.0 in stage 0.0 (TID 2). 2350 bytes result sent to driver
+20/02/14 10:39:07 INFO TaskSetManager: Starting task 4.0 in stage 0.0 (TID 4, localhost, executor driver, partition 4, PROCESS_LOCAL, 8267 bytes)
+20/02/14 10:39:07 INFO Executor: Running task 4.0 in stage 0.0 (TID 4)
+20/02/14 10:39:07 INFO TaskSetManager: Starting task 5.0 in stage 0.0 (TID 5, localhost, executor driver, partition 5, PROCESS_LOCAL, 8267 bytes)
+20/02/14 10:39:07 INFO Executor: Running task 5.0 in stage 0.0 (TID 5)
+20/02/14 10:39:07 INFO FileScanRDD: Reading File path: file:///edw/Reviews/SourceCode/data/AmzReviews.json, range: 536870912-671088640, partition values: [empty row]
+20/02/14 10:39:07 INFO TaskSetManager: Finished task 3.0 in stage 0.0 (TID 3) in 23191 ms on localhost (executor driver) (1/70)
+20/02/14 10:39:07 INFO FileScanRDD: Reading File path: file:///edw/Reviews/SourceCode/data/AmzReviews.json, range: 671088640-805306368, partition values: [empty row]
+20/02/14 10:39:07 INFO TaskSetManager: Finished task 2.0 in stage 0.0 (TID 2) in 23251 ms on localhost (executor driver) (2/70)
+20/02/14 10:39:22 INFO Executor: Finished task 5.0 in stage 0.0 (TID 5). 2307 bytes result sent to driver
+20/02/14 10:39:22 INFO TaskSetManager: Starting task 6.0 in stage 0.0 (TID 6, localhost, executor driver, partition 6, PROCESS_LOCAL, 8267 bytes)
+20/02/14 10:39:22 INFO TaskSetManager: Finished task 5.0 in stage 0.0 (TID 5) in 15518 ms on localhost (executor driver) (3/70)
+20/02/14 10:39:22 INFO Executor: Running task 6.0 in stage 0.0 (TID 6)
+20/02/14 10:39:22 INFO FileScanRDD: Reading File path: file:///edw/Reviews/SourceCode/data/AmzReviews.json, range: 805306368-939524096, partition values: [empty row]
+20/02/14 10:39:22 INFO Executor: Finished task 4.0 in stage 0.0 (TID 4). 2307 bytes result sent to driver
+20/02/14 10:39:22 INFO TaskSetManager: Starting task 7.0 in stage 0.0 (TID 7, localhost, executor driver, partition 7, PROCESS_LOCAL, 8267 bytes)
+20/02/14 10:39:22 INFO Executor: Running task 7.0 in stage 0.0 (TID 7)
+20/02/14 10:39:22 INFO TaskSetManager: Finished task 4.0 in stage 0.0 (TID 4) in 15769 ms on localhost (executor driver) (4/70)
+20/02/14 10:39:22 INFO FileScanRDD: Reading File path: file:///edw/Reviews/SourceCode/data/AmzReviews.json, range: 939524096-1073741824, partition values: [empty row]
+20/02/14 10:39:36 INFO Executor: Finished task 7.0 in stage 0.0 (TID 7). 2307 bytes result sent to driver
+20/02/14 10:39:36 INFO TaskSetManager: Starting task 8.0 in stage 0.0 (TID 8, localhost, executor driver, partition 8, PROCESS_LOCAL, 8267 bytes)
+20/02/14 10:39:36 INFO TaskSetManager: Finished task 7.0 in stage 0.0 (TID 7) in 13498 ms on localhost (executor driver) (5/70)
+20/02/14 10:39:36 INFO Executor: Running task 8.0 in stage 0.0 (TID 8)
+20/02/14 10:39:36 INFO Executor: Finished task 6.0 in stage 0.0 (TID 6). 2307 bytes result sent to driver
+20/02/14 10:39:36 INFO TaskSetManager: Starting task 9.0 in stage 0.0 (TID 9, localhost, executor driver, partition 9, PROCESS_LOCAL, 8267 bytes)
+20/02/14 10:39:36 INFO FileScanRDD: Reading File path: file:///edw/Reviews/SourceCode/data/AmzReviews.json, range: 1073741824-1207959552, partition values: [empty row]
+20/02/14 10:39:36 INFO TaskSetManager: Finished task 6.0 in stage 0.0 (TID 6) in 13733 ms on localhost (executor driver) (6/70)
+20/02/14 10:39:36 INFO Executor: Running task 9.0 in stage 0.0 (TID 9)
+20/02/14 10:39:36 INFO FileScanRDD: Reading File path: file:///edw/Reviews/SourceCode/data/AmzReviews.json, range: 1207959552-1342177280, partition values: [empty row]
+20/02/14 10:39:48 INFO Executor: Finished task 8.0 in stage 0.0 (TID 8). 2307 bytes result sent to driver
+20/02/14 10:39:48 INFO TaskSetManager: Starting task 10.0 in stage 0.0 (TID 10, localhost, executor driver, partition 10, PROCESS_LOCAL, 8267 bytes)
+20/02/14 10:39:48 INFO TaskSetManager: Finished task 8.0 in stage 0.0 (TID 8) in 12477 ms on localhost (executor driver) (7/70)
+20/02/14 10:39:48 INFO Executor: Running task 10.0 in stage 0.0 (TID 10)
+20/02/14 10:39:48 INFO FileScanRDD: Reading File path: file:///edw/Reviews/SourceCode/data/AmzReviews.json, range: 1342177280-1476395008, partition values: [empty row]
+20/02/14 10:39:49 INFO Executor: Finished task 9.0 in stage 0.0 (TID 9). 2307 bytes result sent to driver
+20/02/14 10:39:49 INFO TaskSetManager: Starting task 11.0 in stage 0.0 (TID 11, localhost, executor driver, partition 11, PROCESS_LOCAL, 8267 bytes)
+20/02/14 10:39:49 INFO TaskSetManager: Finished task 9.0 in stage 0.0 (TID 9) in 12500 ms on localhost (executor driver) (8/70)
+20/02/14 10:39:49 INFO Executor: Running task 11.0 in stage 0.0 (TID 11)
+20/02/14 10:39:49 INFO FileScanRDD: Reading File path: file:///edw/Reviews/SourceCode/data/AmzReviews.json, range: 1476395008-1610612736, partition values: [empty row]
+20/02/14 10:39:50 INFO Executor: Finished task 1.0 in stage 0.0 (TID 1). 2350 bytes result sent to driver
+20/02/14 10:39:50 INFO TaskSetManager: Starting task 12.0 in stage 0.0 (TID 12, localhost, executor driver, partition 12, PROCESS_LOCAL, 8267 bytes)
+20/02/14 10:39:50 INFO Executor: Running task 12.0 in stage 0.0 (TID 12)
+20/02/14 10:39:50 INFO TaskSetManager: Finished task 1.0 in stage 0.0 (TID 1) in 66468 ms on localhost (executor driver) (9/70)
+20/02/14 10:39:50 INFO FileScanRDD: Reading File path: file:///edw/Reviews/SourceCode/data/AmzReviews.json, range: 1610612736-1744830464, partition values: [empty row]
+20/02/14 10:40:04 INFO Executor: Finished task 11.0 in stage 0.0 (TID 11). 2307 bytes result sent to driver
+20/02/14 10:40:04 INFO TaskSetManager: Starting task 13.0 in stage 0.0 (TID 13, localhost, executor driver, partition 13, PROCESS_LOCAL, 8267 bytes)
+20/02/14 10:40:04 INFO Executor: Running task 13.0 in stage 0.0 (TID 13)
+20/02/14 10:40:04 INFO TaskSetManager: Finished task 11.0 in stage 0.0 (TID 11) in 15289 ms on localhost (executor driver) (10/70)
+20/02/14 10:40:04 INFO FileScanRDD: Reading File path: file:///edw/Reviews/SourceCode/data/AmzReviews.json, range: 1744830464-1879048192, partition values: [empty row]
+20/02/14 10:40:04 INFO Executor: Finished task 10.0 in stage 0.0 (TID 10). 2264 bytes result sent to driver
+20/02/14 10:40:04 INFO TaskSetManager: Starting task 14.0 in stage 0.0 (TID 14, localhost, executor driver, partition 14, PROCESS_LOCAL, 8267 bytes)
+20/02/14 10:40:04 INFO TaskSetManager: Finished task 10.0 in stage 0.0 (TID 10) in 15794 ms on localhost (executor driver) (11/70)
+20/02/14 10:40:04 INFO Executor: Running task 14.0 in stage 0.0 (TID 14)
+20/02/14 10:40:04 INFO FileScanRDD: Reading File path: file:///edw/Reviews/SourceCode/data/AmzReviews.json, range: 1879048192-2013265920, partition values: [empty row]
+20/02/14 10:40:05 INFO Executor: Finished task 12.0 in stage 0.0 (TID 12). 2307 bytes result sent to driver
+20/02/14 10:40:05 INFO TaskSetManager: Starting task 15.0 in stage 0.0 (TID 15, localhost, executor driver, partition 15, PROCESS_LOCAL, 8267 bytes)
+20/02/14 10:40:05 INFO TaskSetManager: Finished task 12.0 in stage 0.0 (TID 12) in 15435 ms on localhost (executor driver) (12/70)
+20/02/14 10:40:05 INFO Executor: Running task 15.0 in stage 0.0 (TID 15)
+20/02/14 10:40:06 INFO FileScanRDD: Reading File path: file:///edw/Reviews/SourceCode/data/AmzReviews.json, range: 2013265920-2147483648, partition values: [empty row]
+20/02/14 10:40:19 INFO Executor: Finished task 13.0 in stage 0.0 (TID 13). 2264 bytes result sent to driver
+20/02/14 10:40:19 INFO TaskSetManager: Starting task 16.0 in stage 0.0 (TID 16, localhost, executor driver, partition 16, PROCESS_LOCAL, 8267 bytes)
+20/02/14 10:40:19 INFO Executor: Running task 16.0 in stage 0.0 (TID 16)
+20/02/14 10:40:19 INFO TaskSetManager: Finished task 13.0 in stage 0.0 (TID 13) in 14911 ms on localhost (executor driver) (13/70)
+20/02/14 10:40:19 INFO Executor: Finished task 14.0 in stage 0.0 (TID 14). 2264 bytes result sent to driver
+20/02/14 10:40:19 INFO FileScanRDD: Reading File path: file:///edw/Reviews/SourceCode/data/AmzReviews.json, range: 2147483648-2281701376, partition values: [empty row]
+20/02/14 10:40:19 INFO TaskSetManager: Starting task 17.0 in stage 0.0 (TID 17, localhost, executor driver, partition 17, PROCESS_LOCAL, 8267 bytes)
+20/02/14 10:40:19 INFO Executor: Running task 17.0 in stage 0.0 (TID 17)
+20/02/14 10:40:19 INFO TaskSetManager: Finished task 14.0 in stage 0.0 (TID 14) in 14620 ms on localhost (executor driver) (14/70)
+20/02/14 10:40:19 INFO FileScanRDD: Reading File path: file:///edw/Reviews/SourceCode/data/AmzReviews.json, range: 2281701376-2415919104, partition values: [empty row]
+20/02/14 10:40:19 INFO Executor: Finished task 0.0 in stage 0.0 (TID 0). 2307 bytes result sent to driver
+20/02/14 10:40:19 INFO TaskSetManager: Starting task 18.0 in stage 0.0 (TID 18, localhost, executor driver, partition 18, PROCESS_LOCAL, 8267 bytes)
+20/02/14 10:40:19 INFO TaskSetManager: Finished task 0.0 in stage 0.0 (TID 0) in 95596 ms on localhost (executor driver) (15/70)
+20/02/14 10:40:19 INFO Executor: Running task 18.0 in stage 0.0 (TID 18)
+20/02/14 10:40:19 INFO FileScanRDD: Reading File path: file:///edw/Reviews/SourceCode/data/AmzReviews.json, range: 2415919104-2550136832, partition values: [empty row]
+20/02/14 10:40:21 INFO Executor: Finished task 15.0 in stage 0.0 (TID 15). 2307 bytes result sent to driver
+20/02/14 10:40:21 INFO TaskSetManager: Starting task 19.0 in stage 0.0 (TID 19, localhost, executor driver, partition 19, PROCESS_LOCAL, 8267 bytes)
+20/02/14 10:40:21 INFO Executor: Running task 19.0 in stage 0.0 (TID 19)
+20/02/14 10:40:21 INFO TaskSetManager: Finished task 15.0 in stage 0.0 (TID 15) in 15049 ms on localhost (executor driver) (16/70)
+20/02/14 10:40:21 INFO FileScanRDD: Reading File path: file:///edw/Reviews/SourceCode/data/AmzReviews.json, range: 2550136832-2684354560, partition values: [empty row]
+20/02/14 10:40:38 INFO Executor: Finished task 17.0 in stage 0.0 (TID 17). 2264 bytes result sent to driver
+20/02/14 10:40:38 INFO TaskSetManager: Starting task 20.0 in stage 0.0 (TID 20, localhost, executor driver, partition 20, PROCESS_LOCAL, 8267 bytes)
+20/02/14 10:40:38 INFO Executor: Running task 20.0 in stage 0.0 (TID 20)
+20/02/14 10:40:38 INFO TaskSetManager: Finished task 17.0 in stage 0.0 (TID 17) in 19470 ms on localhost (executor driver) (17/70)
+20/02/14 10:40:38 INFO FileScanRDD: Reading File path: file:///edw/Reviews/SourceCode/data/AmzReviews.json, range: 2684354560-2818572288, partition values: [empty row]
+20/02/14 10:40:39 INFO Executor: Finished task 16.0 in stage 0.0 (TID 16). 2350 bytes result sent to driver
+20/02/14 10:40:39 INFO TaskSetManager: Starting task 21.0 in stage 0.0 (TID 21, localhost, executor driver, partition 21, PROCESS_LOCAL, 8267 bytes)
+20/02/14 10:40:39 INFO Executor: Running task 21.0 in stage 0.0 (TID 21)
+20/02/14 10:40:39 INFO TaskSetManager: Finished task 16.0 in stage 0.0 (TID 16) in 19973 ms on localhost (executor driver) (18/70)
+20/02/14 10:40:39 INFO FileScanRDD: Reading File path: file:///edw/Reviews/SourceCode/data/AmzReviews.json, range: 2818572288-2952790016, partition values: [empty row]
+20/02/14 10:40:39 INFO Executor: Finished task 18.0 in stage 0.0 (TID 18). 2307 bytes result sent to driver
+20/02/14 10:40:39 INFO TaskSetManager: Starting task 22.0 in stage 0.0 (TID 22, localhost, executor driver, partition 22, PROCESS_LOCAL, 8267 bytes)
+20/02/14 10:40:39 INFO TaskSetManager: Finished task 18.0 in stage 0.0 (TID 18) in 20033 ms on localhost (executor driver) (19/70)
+20/02/14 10:40:39 INFO Executor: Running task 22.0 in stage 0.0 (TID 22)
+20/02/14 10:40:39 INFO FileScanRDD: Reading File path: file:///edw/Reviews/SourceCode/data/AmzReviews.json, range: 2952790016-3087007744, partition values: [empty row]
+20/02/14 10:40:41 INFO Executor: Finished task 19.0 in stage 0.0 (TID 19). 2350 bytes result sent to driver
+20/02/14 10:40:41 INFO TaskSetManager: Starting task 23.0 in stage 0.0 (TID 23, localhost, executor driver, partition 23, PROCESS_LOCAL, 8267 bytes)
+20/02/14 10:40:41 INFO TaskSetManager: Finished task 19.0 in stage 0.0 (TID 19) in 20157 ms on localhost (executor driver) (20/70)
+20/02/14 10:40:41 INFO Executor: Running task 23.0 in stage 0.0 (TID 23)
+20/02/14 10:40:41 INFO FileScanRDD: Reading File path: file:///edw/Reviews/SourceCode/data/AmzReviews.json, range: 3087007744-3221225472, partition values: [empty row]
+20/02/14 10:40:59 INFO Executor: Finished task 21.0 in stage 0.0 (TID 21). 2264 bytes result sent to driver
+20/02/14 10:40:59 INFO TaskSetManager: Starting task 24.0 in stage 0.0 (TID 24, localhost, executor driver, partition 24, PROCESS_LOCAL, 8267 bytes)
+20/02/14 10:40:59 INFO Executor: Running task 24.0 in stage 0.0 (TID 24)
+20/02/14 10:40:59 INFO TaskSetManager: Finished task 21.0 in stage 0.0 (TID 21) in 19876 ms on localhost (executor driver) (21/70)
+20/02/14 10:40:59 INFO FileScanRDD: Reading File path: file:///edw/Reviews/SourceCode/data/AmzReviews.json, range: 3221225472-3355443200, partition values: [empty row]
+20/02/14 10:40:59 INFO Executor: Finished task 20.0 in stage 0.0 (TID 20). 2264 bytes result sent to driver
+20/02/14 10:40:59 INFO TaskSetManager: Starting task 25.0 in stage 0.0 (TID 25, localhost, executor driver, partition 25, PROCESS_LOCAL, 8267 bytes)
+20/02/14 10:40:59 INFO Executor: Running task 25.0 in stage 0.0 (TID 25)
+20/02/14 10:40:59 INFO TaskSetManager: Finished task 20.0 in stage 0.0 (TID 20) in 20988 ms on localhost (executor driver) (22/70)
+20/02/14 10:40:59 INFO FileScanRDD: Reading File path: file:///edw/Reviews/SourceCode/data/AmzReviews.json, range: 3355443200-3489660928, partition values: [empty row]
+20/02/14 10:41:00 INFO Executor: Finished task 22.0 in stage 0.0 (TID 22). 2264 bytes result sent to driver
+20/02/14 10:41:00 INFO TaskSetManager: Starting task 26.0 in stage 0.0 (TID 26, localhost, executor driver, partition 26, PROCESS_LOCAL, 8267 bytes)
+20/02/14 10:41:00 INFO Executor: Running task 26.0 in stage 0.0 (TID 26)
+20/02/14 10:41:00 INFO TaskSetManager: Finished task 22.0 in stage 0.0 (TID 22) in 21233 ms on localhost (executor driver) (23/70)
+20/02/14 10:41:00 INFO FileScanRDD: Reading File path: file:///edw/Reviews/SourceCode/data/AmzReviews.json, range: 3489660928-3623878656, partition values: [empty row]
+20/02/14 10:41:02 INFO Executor: Finished task 23.0 in stage 0.0 (TID 23). 2264 bytes result sent to driver
+20/02/14 10:41:02 INFO TaskSetManager: Starting task 27.0 in stage 0.0 (TID 27, localhost, executor driver, partition 27, PROCESS_LOCAL, 8267 bytes)
+20/02/14 10:41:02 INFO TaskSetManager: Finished task 23.0 in stage 0.0 (TID 23) in 20970 ms on localhost (executor driver) (24/70)
+20/02/14 10:41:02 INFO Executor: Running task 27.0 in stage 0.0 (TID 27)
+20/02/14 10:41:02 INFO FileScanRDD: Reading File path: file:///edw/Reviews/SourceCode/data/AmzReviews.json, range: 3623878656-3758096384, partition values: [empty row]
+20/02/14 10:41:19 INFO Executor: Finished task 24.0 in stage 0.0 (TID 24). 2307 bytes result sent to driver
+20/02/14 10:41:19 INFO TaskSetManager: Starting task 28.0 in stage 0.0 (TID 28, localhost, executor driver, partition 28, PROCESS_LOCAL, 8267 bytes)
+20/02/14 10:41:19 INFO TaskSetManager: Finished task 24.0 in stage 0.0 (TID 24) in 20664 ms on localhost (executor driver) (25/70)
+20/02/14 10:41:19 INFO Executor: Running task 28.0 in stage 0.0 (TID 28)
+20/02/14 10:41:19 INFO FileScanRDD: Reading File path: file:///edw/Reviews/SourceCode/data/AmzReviews.json, range: 3758096384-3892314112, partition values: [empty row]
+20/02/14 10:41:19 INFO Executor: Finished task 25.0 in stage 0.0 (TID 25). 2264 bytes result sent to driver
+20/02/14 10:41:19 INFO TaskSetManager: Starting task 29.0 in stage 0.0 (TID 29, localhost, executor driver, partition 29, PROCESS_LOCAL, 8267 bytes)
+20/02/14 10:41:19 INFO Executor: Running task 29.0 in stage 0.0 (TID 29)
+20/02/14 10:41:19 INFO TaskSetManager: Finished task 25.0 in stage 0.0 (TID 25) in 20211 ms on localhost (executor driver) (26/70)
+20/02/14 10:41:19 INFO FileScanRDD: Reading File path: file:///edw/Reviews/SourceCode/data/AmzReviews.json, range: 3892314112-4026531840, partition values: [empty row]
+20/02/14 10:41:21 INFO Executor: Finished task 26.0 in stage 0.0 (TID 26). 2307 bytes result sent to driver
+20/02/14 10:41:21 INFO TaskSetManager: Starting task 30.0 in stage 0.0 (TID 30, localhost, executor driver, partition 30, PROCESS_LOCAL, 8267 bytes)
+20/02/14 10:41:21 INFO Executor: Running task 30.0 in stage 0.0 (TID 30)
+20/02/14 10:41:21 INFO TaskSetManager: Finished task 26.0 in stage 0.0 (TID 26) in 20491 ms on localhost (executor driver) (27/70)
+20/02/14 10:41:21 INFO FileScanRDD: Reading File path: file:///edw/Reviews/SourceCode/data/AmzReviews.json, range: 4026531840-4160749568, partition values: [empty row]
+20/02/14 10:41:22 INFO Executor: Finished task 27.0 in stage 0.0 (TID 27). 2264 bytes result sent to driver
+20/02/14 10:41:22 INFO TaskSetManager: Starting task 31.0 in stage 0.0 (TID 31, localhost, executor driver, partition 31, PROCESS_LOCAL, 8267 bytes)
+20/02/14 10:41:22 INFO Executor: Running task 31.0 in stage 0.0 (TID 31)
+20/02/14 10:41:22 INFO TaskSetManager: Finished task 27.0 in stage 0.0 (TID 27) in 20684 ms on localhost (executor driver) (28/70)
+20/02/14 10:41:22 INFO FileScanRDD: Reading File path: file:///edw/Reviews/SourceCode/data/AmzReviews.json, range: 4160749568-4294967296, partition values: [empty row]
+20/02/14 10:41:40 INFO Executor: Finished task 29.0 in stage 0.0 (TID 29). 2350 bytes result sent to driver
+20/02/14 10:41:40 INFO TaskSetManager: Starting task 32.0 in stage 0.0 (TID 32, localhost, executor driver, partition 32, PROCESS_LOCAL, 8267 bytes)
+20/02/14 10:41:40 INFO Executor: Running task 32.0 in stage 0.0 (TID 32)
+20/02/14 10:41:40 INFO TaskSetManager: Finished task 29.0 in stage 0.0 (TID 29) in 20617 ms on localhost (executor driver) (29/70)
+20/02/14 10:41:40 INFO FileScanRDD: Reading File path: file:///edw/Reviews/SourceCode/data/AmzReviews.json, range: 4294967296-4429185024, partition values: [empty row]
+20/02/14 10:41:41 INFO Executor: Finished task 28.0 in stage 0.0 (TID 28). 2264 bytes result sent to driver
+20/02/14 10:41:41 INFO TaskSetManager: Starting task 33.0 in stage 0.0 (TID 33, localhost, executor driver, partition 33, PROCESS_LOCAL, 8267 bytes)
+20/02/14 10:41:41 INFO TaskSetManager: Finished task 28.0 in stage 0.0 (TID 28) in 21668 ms on localhost (executor driver) (30/70)
+20/02/14 10:41:41 INFO Executor: Running task 33.0 in stage 0.0 (TID 33)
+20/02/14 10:41:41 INFO FileScanRDD: Reading File path: file:///edw/Reviews/SourceCode/data/AmzReviews.json, range: 4429185024-4563402752, partition values: [empty row]
+20/02/14 10:41:43 INFO Executor: Finished task 30.0 in stage 0.0 (TID 30). 2307 bytes result sent to driver
+20/02/14 10:41:43 INFO TaskSetManager: Starting task 34.0 in stage 0.0 (TID 34, localhost, executor driver, partition 34, PROCESS_LOCAL, 8267 bytes)
+20/02/14 10:41:43 INFO Executor: Running task 34.0 in stage 0.0 (TID 34)
+20/02/14 10:41:43 INFO TaskSetManager: Finished task 30.0 in stage 0.0 (TID 30) in 21690 ms on localhost (executor driver) (31/70)
+20/02/14 10:41:43 INFO FileScanRDD: Reading File path: file:///edw/Reviews/SourceCode/data/AmzReviews.json, range: 4563402752-4697620480, partition values: [empty row]
+20/02/14 10:41:44 INFO Executor: Finished task 31.0 in stage 0.0 (TID 31). 2264 bytes result sent to driver
+20/02/14 10:41:44 INFO TaskSetManager: Starting task 35.0 in stage 0.0 (TID 35, localhost, executor driver, partition 35, PROCESS_LOCAL, 8267 bytes)
+20/02/14 10:41:44 INFO Executor: Running task 35.0 in stage 0.0 (TID 35)
+20/02/14 10:41:44 INFO TaskSetManager: Finished task 31.0 in stage 0.0 (TID 31) in 21280 ms on localhost (executor driver) (32/70)
+20/02/14 10:41:44 INFO FileScanRDD: Reading File path: file:///edw/Reviews/SourceCode/data/AmzReviews.json, range: 4697620480-4831838208, partition values: [empty row]
+20/02/14 10:42:07 INFO Executor: Finished task 32.0 in stage 0.0 (TID 32). 2307 bytes result sent to driver
+20/02/14 10:42:07 INFO TaskSetManager: Starting task 36.0 in stage 0.0 (TID 36, localhost, executor driver, partition 36, PROCESS_LOCAL, 8267 bytes)
+20/02/14 10:42:07 INFO Executor: Running task 36.0 in stage 0.0 (TID 36)
+20/02/14 10:42:07 INFO TaskSetManager: Finished task 32.0 in stage 0.0 (TID 32) in 26878 ms on localhost (executor driver) (33/70)
+20/02/14 10:42:07 INFO FileScanRDD: Reading File path: file:///edw/Reviews/SourceCode/data/AmzReviews.json, range: 4831838208-4966055936, partition values: [empty row]
+20/02/14 10:42:09 INFO Executor: Finished task 33.0 in stage 0.0 (TID 33). 2307 bytes result sent to driver
+20/02/14 10:42:09 INFO TaskSetManager: Starting task 37.0 in stage 0.0 (TID 37, localhost, executor driver, partition 37, PROCESS_LOCAL, 8267 bytes)
+20/02/14 10:42:09 INFO TaskSetManager: Finished task 33.0 in stage 0.0 (TID 33) in 27700 ms on localhost (executor driver) (34/70)
+20/02/14 10:42:09 INFO Executor: Running task 37.0 in stage 0.0 (TID 37)
+20/02/14 10:42:09 INFO FileScanRDD: Reading File path: file:///edw/Reviews/SourceCode/data/AmzReviews.json, range: 4966055936-5100273664, partition values: [empty row]
+20/02/14 10:42:10 INFO Executor: Finished task 34.0 in stage 0.0 (TID 34). 2264 bytes result sent to driver
+20/02/14 10:42:10 INFO TaskSetManager: Starting task 38.0 in stage 0.0 (TID 38, localhost, executor driver, partition 38, PROCESS_LOCAL, 8267 bytes)
+20/02/14 10:42:10 INFO Executor: Running task 38.0 in stage 0.0 (TID 38)
+20/02/14 10:42:10 INFO TaskSetManager: Finished task 34.0 in stage 0.0 (TID 34) in 27521 ms on localhost (executor driver) (35/70)
+20/02/14 10:42:10 INFO FileScanRDD: Reading File path: file:///edw/Reviews/SourceCode/data/AmzReviews.json, range: 5100273664-5234491392, partition values: [empty row]
+20/02/14 10:42:11 INFO Executor: Finished task 35.0 in stage 0.0 (TID 35). 2264 bytes result sent to driver
+20/02/14 10:42:11 INFO TaskSetManager: Starting task 39.0 in stage 0.0 (TID 39, localhost, executor driver, partition 39, PROCESS_LOCAL, 8267 bytes)
+20/02/14 10:42:11 INFO TaskSetManager: Finished task 35.0 in stage 0.0 (TID 35) in 27332 ms on localhost (executor driver) (36/70)
+20/02/14 10:42:11 INFO Executor: Running task 39.0 in stage 0.0 (TID 39)
+20/02/14 10:42:11 INFO FileScanRDD: Reading File path: file:///edw/Reviews/SourceCode/data/AmzReviews.json, range: 5234491392-5368709120, partition values: [empty row]
+20/02/14 10:42:32 INFO Executor: Finished task 36.0 in stage 0.0 (TID 36). 2307 bytes result sent to driver
+20/02/14 10:42:32 INFO TaskSetManager: Starting task 40.0 in stage 0.0 (TID 40, localhost, executor driver, partition 40, PROCESS_LOCAL, 8267 bytes)
+20/02/14 10:42:32 INFO Executor: Running task 40.0 in stage 0.0 (TID 40)
+20/02/14 10:42:32 INFO TaskSetManager: Finished task 36.0 in stage 0.0 (TID 36) in 25428 ms on localhost (executor driver) (37/70)
+20/02/14 10:42:32 INFO FileScanRDD: Reading File path: file:///edw/Reviews/SourceCode/data/AmzReviews.json, range: 5368709120-5502926848, partition values: [empty row]
+20/02/14 10:42:34 INFO Executor: Finished task 37.0 in stage 0.0 (TID 37). 2264 bytes result sent to driver
+20/02/14 10:42:34 INFO TaskSetManager: Starting task 41.0 in stage 0.0 (TID 41, localhost, executor driver, partition 41, PROCESS_LOCAL, 8267 bytes)
+20/02/14 10:42:34 INFO TaskSetManager: Finished task 37.0 in stage 0.0 (TID 37) in 25042 ms on localhost (executor driver) (38/70)
+20/02/14 10:42:34 INFO Executor: Running task 41.0 in stage 0.0 (TID 41)
+20/02/14 10:42:34 INFO FileScanRDD: Reading File path: file:///edw/Reviews/SourceCode/data/AmzReviews.json, range: 5502926848-5637144576, partition values: [empty row]
+20/02/14 10:42:36 INFO Executor: Finished task 38.0 in stage 0.0 (TID 38). 2264 bytes result sent to driver
+20/02/14 10:42:36 INFO TaskSetManager: Starting task 42.0 in stage 0.0 (TID 42, localhost, executor driver, partition 42, PROCESS_LOCAL, 8267 bytes)
+20/02/14 10:42:36 INFO Executor: Running task 42.0 in stage 0.0 (TID 42)
+20/02/14 10:42:36 INFO TaskSetManager: Finished task 38.0 in stage 0.0 (TID 38) in 25419 ms on localhost (executor driver) (39/70)
+20/02/14 10:42:36 INFO FileScanRDD: Reading File path: file:///edw/Reviews/SourceCode/data/AmzReviews.json, range: 5637144576-5771362304, partition values: [empty row]
+20/02/14 10:42:37 INFO Executor: Finished task 39.0 in stage 0.0 (TID 39). 2264 bytes result sent to driver
+20/02/14 10:42:37 INFO TaskSetManager: Starting task 43.0 in stage 0.0 (TID 43, localhost, executor driver, partition 43, PROCESS_LOCAL, 8267 bytes)
+20/02/14 10:42:37 INFO TaskSetManager: Finished task 39.0 in stage 0.0 (TID 39) in 25696 ms on localhost (executor driver) (40/70)
+20/02/14 10:42:37 INFO Executor: Running task 43.0 in stage 0.0 (TID 43)
+20/02/14 10:42:37 INFO FileScanRDD: Reading File path: file:///edw/Reviews/SourceCode/data/AmzReviews.json, range: 5771362304-5905580032, partition values: [empty row]
+20/02/14 10:42:54 INFO Executor: Finished task 41.0 in stage 0.0 (TID 41). 2264 bytes result sent to driver
+20/02/14 10:42:54 INFO TaskSetManager: Starting task 44.0 in stage 0.0 (TID 44, localhost, executor driver, partition 44, PROCESS_LOCAL, 8267 bytes)
+20/02/14 10:42:54 INFO Executor: Finished task 40.0 in stage 0.0 (TID 40). 2264 bytes result sent to driver
+20/02/14 10:42:54 INFO Executor: Running task 44.0 in stage 0.0 (TID 44)
+20/02/14 10:42:54 INFO TaskSetManager: Starting task 45.0 in stage 0.0 (TID 45, localhost, executor driver, partition 45, PROCESS_LOCAL, 8267 bytes)
+20/02/14 10:42:54 INFO TaskSetManager: Finished task 41.0 in stage 0.0 (TID 41) in 20684 ms on localhost (executor driver) (41/70)
+20/02/14 10:42:54 INFO Executor: Running task 45.0 in stage 0.0 (TID 45)
+20/02/14 10:42:54 INFO TaskSetManager: Finished task 40.0 in stage 0.0 (TID 40) in 21985 ms on localhost (executor driver) (42/70)
+20/02/14 10:42:54 INFO FileScanRDD: Reading File path: file:///edw/Reviews/SourceCode/data/AmzReviews.json, range: 6039797760-6174015488, partition values: [empty row]
+20/02/14 10:42:54 INFO FileScanRDD: Reading File path: file:///edw/Reviews/SourceCode/data/AmzReviews.json, range: 5905580032-6039797760, partition values: [empty row]
+20/02/14 10:42:57 INFO Executor: Finished task 42.0 in stage 0.0 (TID 42). 2264 bytes result sent to driver
+20/02/14 10:42:57 INFO TaskSetManager: Starting task 46.0 in stage 0.0 (TID 46, localhost, executor driver, partition 46, PROCESS_LOCAL, 8267 bytes)
+20/02/14 10:42:57 INFO Executor: Running task 46.0 in stage 0.0 (TID 46)
+20/02/14 10:42:57 INFO TaskSetManager: Finished task 42.0 in stage 0.0 (TID 42) in 21251 ms on localhost (executor driver) (43/70)
+20/02/14 10:42:57 INFO FileScanRDD: Reading File path: file:///edw/Reviews/SourceCode/data/AmzReviews.json, range: 6174015488-6308233216, partition values: [empty row]
+20/02/14 10:42:58 INFO Executor: Finished task 43.0 in stage 0.0 (TID 43). 2264 bytes result sent to driver
+20/02/14 10:42:58 INFO TaskSetManager: Starting task 47.0 in stage 0.0 (TID 47, localhost, executor driver, partition 47, PROCESS_LOCAL, 8267 bytes)
+20/02/14 10:42:58 INFO Executor: Running task 47.0 in stage 0.0 (TID 47)
+20/02/14 10:42:58 INFO TaskSetManager: Finished task 43.0 in stage 0.0 (TID 43) in 21681 ms on localhost (executor driver) (44/70)
+20/02/14 10:42:58 INFO FileScanRDD: Reading File path: file:///edw/Reviews/SourceCode/data/AmzReviews.json, range: 6308233216-6442450944, partition values: [empty row]
+20/02/14 10:43:16 INFO Executor: Finished task 45.0 in stage 0.0 (TID 45). 2307 bytes result sent to driver
+20/02/14 10:43:16 INFO TaskSetManager: Starting task 48.0 in stage 0.0 (TID 48, localhost, executor driver, partition 48, PROCESS_LOCAL, 8267 bytes)
+20/02/14 10:43:16 INFO TaskSetManager: Finished task 45.0 in stage 0.0 (TID 45) in 21563 ms on localhost (executor driver) (45/70)
+20/02/14 10:43:16 INFO Executor: Running task 48.0 in stage 0.0 (TID 48)
+20/02/14 10:43:16 INFO FileScanRDD: Reading File path: file:///edw/Reviews/SourceCode/data/AmzReviews.json, range: 6442450944-6576668672, partition values: [empty row]
+20/02/14 10:43:16 INFO Executor: Finished task 44.0 in stage 0.0 (TID 44). 2264 bytes result sent to driver
+20/02/14 10:43:16 INFO TaskSetManager: Starting task 49.0 in stage 0.0 (TID 49, localhost, executor driver, partition 49, PROCESS_LOCAL, 8267 bytes)
+20/02/14 10:43:16 INFO Executor: Running task 49.0 in stage 0.0 (TID 49)
+20/02/14 10:43:16 INFO TaskSetManager: Finished task 44.0 in stage 0.0 (TID 44) in 21940 ms on localhost (executor driver) (46/70)
+20/02/14 10:43:16 INFO FileScanRDD: Reading File path: file:///edw/Reviews/SourceCode/data/AmzReviews.json, range: 6576668672-6710886400, partition values: [empty row]
+20/02/14 10:43:18 INFO Executor: Finished task 46.0 in stage 0.0 (TID 46). 2264 bytes result sent to driver
+20/02/14 10:43:18 INFO TaskSetManager: Starting task 50.0 in stage 0.0 (TID 50, localhost, executor driver, partition 50, PROCESS_LOCAL, 8267 bytes)
+20/02/14 10:43:18 INFO TaskSetManager: Finished task 46.0 in stage 0.0 (TID 46) in 21681 ms on localhost (executor driver) (47/70)
+20/02/14 10:43:18 INFO Executor: Running task 50.0 in stage 0.0 (TID 50)
+20/02/14 10:43:18 INFO FileScanRDD: Reading File path: file:///edw/Reviews/SourceCode/data/AmzReviews.json, range: 6710886400-6845104128, partition values: [empty row]
+20/02/14 10:43:21 INFO Executor: Finished task 47.0 in stage 0.0 (TID 47). 2264 bytes result sent to driver
+20/02/14 10:43:21 INFO TaskSetManager: Starting task 51.0 in stage 0.0 (TID 51, localhost, executor driver, partition 51, PROCESS_LOCAL, 8267 bytes)
+20/02/14 10:43:21 INFO Executor: Running task 51.0 in stage 0.0 (TID 51)
+20/02/14 10:43:21 INFO TaskSetManager: Finished task 47.0 in stage 0.0 (TID 47) in 22484 ms on localhost (executor driver) (48/70)
+20/02/14 10:43:21 INFO FileScanRDD: Reading File path: file:///edw/Reviews/SourceCode/data/AmzReviews.json, range: 6845104128-6979321856, partition values: [empty row]
+20/02/14 10:43:39 INFO Executor: Finished task 49.0 in stage 0.0 (TID 49). 2264 bytes result sent to driver
+20/02/14 10:43:39 INFO TaskSetManager: Starting task 52.0 in stage 0.0 (TID 52, localhost, executor driver, partition 52, PROCESS_LOCAL, 8267 bytes)
+20/02/14 10:43:39 INFO Executor: Running task 52.0 in stage 0.0 (TID 52)
+20/02/14 10:43:39 INFO TaskSetManager: Finished task 49.0 in stage 0.0 (TID 49) in 22871 ms on localhost (executor driver) (49/70)
+20/02/14 10:43:39 INFO FileScanRDD: Reading File path: file:///edw/Reviews/SourceCode/data/AmzReviews.json, range: 6979321856-7113539584, partition values: [empty row]
+20/02/14 10:43:40 INFO Executor: Finished task 48.0 in stage 0.0 (TID 48). 2307 bytes result sent to driver
+20/02/14 10:43:40 INFO TaskSetManager: Starting task 53.0 in stage 0.0 (TID 53, localhost, executor driver, partition 53, PROCESS_LOCAL, 8267 bytes)
+20/02/14 10:43:40 INFO Executor: Running task 53.0 in stage 0.0 (TID 53)
+20/02/14 10:43:40 INFO TaskSetManager: Finished task 48.0 in stage 0.0 (TID 48) in 23884 ms on localhost (executor driver) (50/70)
+20/02/14 10:43:40 INFO FileScanRDD: Reading File path: file:///edw/Reviews/SourceCode/data/AmzReviews.json, range: 7113539584-7247757312, partition values: [empty row]
+20/02/14 10:43:40 INFO Executor: Finished task 50.0 in stage 0.0 (TID 50). 2350 bytes result sent to driver
+20/02/14 10:43:40 INFO TaskSetManager: Starting task 54.0 in stage 0.0 (TID 54, localhost, executor driver, partition 54, PROCESS_LOCAL, 8267 bytes)
+20/02/14 10:43:40 INFO TaskSetManager: Finished task 50.0 in stage 0.0 (TID 50) in 21831 ms on localhost (executor driver) (51/70)
+20/02/14 10:43:40 INFO Executor: Running task 54.0 in stage 0.0 (TID 54)
+20/02/14 10:43:40 INFO FileScanRDD: Reading File path: file:///edw/Reviews/SourceCode/data/AmzReviews.json, range: 7247757312-7381975040, partition values: [empty row]
+20/02/14 10:43:43 INFO Executor: Finished task 51.0 in stage 0.0 (TID 51). 2264 bytes result sent to driver
+20/02/14 10:43:43 INFO TaskSetManager: Starting task 55.0 in stage 0.0 (TID 55, localhost, executor driver, partition 55, PROCESS_LOCAL, 8267 bytes)
+20/02/14 10:43:43 INFO Executor: Running task 55.0 in stage 0.0 (TID 55)
+20/02/14 10:43:43 INFO TaskSetManager: Finished task 51.0 in stage 0.0 (TID 51) in 22511 ms on localhost (executor driver) (52/70)
+20/02/14 10:43:43 INFO FileScanRDD: Reading File path: file:///edw/Reviews/SourceCode/data/AmzReviews.json, range: 7381975040-7516192768, partition values: [empty row]
+20/02/14 10:43:59 INFO Executor: Finished task 53.0 in stage 0.0 (TID 53). 2307 bytes result sent to driver
+20/02/14 10:43:59 INFO TaskSetManager: Starting task 56.0 in stage 0.0 (TID 56, localhost, executor driver, partition 56, PROCESS_LOCAL, 8267 bytes)
+20/02/14 10:43:59 INFO Executor: Running task 56.0 in stage 0.0 (TID 56)
+20/02/14 10:43:59 INFO TaskSetManager: Finished task 53.0 in stage 0.0 (TID 53) in 19392 ms on localhost (executor driver) (53/70)
+20/02/14 10:43:59 INFO Executor: Finished task 52.0 in stage 0.0 (TID 52). 2307 bytes result sent to driver
+20/02/14 10:43:59 INFO TaskSetManager: Starting task 57.0 in stage 0.0 (TID 57, localhost, executor driver, partition 57, PROCESS_LOCAL, 8267 bytes)
+20/02/14 10:43:59 INFO TaskSetManager: Finished task 52.0 in stage 0.0 (TID 52) in 20050 ms on localhost (executor driver) (54/70)
+20/02/14 10:43:59 INFO Executor: Running task 57.0 in stage 0.0 (TID 57)
+20/02/14 10:43:59 INFO FileScanRDD: Reading File path: file:///edw/Reviews/SourceCode/data/AmzReviews.json, range: 7516192768-7650410496, partition values: [empty row]
+20/02/14 10:43:59 INFO FileScanRDD: Reading File path: file:///edw/Reviews/SourceCode/data/AmzReviews.json, range: 7650410496-7784628224, partition values: [empty row]
+20/02/14 10:44:00 INFO Executor: Finished task 54.0 in stage 0.0 (TID 54). 2264 bytes result sent to driver
+20/02/14 10:44:00 INFO TaskSetManager: Starting task 58.0 in stage 0.0 (TID 58, localhost, executor driver, partition 58, PROCESS_LOCAL, 8267 bytes)
+20/02/14 10:44:00 INFO TaskSetManager: Finished task 54.0 in stage 0.0 (TID 54) in 20100 ms on localhost (executor driver) (55/70)
+20/02/14 10:44:00 INFO Executor: Running task 58.0 in stage 0.0 (TID 58)
+20/02/14 10:44:00 INFO FileScanRDD: Reading File path: file:///edw/Reviews/SourceCode/data/AmzReviews.json, range: 7784628224-7918845952, partition values: [empty row]
+20/02/14 10:44:03 INFO Executor: Finished task 55.0 in stage 0.0 (TID 55). 2264 bytes result sent to driver
+20/02/14 10:44:03 INFO TaskSetManager: Starting task 59.0 in stage 0.0 (TID 59, localhost, executor driver, partition 59, PROCESS_LOCAL, 8267 bytes)
+20/02/14 10:44:03 INFO TaskSetManager: Finished task 55.0 in stage 0.0 (TID 55) in 19454 ms on localhost (executor driver) (56/70)
+20/02/14 10:44:03 INFO Executor: Running task 59.0 in stage 0.0 (TID 59)
+20/02/14 10:44:03 INFO FileScanRDD: Reading File path: file:///edw/Reviews/SourceCode/data/AmzReviews.json, range: 7918845952-8053063680, partition values: [empty row]
+20/02/14 10:44:19 INFO Executor: Finished task 57.0 in stage 0.0 (TID 57). 2307 bytes result sent to driver
+20/02/14 10:44:19 INFO TaskSetManager: Starting task 60.0 in stage 0.0 (TID 60, localhost, executor driver, partition 60, PROCESS_LOCAL, 8267 bytes)
+20/02/14 10:44:19 INFO TaskSetManager: Finished task 57.0 in stage 0.0 (TID 57) in 19768 ms on localhost (executor driver) (57/70)
+20/02/14 10:44:19 INFO Executor: Running task 60.0 in stage 0.0 (TID 60)
+20/02/14 10:44:19 INFO FileScanRDD: Reading File path: file:///edw/Reviews/SourceCode/data/AmzReviews.json, range: 8053063680-8187281408, partition values: [empty row]
+20/02/14 10:44:19 INFO Executor: Finished task 56.0 in stage 0.0 (TID 56). 2264 bytes result sent to driver
+20/02/14 10:44:19 INFO TaskSetManager: Starting task 61.0 in stage 0.0 (TID 61, localhost, executor driver, partition 61, PROCESS_LOCAL, 8267 bytes)
+20/02/14 10:44:19 INFO TaskSetManager: Finished task 56.0 in stage 0.0 (TID 56) in 20326 ms on localhost (executor driver) (58/70)
+20/02/14 10:44:19 INFO Executor: Running task 61.0 in stage 0.0 (TID 61)
+20/02/14 10:44:19 INFO FileScanRDD: Reading File path: file:///edw/Reviews/SourceCode/data/AmzReviews.json, range: 8187281408-8321499136, partition values: [empty row]
+20/02/14 10:44:21 INFO Executor: Finished task 58.0 in stage 0.0 (TID 58). 2264 bytes result sent to driver
+20/02/14 10:44:21 INFO TaskSetManager: Starting task 62.0 in stage 0.0 (TID 62, localhost, executor driver, partition 62, PROCESS_LOCAL, 8267 bytes)
+20/02/14 10:44:21 INFO Executor: Running task 62.0 in stage 0.0 (TID 62)
+20/02/14 10:44:21 INFO TaskSetManager: Finished task 58.0 in stage 0.0 (TID 58) in 20538 ms on localhost (executor driver) (59/70)
+20/02/14 10:44:21 INFO FileScanRDD: Reading File path: file:///edw/Reviews/SourceCode/data/AmzReviews.json, range: 8321499136-8455716864, partition values: [empty row]
+20/02/14 10:44:23 INFO Executor: Finished task 59.0 in stage 0.0 (TID 59). 2264 bytes result sent to driver
+20/02/14 10:44:23 INFO TaskSetManager: Starting task 63.0 in stage 0.0 (TID 63, localhost, executor driver, partition 63, PROCESS_LOCAL, 8267 bytes)
+20/02/14 10:44:23 INFO Executor: Running task 63.0 in stage 0.0 (TID 63)
+20/02/14 10:44:23 INFO TaskSetManager: Finished task 59.0 in stage 0.0 (TID 59) in 20544 ms on localhost (executor driver) (60/70)
+20/02/14 10:44:23 INFO FileScanRDD: Reading File path: file:///edw/Reviews/SourceCode/data/AmzReviews.json, range: 8455716864-8589934592, partition values: [empty row]
+20/02/14 10:44:39 INFO Executor: Finished task 60.0 in stage 0.0 (TID 60). 2350 bytes result sent to driver
+20/02/14 10:44:39 INFO TaskSetManager: Starting task 64.0 in stage 0.0 (TID 64, localhost, executor driver, partition 64, PROCESS_LOCAL, 8267 bytes)
+20/02/14 10:44:39 INFO TaskSetManager: Finished task 60.0 in stage 0.0 (TID 60) in 20582 ms on localhost (executor driver) (61/70)
+20/02/14 10:44:39 INFO Executor: Running task 64.0 in stage 0.0 (TID 64)
+20/02/14 10:44:39 INFO FileScanRDD: Reading File path: file:///edw/Reviews/SourceCode/data/AmzReviews.json, range: 8589934592-8724152320, partition values: [empty row]
+20/02/14 10:44:40 INFO Executor: Finished task 62.0 in stage 0.0 (TID 62). 2264 bytes result sent to driver
+20/02/14 10:44:40 INFO TaskSetManager: Starting task 65.0 in stage 0.0 (TID 65, localhost, executor driver, partition 65, PROCESS_LOCAL, 8267 bytes)
+20/02/14 10:44:40 INFO TaskSetManager: Finished task 62.0 in stage 0.0 (TID 62) in 18792 ms on localhost (executor driver) (62/70)
+20/02/14 10:44:40 INFO Executor: Running task 65.0 in stage 0.0 (TID 65)
+20/02/14 10:44:40 INFO FileScanRDD: Reading File path: file:///edw/Reviews/SourceCode/data/AmzReviews.json, range: 8724152320-8858370048, partition values: [empty row]
+20/02/14 10:44:42 INFO Executor: Finished task 61.0 in stage 0.0 (TID 61). 2264 bytes result sent to driver
+20/02/14 10:44:42 INFO TaskSetManager: Starting task 66.0 in stage 0.0 (TID 66, localhost, executor driver, partition 66, PROCESS_LOCAL, 8267 bytes)
+20/02/14 10:44:42 INFO TaskSetManager: Finished task 61.0 in stage 0.0 (TID 61) in 22420 ms on localhost (executor driver) (63/70)
+20/02/14 10:44:42 INFO Executor: Running task 66.0 in stage 0.0 (TID 66)
+20/02/14 10:44:42 INFO FileScanRDD: Reading File path: file:///edw/Reviews/SourceCode/data/AmzReviews.json, range: 8858370048-8992587776, partition values: [empty row]
+20/02/14 10:44:42 INFO Executor: Finished task 63.0 in stage 0.0 (TID 63). 2264 bytes result sent to driver
+20/02/14 10:44:42 INFO TaskSetManager: Starting task 67.0 in stage 0.0 (TID 67, localhost, executor driver, partition 67, PROCESS_LOCAL, 8267 bytes)
+20/02/14 10:44:42 INFO TaskSetManager: Finished task 63.0 in stage 0.0 (TID 63) in 18991 ms on localhost (executor driver) (64/70)
+20/02/14 10:44:42 INFO Executor: Running task 67.0 in stage 0.0 (TID 67)
+20/02/14 10:44:42 INFO FileScanRDD: Reading File path: file:///edw/Reviews/SourceCode/data/AmzReviews.json, range: 8992587776-9126805504, partition values: [empty row]
+20/02/14 10:44:59 INFO Executor: Finished task 64.0 in stage 0.0 (TID 64). 2350 bytes result sent to driver
+20/02/14 10:44:59 INFO TaskSetManager: Starting task 68.0 in stage 0.0 (TID 68, localhost, executor driver, partition 68, PROCESS_LOCAL, 8267 bytes)
+20/02/14 10:44:59 INFO TaskSetManager: Finished task 64.0 in stage 0.0 (TID 64) in 20035 ms on localhost (executor driver) (65/70)
+20/02/14 10:44:59 INFO Executor: Running task 68.0 in stage 0.0 (TID 68)
+20/02/14 10:45:00 INFO FileScanRDD: Reading File path: file:///edw/Reviews/SourceCode/data/AmzReviews.json, range: 9126805504-9261023232, partition values: [empty row]
+20/02/14 10:45:00 INFO Executor: Finished task 65.0 in stage 0.0 (TID 65). 2307 bytes result sent to driver
+20/02/14 10:45:00 INFO TaskSetManager: Starting task 69.0 in stage 0.0 (TID 69, localhost, executor driver, partition 69, PROCESS_LOCAL, 8267 bytes)
+20/02/14 10:45:00 INFO Executor: Running task 69.0 in stage 0.0 (TID 69)
+20/02/14 10:45:00 INFO TaskSetManager: Finished task 65.0 in stage 0.0 (TID 65) in 20405 ms on localhost (executor driver) (66/70)
+20/02/14 10:45:00 INFO FileScanRDD: Reading File path: file:///edw/Reviews/SourceCode/data/AmzReviews.json, range: 9261023232-9362045638, partition values: [empty row]
+20/02/14 10:45:03 INFO Executor: Finished task 66.0 in stage 0.0 (TID 66). 2264 bytes result sent to driver
+20/02/14 10:45:03 INFO Executor: Finished task 67.0 in stage 0.0 (TID 67). 2264 bytes result sent to driver
+20/02/14 10:45:05 INFO TaskSetManager: Finished task 66.0 in stage 0.0 (TID 66) in 23010 ms on localhost (executor driver) (67/70)
+20/02/14 10:45:05 INFO TaskSetManager: Finished task 67.0 in stage 0.0 (TID 67) in 22571 ms on localhost (executor driver) (68/70)
+20/02/14 10:45:11 INFO Executor: Finished task 69.0 in stage 0.0 (TID 69). 2264 bytes result sent to driver
+20/02/14 10:45:11 INFO TaskSetManager: Finished task 69.0 in stage 0.0 (TID 69) in 10811 ms on localhost (executor driver) (69/70)
+20/02/14 10:45:11 INFO Executor: Finished task 68.0 in stage 0.0 (TID 68). 2264 bytes result sent to driver
+20/02/14 10:45:11 INFO TaskSetManager: Finished task 68.0 in stage 0.0 (TID 68) in 11761 ms on localhost (executor driver) (70/70)
+20/02/14 10:45:11 INFO TaskSchedulerImpl: Removed TaskSet 0.0, whose tasks have all completed, from pool 
+20/02/14 10:45:11 INFO DAGScheduler: ResultStage 0 (json at NativeMethodAccessorImpl.java:0) finished in 387.874 s
+20/02/14 10:45:11 INFO DAGScheduler: Job 0 finished: json at NativeMethodAccessorImpl.java:0, took 388.200845 s
+20/02/14 10:45:14 INFO FileSourceStrategy: Pruning directories with: 
+20/02/14 10:45:14 INFO FileSourceStrategy: Post-Scan Filters: 
+20/02/14 10:45:14 INFO FileSourceStrategy: Output Data Schema: struct<asin: string, overall: double, reviewerID: string, reviewerName: string, unixReviewTime: bigint ... 3 more fields>
+20/02/14 10:45:14 INFO FileSourceScanExec: Pushed Filters: 
+20/02/14 10:45:14 INFO CodeGenerator: Code generated in 63.891 ms
+20/02/14 10:45:14 INFO MemoryStore: Block broadcast_2 stored as values in memory (estimated size 282.7 KB, free 365.7 MB)
+20/02/14 10:45:14 INFO MemoryStore: Block broadcast_2_piece0 stored as bytes in memory (estimated size 23.3 KB, free 365.7 MB)
+20/02/14 10:45:14 INFO BlockManagerInfo: Added broadcast_2_piece0 in memory on 192.168.1.25:2833 (size: 23.3 KB, free: 366.2 MB)
+20/02/14 10:45:14 INFO SparkContext: Created broadcast 2 from jdbc at NativeMethodAccessorImpl.java:0
+20/02/14 10:45:14 INFO FileSourceScanExec: Planning scan with bin packing, max size: 134217728 bytes, open cost is considered as scanning 4194304 bytes.
+20/02/14 10:45:15 INFO SparkContext: Starting job: jdbc at NativeMethodAccessorImpl.java:0
+20/02/14 10:45:15 INFO DAGScheduler: Got job 1 (jdbc at NativeMethodAccessorImpl.java:0) with 70 output partitions
+20/02/14 10:45:15 INFO DAGScheduler: Final stage: ResultStage 1 (jdbc at NativeMethodAccessorImpl.java:0)
+20/02/14 10:45:15 INFO DAGScheduler: Parents of final stage: List()
+20/02/14 10:45:15 INFO DAGScheduler: Missing parents: List()
+20/02/14 10:45:15 INFO DAGScheduler: Submitting ResultStage 1 (MapPartitionsRDD[8] at jdbc at NativeMethodAccessorImpl.java:0), which has no missing parents
+20/02/14 10:45:15 INFO MemoryStore: Block broadcast_3 stored as values in memory (estimated size 64.3 KB, free 365.6 MB)
+20/02/14 10:45:15 INFO MemoryStore: Block broadcast_3_piece0 stored as bytes in memory (estimated size 29.4 KB, free 365.6 MB)
+20/02/14 10:45:15 INFO BlockManagerInfo: Added broadcast_3_piece0 in memory on 192.168.1.25:2833 (size: 29.4 KB, free: 366.2 MB)
+20/02/14 10:45:15 INFO SparkContext: Created broadcast 3 from broadcast at DAGScheduler.scala:1163
+20/02/14 10:45:15 INFO DAGScheduler: Submitting 70 missing tasks from ResultStage 1 (MapPartitionsRDD[8] at jdbc at NativeMethodAccessorImpl.java:0) (first 15 tasks are for partitions Vector(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14))
+20/02/14 10:45:15 INFO TaskSchedulerImpl: Adding task set 1.0 with 70 tasks
+20/02/14 10:45:15 INFO TaskSetManager: Starting task 0.0 in stage 1.0 (TID 70, localhost, executor driver, partition 0, PROCESS_LOCAL, 8267 bytes)
+20/02/14 10:45:15 INFO TaskSetManager: Starting task 1.0 in stage 1.0 (TID 71, localhost, executor driver, partition 1, PROCESS_LOCAL, 8267 bytes)
+20/02/14 10:45:15 INFO TaskSetManager: Starting task 2.0 in stage 1.0 (TID 72, localhost, executor driver, partition 2, PROCESS_LOCAL, 8267 bytes)
+20/02/14 10:45:15 INFO TaskSetManager: Starting task 3.0 in stage 1.0 (TID 73, localhost, executor driver, partition 3, PROCESS_LOCAL, 8267 bytes)
+20/02/14 10:45:15 INFO Executor: Running task 0.0 in stage 1.0 (TID 70)
+20/02/14 10:45:15 INFO Executor: Running task 3.0 in stage 1.0 (TID 73)
+20/02/14 10:45:15 INFO Executor: Running task 1.0 in stage 1.0 (TID 71)
+20/02/14 10:45:15 INFO Executor: Running task 2.0 in stage 1.0 (TID 72)
+20/02/14 10:45:15 INFO CodeGenerator: Code generated in 32.8602 ms
+20/02/14 10:45:15 INFO FileScanRDD: Reading File path: file:///edw/Reviews/SourceCode/data/AmzReviews.json, range: 0-134217728, partition values: [empty row]
+20/02/14 10:45:15 INFO FileScanRDD: Reading File path: file:///edw/Reviews/SourceCode/data/AmzReviews.json, range: 134217728-268435456, partition values: [empty row]
+20/02/14 10:45:15 INFO FileScanRDD: Reading File path: file:///edw/Reviews/SourceCode/data/AmzReviews.json, range: 268435456-402653184, partition values: [empty row]
+20/02/14 10:45:15 INFO FileScanRDD: Reading File path: file:///edw/Reviews/SourceCode/data/AmzReviews.json, range: 402653184-536870912, partition values: [empty row]
+20/02/14 10:45:15 INFO CodeGenerator: Code generated in 21.7382 ms
+20/02/14 10:45:50 INFO Executor: Finished task 2.0 in stage 1.0 (TID 72). 1480 bytes result sent to driver
+20/02/14 10:45:50 INFO TaskSetManager: Starting task 4.0 in stage 1.0 (TID 74, localhost, executor driver, partition 4, PROCESS_LOCAL, 8267 bytes)
+20/02/14 10:45:50 INFO TaskSetManager: Finished task 2.0 in stage 1.0 (TID 72) in 35593 ms on localhost (executor driver) (1/70)
+20/02/14 10:45:50 INFO Executor: Running task 4.0 in stage 1.0 (TID 74)
+20/02/14 10:45:50 INFO FileScanRDD: Reading File path: file:///edw/Reviews/SourceCode/data/AmzReviews.json, range: 536870912-671088640, partition values: [empty row]
+20/02/14 10:45:55 INFO Executor: Finished task 3.0 in stage 1.0 (TID 73). 1437 bytes result sent to driver
+20/02/14 10:45:55 INFO TaskSetManager: Starting task 5.0 in stage 1.0 (TID 75, localhost, executor driver, partition 5, PROCESS_LOCAL, 8267 bytes)
+20/02/14 10:45:55 INFO TaskSetManager: Finished task 3.0 in stage 1.0 (TID 73) in 40174 ms on localhost (executor driver) (2/70)
+20/02/14 10:45:55 INFO Executor: Running task 5.0 in stage 1.0 (TID 75)
+20/02/14 10:45:56 INFO FileScanRDD: Reading File path: file:///edw/Reviews/SourceCode/data/AmzReviews.json, range: 671088640-805306368, partition values: [empty row]
+20/02/14 10:46:07 INFO Executor: Finished task 1.0 in stage 1.0 (TID 71). 1394 bytes result sent to driver
+20/02/14 10:46:07 INFO TaskSetManager: Starting task 6.0 in stage 1.0 (TID 76, localhost, executor driver, partition 6, PROCESS_LOCAL, 8267 bytes)
+20/02/14 10:46:07 INFO TaskSetManager: Finished task 1.0 in stage 1.0 (TID 71) in 52416 ms on localhost (executor driver) (3/70)
+20/02/14 10:46:07 INFO Executor: Running task 6.0 in stage 1.0 (TID 76)
+20/02/14 10:46:07 INFO FileScanRDD: Reading File path: file:///edw/Reviews/SourceCode/data/AmzReviews.json, range: 805306368-939524096, partition values: [empty row]
+20/02/14 10:46:20 INFO Executor: Finished task 0.0 in stage 1.0 (TID 70). 1394 bytes result sent to driver
+20/02/14 10:46:20 INFO TaskSetManager: Starting task 7.0 in stage 1.0 (TID 77, localhost, executor driver, partition 7, PROCESS_LOCAL, 8267 bytes)
+20/02/14 10:46:20 INFO Executor: Running task 7.0 in stage 1.0 (TID 77)
+20/02/14 10:46:20 INFO TaskSetManager: Finished task 0.0 in stage 1.0 (TID 70) in 64809 ms on localhost (executor driver) (4/70)
+20/02/14 10:46:21 INFO FileScanRDD: Reading File path: file:///edw/Reviews/SourceCode/data/AmzReviews.json, range: 939524096-1073741824, partition values: [empty row]
+20/02/14 10:46:28 INFO Executor: Finished task 4.0 in stage 1.0 (TID 74). 1437 bytes result sent to driver
+20/02/14 10:46:28 INFO TaskSetManager: Starting task 8.0 in stage 1.0 (TID 78, localhost, executor driver, partition 8, PROCESS_LOCAL, 8267 bytes)
+20/02/14 10:46:28 INFO TaskSetManager: Finished task 4.0 in stage 1.0 (TID 74) in 37121 ms on localhost (executor driver) (5/70)
+20/02/14 10:46:28 INFO Executor: Running task 8.0 in stage 1.0 (TID 78)
+20/02/14 10:46:29 INFO FileScanRDD: Reading File path: file:///edw/Reviews/SourceCode/data/AmzReviews.json, range: 1073741824-1207959552, partition values: [empty row]
+20/02/14 10:46:37 INFO Executor: Finished task 5.0 in stage 1.0 (TID 75). 1394 bytes result sent to driver
+20/02/14 10:46:37 INFO TaskSetManager: Starting task 9.0 in stage 1.0 (TID 79, localhost, executor driver, partition 9, PROCESS_LOCAL, 8267 bytes)
+20/02/14 10:46:37 INFO TaskSetManager: Finished task 5.0 in stage 1.0 (TID 75) in 41800 ms on localhost (executor driver) (6/70)
+20/02/14 10:46:37 INFO Executor: Running task 9.0 in stage 1.0 (TID 79)
+20/02/14 10:46:38 INFO FileScanRDD: Reading File path: file:///edw/Reviews/SourceCode/data/AmzReviews.json, range: 1207959552-1342177280, partition values: [empty row]
+20/02/14 10:46:55 INFO Executor: Finished task 6.0 in stage 1.0 (TID 76). 1394 bytes result sent to driver
+20/02/14 10:46:55 INFO TaskSetManager: Starting task 10.0 in stage 1.0 (TID 80, localhost, executor driver, partition 10, PROCESS_LOCAL, 8267 bytes)
+20/02/14 10:46:55 INFO TaskSetManager: Finished task 6.0 in stage 1.0 (TID 76) in 47300 ms on localhost (executor driver) (7/70)
+20/02/14 10:46:55 INFO Executor: Running task 10.0 in stage 1.0 (TID 80)
+20/02/14 10:46:55 INFO FileScanRDD: Reading File path: file:///edw/Reviews/SourceCode/data/AmzReviews.json, range: 1342177280-1476395008, partition values: [empty row]
+20/02/14 10:47:12 INFO Executor: Finished task 7.0 in stage 1.0 (TID 77). 1394 bytes result sent to driver
+20/02/14 10:47:12 INFO TaskSetManager: Starting task 11.0 in stage 1.0 (TID 81, localhost, executor driver, partition 11, PROCESS_LOCAL, 8267 bytes)
+20/02/14 10:47:12 INFO TaskSetManager: Finished task 7.0 in stage 1.0 (TID 77) in 52785 ms on localhost (executor driver) (8/70)
+20/02/14 10:47:12 INFO Executor: Running task 11.0 in stage 1.0 (TID 81)
+20/02/14 10:47:13 INFO FileScanRDD: Reading File path: file:///edw/Reviews/SourceCode/data/AmzReviews.json, range: 1476395008-1610612736, partition values: [empty row]
+20/02/14 10:47:20 INFO Executor: Finished task 8.0 in stage 1.0 (TID 78). 1394 bytes result sent to driver
+20/02/14 10:47:20 INFO TaskSetManager: Starting task 12.0 in stage 1.0 (TID 82, localhost, executor driver, partition 12, PROCESS_LOCAL, 8267 bytes)
+20/02/14 10:47:20 INFO TaskSetManager: Finished task 8.0 in stage 1.0 (TID 78) in 52368 ms on localhost (executor driver) (9/70)
+20/02/14 10:47:20 INFO Executor: Running task 12.0 in stage 1.0 (TID 82)
+20/02/14 10:47:21 INFO FileScanRDD: Reading File path: file:///edw/Reviews/SourceCode/data/AmzReviews.json, range: 1610612736-1744830464, partition values: [empty row]
+20/02/14 10:47:23 INFO Executor: Finished task 9.0 in stage 1.0 (TID 79). 1394 bytes result sent to driver
+20/02/14 10:47:23 INFO TaskSetManager: Starting task 13.0 in stage 1.0 (TID 83, localhost, executor driver, partition 13, PROCESS_LOCAL, 8267 bytes)
+20/02/14 10:47:23 INFO TaskSetManager: Finished task 9.0 in stage 1.0 (TID 79) in 46425 ms on localhost (executor driver) (10/70)
+20/02/14 10:47:23 INFO Executor: Running task 13.0 in stage 1.0 (TID 83)
+20/02/14 10:47:23 INFO FileScanRDD: Reading File path: file:///edw/Reviews/SourceCode/data/AmzReviews.json, range: 1744830464-1879048192, partition values: [empty row]
+20/02/14 10:47:30 INFO Executor: Finished task 10.0 in stage 1.0 (TID 80). 1437 bytes result sent to driver
+20/02/14 10:47:30 INFO TaskSetManager: Starting task 14.0 in stage 1.0 (TID 84, localhost, executor driver, partition 14, PROCESS_LOCAL, 8267 bytes)
+20/02/14 10:47:30 INFO TaskSetManager: Finished task 10.0 in stage 1.0 (TID 80) in 35741 ms on localhost (executor driver) (11/70)
+20/02/14 10:47:30 INFO Executor: Running task 14.0 in stage 1.0 (TID 84)
+20/02/14 10:47:31 INFO FileScanRDD: Reading File path: file:///edw/Reviews/SourceCode/data/AmzReviews.json, range: 1879048192-2013265920, partition values: [empty row]
+20/02/14 10:47:53 INFO Executor: Finished task 11.0 in stage 1.0 (TID 81). 1437 bytes result sent to driver
+20/02/14 10:47:53 INFO TaskSetManager: Starting task 15.0 in stage 1.0 (TID 85, localhost, executor driver, partition 15, PROCESS_LOCAL, 8267 bytes)
+20/02/14 10:47:53 INFO TaskSetManager: Finished task 11.0 in stage 1.0 (TID 81) in 41084 ms on localhost (executor driver) (12/70)
+20/02/14 10:47:53 INFO Executor: Running task 15.0 in stage 1.0 (TID 85)
+20/02/14 10:47:55 INFO FileScanRDD: Reading File path: file:///edw/Reviews/SourceCode/data/AmzReviews.json, range: 2013265920-2147483648, partition values: [empty row]
+20/02/14 10:47:55 INFO Executor: Finished task 12.0 in stage 1.0 (TID 82). 1394 bytes result sent to driver
+20/02/14 10:47:55 INFO TaskSetManager: Starting task 16.0 in stage 1.0 (TID 86, localhost, executor driver, partition 16, PROCESS_LOCAL, 8267 bytes)
+20/02/14 10:47:55 INFO TaskSetManager: Finished task 12.0 in stage 1.0 (TID 82) in 35428 ms on localhost (executor driver) (13/70)
+20/02/14 10:47:55 INFO Executor: Running task 16.0 in stage 1.0 (TID 86)
+20/02/14 10:47:55 INFO FileScanRDD: Reading File path: file:///edw/Reviews/SourceCode/data/AmzReviews.json, range: 2147483648-2281701376, partition values: [empty row]
+20/02/14 10:47:58 INFO Executor: Finished task 13.0 in stage 1.0 (TID 83). 1394 bytes result sent to driver
+20/02/14 10:47:58 INFO TaskSetManager: Starting task 17.0 in stage 1.0 (TID 87, localhost, executor driver, partition 17, PROCESS_LOCAL, 8267 bytes)
+20/02/14 10:47:58 INFO TaskSetManager: Finished task 13.0 in stage 1.0 (TID 83) in 34953 ms on localhost (executor driver) (14/70)
+20/02/14 10:47:58 INFO Executor: Running task 17.0 in stage 1.0 (TID 87)
+20/02/14 10:47:58 INFO FileScanRDD: Reading File path: file:///edw/Reviews/SourceCode/data/AmzReviews.json, range: 2281701376-2415919104, partition values: [empty row]
+20/02/14 10:48:15 INFO Executor: Finished task 14.0 in stage 1.0 (TID 84). 1437 bytes result sent to driver
+20/02/14 10:48:15 INFO TaskSetManager: Starting task 18.0 in stage 1.0 (TID 88, localhost, executor driver, partition 18, PROCESS_LOCAL, 8267 bytes)
+20/02/14 10:48:15 INFO TaskSetManager: Finished task 14.0 in stage 1.0 (TID 84) in 45064 ms on localhost (executor driver) (15/70)
+20/02/14 10:48:15 INFO Executor: Running task 18.0 in stage 1.0 (TID 88)
+20/02/14 10:48:17 INFO FileScanRDD: Reading File path: file:///edw/Reviews/SourceCode/data/AmzReviews.json, range: 2415919104-2550136832, partition values: [empty row]
+20/02/14 10:48:55 INFO Executor: Finished task 16.0 in stage 1.0 (TID 86). 1394 bytes result sent to driver
+20/02/14 10:48:55 INFO TaskSetManager: Starting task 19.0 in stage 1.0 (TID 89, localhost, executor driver, partition 19, PROCESS_LOCAL, 8267 bytes)
+20/02/14 10:48:55 INFO Executor: Running task 19.0 in stage 1.0 (TID 89)
+20/02/14 10:48:55 INFO TaskSetManager: Finished task 16.0 in stage 1.0 (TID 86) in 59218 ms on localhost (executor driver) (16/70)
+20/02/14 10:48:56 INFO FileScanRDD: Reading File path: file:///edw/Reviews/SourceCode/data/AmzReviews.json, range: 2550136832-2684354560, partition values: [empty row]
+20/02/14 10:48:57 INFO Executor: Finished task 15.0 in stage 1.0 (TID 85). 1394 bytes result sent to driver
+20/02/14 10:48:57 INFO TaskSetManager: Starting task 20.0 in stage 1.0 (TID 90, localhost, executor driver, partition 20, PROCESS_LOCAL, 8267 bytes)
+20/02/14 10:48:57 INFO TaskSetManager: Finished task 15.0 in stage 1.0 (TID 85) in 63422 ms on localhost (executor driver) (17/70)
+20/02/14 10:48:57 INFO Executor: Running task 20.0 in stage 1.0 (TID 90)
+20/02/14 10:48:57 INFO FileScanRDD: Reading File path: file:///edw/Reviews/SourceCode/data/AmzReviews.json, range: 2684354560-2818572288, partition values: [empty row]
+20/02/14 10:49:02 INFO Executor: Finished task 17.0 in stage 1.0 (TID 87). 1394 bytes result sent to driver
+20/02/14 10:49:02 INFO TaskSetManager: Starting task 21.0 in stage 1.0 (TID 91, localhost, executor driver, partition 21, PROCESS_LOCAL, 8267 bytes)
+20/02/14 10:49:02 INFO TaskSetManager: Finished task 17.0 in stage 1.0 (TID 87) in 63584 ms on localhost (executor driver) (18/70)
+20/02/14 10:49:02 INFO Executor: Running task 21.0 in stage 1.0 (TID 91)
+20/02/14 10:49:02 INFO FileScanRDD: Reading File path: file:///edw/Reviews/SourceCode/data/AmzReviews.json, range: 2818572288-2952790016, partition values: [empty row]
+20/02/14 10:49:26 INFO Executor: Finished task 18.0 in stage 1.0 (TID 88). 1394 bytes result sent to driver
+20/02/14 10:49:26 INFO TaskSetManager: Starting task 22.0 in stage 1.0 (TID 92, localhost, executor driver, partition 22, PROCESS_LOCAL, 8267 bytes)
+20/02/14 10:49:26 INFO Executor: Running task 22.0 in stage 1.0 (TID 92)
+20/02/14 10:49:26 INFO TaskSetManager: Finished task 18.0 in stage 1.0 (TID 88) in 70542 ms on localhost (executor driver) (19/70)
+20/02/14 10:49:29 INFO FileScanRDD: Reading File path: file:///edw/Reviews/SourceCode/data/AmzReviews.json, range: 2952790016-3087007744, partition values: [empty row]
+20/02/14 10:49:59 INFO Executor: Finished task 19.0 in stage 1.0 (TID 89). 1394 bytes result sent to driver
+20/02/14 10:49:59 INFO TaskSetManager: Starting task 23.0 in stage 1.0 (TID 93, localhost, executor driver, partition 23, PROCESS_LOCAL, 8267 bytes)
+20/02/14 10:49:59 INFO TaskSetManager: Finished task 19.0 in stage 1.0 (TID 89) in 64233 ms on localhost (executor driver) (20/70)
+20/02/14 10:49:59 INFO Executor: Running task 23.0 in stage 1.0 (TID 93)
+20/02/14 10:50:00 INFO FileScanRDD: Reading File path: file:///edw/Reviews/SourceCode/data/AmzReviews.json, range: 3087007744-3221225472, partition values: [empty row]
+20/02/14 10:50:03 INFO Executor: Finished task 21.0 in stage 1.0 (TID 91). 1394 bytes result sent to driver
+20/02/14 10:50:03 INFO TaskSetManager: Starting task 24.0 in stage 1.0 (TID 94, localhost, executor driver, partition 24, PROCESS_LOCAL, 8267 bytes)
+20/02/14 10:50:03 INFO TaskSetManager: Finished task 21.0 in stage 1.0 (TID 91) in 61376 ms on localhost (executor driver) (21/70)
+20/02/14 10:50:03 INFO Executor: Running task 24.0 in stage 1.0 (TID 94)
+20/02/14 10:50:03 INFO FileScanRDD: Reading File path: file:///edw/Reviews/SourceCode/data/AmzReviews.json, range: 3221225472-3355443200, partition values: [empty row]
+20/02/14 10:51:15 INFO Executor: Finished task 20.0 in stage 1.0 (TID 90). 1437 bytes result sent to driver
+20/02/14 10:51:15 INFO TaskSetManager: Starting task 25.0 in stage 1.0 (TID 95, localhost, executor driver, partition 25, PROCESS_LOCAL, 8267 bytes)
+20/02/14 10:51:15 INFO TaskSetManager: Finished task 20.0 in stage 1.0 (TID 90) in 137728 ms on localhost (executor driver) (22/70)
+20/02/14 10:51:15 INFO Executor: Running task 25.0 in stage 1.0 (TID 95)
+20/02/14 10:51:15 INFO FileScanRDD: Reading File path: file:///edw/Reviews/SourceCode/data/AmzReviews.json, range: 3355443200-3489660928, partition values: [empty row]
+20/02/14 10:51:48 INFO Executor: Finished task 22.0 in stage 1.0 (TID 92). 1394 bytes result sent to driver
+20/02/14 10:51:48 INFO TaskSetManager: Starting task 26.0 in stage 1.0 (TID 96, localhost, executor driver, partition 26, PROCESS_LOCAL, 8267 bytes)
+20/02/14 10:51:48 INFO TaskSetManager: Finished task 22.0 in stage 1.0 (TID 92) in 141735 ms on localhost (executor driver) (23/70)
+20/02/14 10:51:48 INFO Executor: Running task 26.0 in stage 1.0 (TID 96)
+20/02/14 10:51:49 INFO FileScanRDD: Reading File path: file:///edw/Reviews/SourceCode/data/AmzReviews.json, range: 3489660928-3623878656, partition values: [empty row]
+20/02/14 10:52:30 INFO Executor: Finished task 23.0 in stage 1.0 (TID 93). 1437 bytes result sent to driver
+20/02/14 10:52:30 INFO TaskSetManager: Starting task 27.0 in stage 1.0 (TID 97, localhost, executor driver, partition 27, PROCESS_LOCAL, 8267 bytes)
+20/02/14 10:52:30 INFO TaskSetManager: Finished task 23.0 in stage 1.0 (TID 93) in 151449 ms on localhost (executor driver) (24/70)
+20/02/14 10:52:30 INFO Executor: Running task 27.0 in stage 1.0 (TID 97)
+20/02/14 10:52:35 INFO FileScanRDD: Reading File path: file:///edw/Reviews/SourceCode/data/AmzReviews.json, range: 3623878656-3758096384, partition values: [empty row]
+20/02/14 10:52:36 INFO Executor: Finished task 24.0 in stage 1.0 (TID 94). 1394 bytes result sent to driver
+20/02/14 10:52:36 INFO TaskSetManager: Starting task 28.0 in stage 1.0 (TID 98, localhost, executor driver, partition 28, PROCESS_LOCAL, 8267 bytes)
+20/02/14 10:52:36 INFO TaskSetManager: Finished task 24.0 in stage 1.0 (TID 94) in 152665 ms on localhost (executor driver) (25/70)
+20/02/14 10:52:36 INFO Executor: Running task 28.0 in stage 1.0 (TID 98)
+20/02/14 10:52:37 INFO FileScanRDD: Reading File path: file:///edw/Reviews/SourceCode/data/AmzReviews.json, range: 3758096384-3892314112, partition values: [empty row]
+20/02/14 10:52:38 INFO Executor: Finished task 25.0 in stage 1.0 (TID 95). 1437 bytes result sent to driver
+20/02/14 10:52:38 INFO TaskSetManager: Starting task 29.0 in stage 1.0 (TID 99, localhost, executor driver, partition 29, PROCESS_LOCAL, 8267 bytes)
+20/02/14 10:52:38 INFO TaskSetManager: Finished task 25.0 in stage 1.0 (TID 95) in 83785 ms on localhost (executor driver) (26/70)
+20/02/14 10:52:38 INFO Executor: Running task 29.0 in stage 1.0 (TID 99)
+20/02/14 10:52:39 INFO FileScanRDD: Reading File path: file:///edw/Reviews/SourceCode/data/AmzReviews.json, range: 3892314112-4026531840, partition values: [empty row]
+20/02/14 10:53:01 INFO Executor: Finished task 26.0 in stage 1.0 (TID 96). 1394 bytes result sent to driver
+20/02/14 10:53:01 INFO TaskSetManager: Starting task 30.0 in stage 1.0 (TID 100, localhost, executor driver, partition 30, PROCESS_LOCAL, 8267 bytes)
+20/02/14 10:53:01 INFO TaskSetManager: Finished task 26.0 in stage 1.0 (TID 96) in 73679 ms on localhost (executor driver) (27/70)
+20/02/14 10:53:01 INFO Executor: Running task 30.0 in stage 1.0 (TID 100)
+20/02/14 10:53:03 INFO FileScanRDD: Reading File path: file:///edw/Reviews/SourceCode/data/AmzReviews.json, range: 4026531840-4160749568, partition values: [empty row]
+20/02/14 10:54:05 INFO Executor: Finished task 27.0 in stage 1.0 (TID 97). 1394 bytes result sent to driver
+20/02/14 10:54:05 INFO TaskSetManager: Starting task 31.0 in stage 1.0 (TID 101, localhost, executor driver, partition 31, PROCESS_LOCAL, 8267 bytes)
+20/02/14 10:54:05 INFO TaskSetManager: Finished task 27.0 in stage 1.0 (TID 97) in 94477 ms on localhost (executor driver) (28/70)
+20/02/14 10:54:05 INFO Executor: Running task 31.0 in stage 1.0 (TID 101)
+20/02/14 10:54:07 INFO FileScanRDD: Reading File path: file:///edw/Reviews/SourceCode/data/AmzReviews.json, range: 4160749568-4294967296, partition values: [empty row]
+20/02/14 10:55:44 INFO Executor: Finished task 29.0 in stage 1.0 (TID 99). 1394 bytes result sent to driver
+20/02/14 10:55:44 INFO TaskSetManager: Starting task 32.0 in stage 1.0 (TID 102, localhost, executor driver, partition 32, PROCESS_LOCAL, 8267 bytes)
+20/02/14 10:55:44 INFO TaskSetManager: Finished task 29.0 in stage 1.0 (TID 99) in 185980 ms on localhost (executor driver) (29/70)
+20/02/14 10:55:44 INFO Executor: Running task 32.0 in stage 1.0 (TID 102)
+20/02/14 10:55:44 INFO FileScanRDD: Reading File path: file:///edw/Reviews/SourceCode/data/AmzReviews.json, range: 4294967296-4429185024, partition values: [empty row]
+20/02/14 10:55:46 INFO Executor: Finished task 28.0 in stage 1.0 (TID 98). 1394 bytes result sent to driver
+20/02/14 10:55:46 INFO TaskSetManager: Starting task 33.0 in stage 1.0 (TID 103, localhost, executor driver, partition 33, PROCESS_LOCAL, 8267 bytes)
+20/02/14 10:55:46 INFO TaskSetManager: Finished task 28.0 in stage 1.0 (TID 98) in 189995 ms on localhost (executor driver) (30/70)
+20/02/14 10:55:46 INFO Executor: Running task 33.0 in stage 1.0 (TID 103)
+20/02/14 10:55:46 INFO FileScanRDD: Reading File path: file:///edw/Reviews/SourceCode/data/AmzReviews.json, range: 4429185024-4563402752, partition values: [empty row]
+20/02/14 10:56:14 INFO Executor: Finished task 30.0 in stage 1.0 (TID 100). 1394 bytes result sent to driver
+20/02/14 10:56:14 INFO TaskSetManager: Starting task 34.0 in stage 1.0 (TID 104, localhost, executor driver, partition 34, PROCESS_LOCAL, 8267 bytes)
+20/02/14 10:56:14 INFO TaskSetManager: Finished task 30.0 in stage 1.0 (TID 100) in 192326 ms on localhost (executor driver) (31/70)
+20/02/14 10:56:14 INFO Executor: Running task 34.0 in stage 1.0 (TID 104)
+20/02/14 10:56:15 INFO FileScanRDD: Reading File path: file:///edw/Reviews/SourceCode/data/AmzReviews.json, range: 4563402752-4697620480, partition values: [empty row]
+20/02/14 10:56:54 INFO Executor: Finished task 31.0 in stage 1.0 (TID 101). 1394 bytes result sent to driver
+20/02/14 10:56:54 INFO TaskSetManager: Starting task 35.0 in stage 1.0 (TID 105, localhost, executor driver, partition 35, PROCESS_LOCAL, 8267 bytes)
+20/02/14 10:56:54 INFO TaskSetManager: Finished task 31.0 in stage 1.0 (TID 101) in 169539 ms on localhost (executor driver) (32/70)
+20/02/14 10:56:54 INFO Executor: Running task 35.0 in stage 1.0 (TID 105)
+20/02/14 10:56:56 INFO FileScanRDD: Reading File path: file:///edw/Reviews/SourceCode/data/AmzReviews.json, range: 4697620480-4831838208, partition values: [empty row]
+20/02/14 10:57:00 INFO Executor: Finished task 32.0 in stage 1.0 (TID 102). 1394 bytes result sent to driver
+20/02/14 10:57:00 INFO TaskSetManager: Starting task 36.0 in stage 1.0 (TID 106, localhost, executor driver, partition 36, PROCESS_LOCAL, 8267 bytes)
+20/02/14 10:57:00 INFO TaskSetManager: Finished task 32.0 in stage 1.0 (TID 102) in 75391 ms on localhost (executor driver) (33/70)
+20/02/14 10:57:00 INFO Executor: Running task 36.0 in stage 1.0 (TID 106)
+20/02/14 10:57:01 INFO FileScanRDD: Reading File path: file:///edw/Reviews/SourceCode/data/AmzReviews.json, range: 4831838208-4966055936, partition values: [empty row]
+20/02/14 10:57:02 INFO Executor: Finished task 33.0 in stage 1.0 (TID 103). 1394 bytes result sent to driver
+20/02/14 10:57:02 INFO TaskSetManager: Starting task 37.0 in stage 1.0 (TID 107, localhost, executor driver, partition 37, PROCESS_LOCAL, 8267 bytes)
+20/02/14 10:57:02 INFO TaskSetManager: Finished task 33.0 in stage 1.0 (TID 103) in 76526 ms on localhost (executor driver) (34/70)
+20/02/14 10:57:02 INFO Executor: Running task 37.0 in stage 1.0 (TID 107)
+20/02/14 10:57:03 INFO FileScanRDD: Reading File path: file:///edw/Reviews/SourceCode/data/AmzReviews.json, range: 4966055936-5100273664, partition values: [empty row]
+20/02/14 10:57:22 INFO Executor: Finished task 34.0 in stage 1.0 (TID 104). 1394 bytes result sent to driver
+20/02/14 10:57:22 INFO TaskSetManager: Starting task 38.0 in stage 1.0 (TID 108, localhost, executor driver, partition 38, PROCESS_LOCAL, 8267 bytes)
+20/02/14 10:57:22 INFO TaskSetManager: Finished task 34.0 in stage 1.0 (TID 104) in 68710 ms on localhost (executor driver) (35/70)
+20/02/14 10:57:22 INFO Executor: Running task 38.0 in stage 1.0 (TID 108)
+20/02/14 10:57:24 INFO FileScanRDD: Reading File path: file:///edw/Reviews/SourceCode/data/AmzReviews.json, range: 5100273664-5234491392, partition values: [empty row]
+20/02/14 10:58:53 INFO Executor: Finished task 35.0 in stage 1.0 (TID 105). 1394 bytes result sent to driver
+20/02/14 10:58:53 INFO TaskSetManager: Starting task 39.0 in stage 1.0 (TID 109, localhost, executor driver, partition 39, PROCESS_LOCAL, 8267 bytes)
+20/02/14 10:58:53 INFO TaskSetManager: Finished task 35.0 in stage 1.0 (TID 105) in 119181 ms on localhost (executor driver) (36/70)
+20/02/14 10:58:53 INFO Executor: Running task 39.0 in stage 1.0 (TID 109)
+20/02/14 10:58:55 INFO FileScanRDD: Reading File path: file:///edw/Reviews/SourceCode/data/AmzReviews.json, range: 5234491392-5368709120, partition values: [empty row]
+20/02/14 11:00:25 INFO Executor: Finished task 36.0 in stage 1.0 (TID 106). 1437 bytes result sent to driver
+20/02/14 11:00:25 INFO TaskSetManager: Starting task 40.0 in stage 1.0 (TID 110, localhost, executor driver, partition 40, PROCESS_LOCAL, 8267 bytes)
+20/02/14 11:00:25 INFO TaskSetManager: Finished task 36.0 in stage 1.0 (TID 106) in 204971 ms on localhost (executor driver) (37/70)
+20/02/14 11:00:25 INFO Executor: Running task 40.0 in stage 1.0 (TID 110)
+20/02/14 11:00:25 INFO Executor: Finished task 37.0 in stage 1.0 (TID 107). 1394 bytes result sent to driver
+20/02/14 11:00:25 INFO TaskSetManager: Starting task 41.0 in stage 1.0 (TID 111, localhost, executor driver, partition 41, PROCESS_LOCAL, 8267 bytes)
+20/02/14 11:00:25 INFO TaskSetManager: Finished task 37.0 in stage 1.0 (TID 107) in 202485 ms on localhost (executor driver) (38/70)
+20/02/14 11:00:25 INFO Executor: Running task 41.0 in stage 1.0 (TID 111)
+20/02/14 11:02:18 ERROR Executor: Exception in task 41.0 in stage 1.0 (TID 111)
+org.postgresql.util.PSQLException: The connection attempt failed.
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:296)
+	at org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:49)
+	at org.postgresql.jdbc.PgConnection.<init>(PgConnection.java:211)
+	at org.postgresql.Driver.makeConnection(Driver.java:459)
+	at org.postgresql.Driver.connect(Driver.java:261)
+	at org.apache.spark.sql.execution.datasources.jdbc.JdbcUtils$$anonfun$createConnectionFactory$1.apply(JdbcUtils.scala:63)
+	at org.apache.spark.sql.execution.datasources.jdbc.JdbcUtils$$anonfun$createConnectionFactory$1.apply(JdbcUtils.scala:54)
+	at org.apache.spark.sql.execution.datasources.jdbc.JdbcUtils$.savePartition(JdbcUtils.scala:614)
+	at org.apache.spark.sql.execution.datasources.jdbc.JdbcUtils$$anonfun$saveTable$1.apply(JdbcUtils.scala:838)
+	at org.apache.spark.sql.execution.datasources.jdbc.JdbcUtils$$anonfun$saveTable$1.apply(JdbcUtils.scala:838)
+	at org.apache.spark.rdd.RDD$$anonfun$foreachPartition$1$$anonfun$apply$28.apply(RDD.scala:980)
+	at org.apache.spark.rdd.RDD$$anonfun$foreachPartition$1$$anonfun$apply$28.apply(RDD.scala:980)
+	at org.apache.spark.SparkContext$$anonfun$runJob$5.apply(SparkContext.scala:2101)
+	at org.apache.spark.SparkContext$$anonfun$runJob$5.apply(SparkContext.scala:2101)
+	at org.apache.spark.scheduler.ResultTask.runTask(ResultTask.scala:90)
+	at org.apache.spark.scheduler.Task.run(Task.scala:123)
+	at org.apache.spark.executor.Executor$TaskRunner$$anonfun$10.apply(Executor.scala:408)
+	at org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:1360)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:414)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.io.EOFException
+	at org.postgresql.core.PGStream.receiveChar(PGStream.java:372)
+	at org.postgresql.core.v3.ConnectionFactoryImpl.doAuthentication(ConnectionFactoryImpl.java:509)
+	at org.postgresql.core.v3.ConnectionFactoryImpl.tryConnect(ConnectionFactoryImpl.java:145)
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:196)
+	... 21 more
+20/02/14 11:02:18 ERROR Executor: Exception in task 40.0 in stage 1.0 (TID 110)
+org.postgresql.util.PSQLException: The connection attempt failed.
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:296)
+	at org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:49)
+	at org.postgresql.jdbc.PgConnection.<init>(PgConnection.java:211)
+	at org.postgresql.Driver.makeConnection(Driver.java:459)
+	at org.postgresql.Driver.connect(Driver.java:261)
+	at org.apache.spark.sql.execution.datasources.jdbc.JdbcUtils$$anonfun$createConnectionFactory$1.apply(JdbcUtils.scala:63)
+	at org.apache.spark.sql.execution.datasources.jdbc.JdbcUtils$$anonfun$createConnectionFactory$1.apply(JdbcUtils.scala:54)
+	at org.apache.spark.sql.execution.datasources.jdbc.JdbcUtils$.savePartition(JdbcUtils.scala:614)
+	at org.apache.spark.sql.execution.datasources.jdbc.JdbcUtils$$anonfun$saveTable$1.apply(JdbcUtils.scala:838)
+	at org.apache.spark.sql.execution.datasources.jdbc.JdbcUtils$$anonfun$saveTable$1.apply(JdbcUtils.scala:838)
+	at org.apache.spark.rdd.RDD$$anonfun$foreachPartition$1$$anonfun$apply$28.apply(RDD.scala:980)
+	at org.apache.spark.rdd.RDD$$anonfun$foreachPartition$1$$anonfun$apply$28.apply(RDD.scala:980)
+	at org.apache.spark.SparkContext$$anonfun$runJob$5.apply(SparkContext.scala:2101)
+	at org.apache.spark.SparkContext$$anonfun$runJob$5.apply(SparkContext.scala:2101)
+	at org.apache.spark.scheduler.ResultTask.runTask(ResultTask.scala:90)
+	at org.apache.spark.scheduler.Task.run(Task.scala:123)
+	at org.apache.spark.executor.Executor$TaskRunner$$anonfun$10.apply(Executor.scala:408)
+	at org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:1360)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:414)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.io.EOFException
+	at org.postgresql.core.PGStream.receiveChar(PGStream.java:372)
+	at org.postgresql.core.v3.ConnectionFactoryImpl.doAuthentication(ConnectionFactoryImpl.java:509)
+	at org.postgresql.core.v3.ConnectionFactoryImpl.tryConnect(ConnectionFactoryImpl.java:145)
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:196)
+	... 21 more
+20/02/14 11:02:19 INFO TaskSetManager: Starting task 42.0 in stage 1.0 (TID 112, localhost, executor driver, partition 42, PROCESS_LOCAL, 8267 bytes)
+20/02/14 11:02:19 INFO TaskSetManager: Starting task 43.0 in stage 1.0 (TID 113, localhost, executor driver, partition 43, PROCESS_LOCAL, 8267 bytes)
+20/02/14 11:02:19 INFO Executor: Running task 42.0 in stage 1.0 (TID 112)
+20/02/14 11:02:19 INFO Executor: Running task 43.0 in stage 1.0 (TID 113)
+20/02/14 11:02:19 INFO FileScanRDD: Reading File path: file:///edw/Reviews/SourceCode/data/AmzReviews.json, range: 5637144576-5771362304, partition values: [empty row]
+20/02/14 11:02:20 WARN TaskSetManager: Lost task 40.0 in stage 1.0 (TID 110, localhost, executor driver): org.postgresql.util.PSQLException: The connection attempt failed.
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:296)
+	at org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:49)
+	at org.postgresql.jdbc.PgConnection.<init>(PgConnection.java:211)
+	at org.postgresql.Driver.makeConnection(Driver.java:459)
+	at org.postgresql.Driver.connect(Driver.java:261)
+	at org.apache.spark.sql.execution.datasources.jdbc.JdbcUtils$$anonfun$createConnectionFactory$1.apply(JdbcUtils.scala:63)
+	at org.apache.spark.sql.execution.datasources.jdbc.JdbcUtils$$anonfun$createConnectionFactory$1.apply(JdbcUtils.scala:54)
+	at org.apache.spark.sql.execution.datasources.jdbc.JdbcUtils$.savePartition(JdbcUtils.scala:614)
+	at org.apache.spark.sql.execution.datasources.jdbc.JdbcUtils$$anonfun$saveTable$1.apply(JdbcUtils.scala:838)
+	at org.apache.spark.sql.execution.datasources.jdbc.JdbcUtils$$anonfun$saveTable$1.apply(JdbcUtils.scala:838)
+	at org.apache.spark.rdd.RDD$$anonfun$foreachPartition$1$$anonfun$apply$28.apply(RDD.scala:980)
+	at org.apache.spark.rdd.RDD$$anonfun$foreachPartition$1$$anonfun$apply$28.apply(RDD.scala:980)
+	at org.apache.spark.SparkContext$$anonfun$runJob$5.apply(SparkContext.scala:2101)
+	at org.apache.spark.SparkContext$$anonfun$runJob$5.apply(SparkContext.scala:2101)
+	at org.apache.spark.scheduler.ResultTask.runTask(ResultTask.scala:90)
+	at org.apache.spark.scheduler.Task.run(Task.scala:123)
+	at org.apache.spark.executor.Executor$TaskRunner$$anonfun$10.apply(Executor.scala:408)
+	at org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:1360)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:414)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.io.EOFException
+	at org.postgresql.core.PGStream.receiveChar(PGStream.java:372)
+	at org.postgresql.core.v3.ConnectionFactoryImpl.doAuthentication(ConnectionFactoryImpl.java:509)
+	at org.postgresql.core.v3.ConnectionFactoryImpl.tryConnect(ConnectionFactoryImpl.java:145)
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:196)
+	... 21 more
+
+20/02/14 11:02:20 INFO FileScanRDD: Reading File path: file:///edw/Reviews/SourceCode/data/AmzReviews.json, range: 5771362304-5905580032, partition values: [empty row]
+20/02/14 11:02:20 ERROR TaskSetManager: Task 40 in stage 1.0 failed 1 times; aborting job
+20/02/14 11:02:21 INFO TaskSetManager: Lost task 41.0 in stage 1.0 (TID 111) on localhost, executor driver: org.postgresql.util.PSQLException (The connection attempt failed.) [duplicate 1]
+20/02/14 11:02:22 INFO TaskSchedulerImpl: Cancelling stage 1
+20/02/14 11:02:22 INFO TaskSchedulerImpl: Killing all running tasks in stage 1: Stage cancelled
+20/02/14 11:02:22 INFO Executor: Executor is trying to kill task 38.0 in stage 1.0 (TID 108), reason: Stage cancelled
+20/02/14 11:02:22 INFO Executor: Executor is trying to kill task 42.0 in stage 1.0 (TID 112), reason: Stage cancelled
+20/02/14 11:02:22 INFO Executor: Executor is trying to kill task 39.0 in stage 1.0 (TID 109), reason: Stage cancelled
+20/02/14 11:02:22 INFO Executor: Executor is trying to kill task 43.0 in stage 1.0 (TID 113), reason: Stage cancelled
+20/02/14 11:02:23 INFO Executor: Executor killed task 43.0 in stage 1.0 (TID 113), reason: Stage cancelled
+20/02/14 11:02:23 INFO Executor: Executor killed task 38.0 in stage 1.0 (TID 108), reason: Stage cancelled
+20/02/14 11:02:23 INFO Executor: Executor killed task 39.0 in stage 1.0 (TID 109), reason: Stage cancelled
+20/02/14 11:02:23 INFO Executor: Executor killed task 42.0 in stage 1.0 (TID 112), reason: Stage cancelled
+20/02/14 11:02:23 INFO TaskSchedulerImpl: Stage 1 was cancelled
+20/02/14 11:02:23 WARN TaskSetManager: Lost task 42.0 in stage 1.0 (TID 112, localhost, executor driver): TaskKilled (Stage cancelled)
+20/02/14 11:02:23 INFO DAGScheduler: ResultStage 1 (jdbc at NativeMethodAccessorImpl.java:0) failed in 1028.359 s due to Job aborted due to stage failure: Task 40 in stage 1.0 failed 1 times, most recent failure: Lost task 40.0 in stage 1.0 (TID 110, localhost, executor driver): org.postgresql.util.PSQLException: The connection attempt failed.
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:296)
+	at org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:49)
+	at org.postgresql.jdbc.PgConnection.<init>(PgConnection.java:211)
+	at org.postgresql.Driver.makeConnection(Driver.java:459)
+	at org.postgresql.Driver.connect(Driver.java:261)
+	at org.apache.spark.sql.execution.datasources.jdbc.JdbcUtils$$anonfun$createConnectionFactory$1.apply(JdbcUtils.scala:63)
+	at org.apache.spark.sql.execution.datasources.jdbc.JdbcUtils$$anonfun$createConnectionFactory$1.apply(JdbcUtils.scala:54)
+	at org.apache.spark.sql.execution.datasources.jdbc.JdbcUtils$.savePartition(JdbcUtils.scala:614)
+	at org.apache.spark.sql.execution.datasources.jdbc.JdbcUtils$$anonfun$saveTable$1.apply(JdbcUtils.scala:838)
+	at org.apache.spark.sql.execution.datasources.jdbc.JdbcUtils$$anonfun$saveTable$1.apply(JdbcUtils.scala:838)
+	at org.apache.spark.rdd.RDD$$anonfun$foreachPartition$1$$anonfun$apply$28.apply(RDD.scala:980)
+	at org.apache.spark.rdd.RDD$$anonfun$foreachPartition$1$$anonfun$apply$28.apply(RDD.scala:980)
+	at org.apache.spark.SparkContext$$anonfun$runJob$5.apply(SparkContext.scala:2101)
+	at org.apache.spark.SparkContext$$anonfun$runJob$5.apply(SparkContext.scala:2101)
+	at org.apache.spark.scheduler.ResultTask.runTask(ResultTask.scala:90)
+	at org.apache.spark.scheduler.Task.run(Task.scala:123)
+	at org.apache.spark.executor.Executor$TaskRunner$$anonfun$10.apply(Executor.scala:408)
+	at org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:1360)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:414)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.io.EOFException
+	at org.postgresql.core.PGStream.receiveChar(PGStream.java:372)
+	at org.postgresql.core.v3.ConnectionFactoryImpl.doAuthentication(ConnectionFactoryImpl.java:509)
+	at org.postgresql.core.v3.ConnectionFactoryImpl.tryConnect(ConnectionFactoryImpl.java:145)
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:196)
+	... 21 more
+
+Driver stacktrace:
+20/02/14 11:02:23 INFO TaskSchedulerImpl: Removed TaskSet 1.0, whose tasks have all completed, from pool 
+20/02/14 11:02:23 WARN TaskSetManager: Lost task 38.0 in stage 1.0 (TID 108, localhost, executor driver): TaskKilled (Stage cancelled)
+20/02/14 11:02:23 INFO TaskSchedulerImpl: Removed TaskSet 1.0, whose tasks have all completed, from pool 
+20/02/14 11:02:23 WARN TaskSetManager: Lost task 43.0 in stage 1.0 (TID 113, localhost, executor driver): TaskKilled (Stage cancelled)
+20/02/14 11:02:23 INFO TaskSchedulerImpl: Removed TaskSet 1.0, whose tasks have all completed, from pool 
+20/02/14 11:02:23 WARN TaskSetManager: Lost task 39.0 in stage 1.0 (TID 109, localhost, executor driver): TaskKilled (Stage cancelled)
+20/02/14 11:02:23 INFO TaskSchedulerImpl: Removed TaskSet 1.0, whose tasks have all completed, from pool 
+20/02/14 11:02:23 INFO DAGScheduler: Job 1 failed: jdbc at NativeMethodAccessorImpl.java:0, took 1028.648861 s
+Traceback (most recent call last):
+  File "/edw/Reviews/SourceCode/python/rating_ods_load.py", line 31, in <module>
+    Cl_Reviews_df.write.jdbc(url=url, table="REVIEWS_STAGING", mode=mode, properties=properties)
+  File "/edw/Reviews/spark-2.4.5-bin-hadoop2.7/python/lib/pyspark.zip/pyspark/sql/readwriter.py", line 987, in jdbc
+  File "/edw/Reviews/spark-2.4.5-bin-hadoop2.7/python/lib/py4j-0.10.7-src.zip/py4j/java_gateway.py", line 1257, in __call__
+  File "/edw/Reviews/spark-2.4.5-bin-hadoop2.7/python/lib/pyspark.zip/pyspark/sql/utils.py", line 63, in deco
+  File "/edw/Reviews/spark-2.4.5-bin-hadoop2.7/python/lib/py4j-0.10.7-src.zip/py4j/protocol.py", line 328, in get_return_value
+py4j.protocol.Py4JJavaError: An error occurred while calling o52.jdbc.
+: org.apache.spark.SparkException: Job aborted due to stage failure: Task 40 in stage 1.0 failed 1 times, most recent failure: Lost task 40.0 in stage 1.0 (TID 110, localhost, executor driver): org.postgresql.util.PSQLException: The connection attempt failed.
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:296)
+	at org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:49)
+	at org.postgresql.jdbc.PgConnection.<init>(PgConnection.java:211)
+	at org.postgresql.Driver.makeConnection(Driver.java:459)
+	at org.postgresql.Driver.connect(Driver.java:261)
+	at org.apache.spark.sql.execution.datasources.jdbc.JdbcUtils$$anonfun$createConnectionFactory$1.apply(JdbcUtils.scala:63)
+	at org.apache.spark.sql.execution.datasources.jdbc.JdbcUtils$$anonfun$createConnectionFactory$1.apply(JdbcUtils.scala:54)
+	at org.apache.spark.sql.execution.datasources.jdbc.JdbcUtils$.savePartition(JdbcUtils.scala:614)
+	at org.apache.spark.sql.execution.datasources.jdbc.JdbcUtils$$anonfun$saveTable$1.apply(JdbcUtils.scala:838)
+	at org.apache.spark.sql.execution.datasources.jdbc.JdbcUtils$$anonfun$saveTable$1.apply(JdbcUtils.scala:838)
+	at org.apache.spark.rdd.RDD$$anonfun$foreachPartition$1$$anonfun$apply$28.apply(RDD.scala:980)
+	at org.apache.spark.rdd.RDD$$anonfun$foreachPartition$1$$anonfun$apply$28.apply(RDD.scala:980)
+	at org.apache.spark.SparkContext$$anonfun$runJob$5.apply(SparkContext.scala:2101)
+	at org.apache.spark.SparkContext$$anonfun$runJob$5.apply(SparkContext.scala:2101)
+	at org.apache.spark.scheduler.ResultTask.runTask(ResultTask.scala:90)
+	at org.apache.spark.scheduler.Task.run(Task.scala:123)
+	at org.apache.spark.executor.Executor$TaskRunner$$anonfun$10.apply(Executor.scala:408)
+	at org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:1360)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:414)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.io.EOFException
+	at org.postgresql.core.PGStream.receiveChar(PGStream.java:372)
+	at org.postgresql.core.v3.ConnectionFactoryImpl.doAuthentication(ConnectionFactoryImpl.java:509)
+	at org.postgresql.core.v3.ConnectionFactoryImpl.tryConnect(ConnectionFactoryImpl.java:145)
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:196)
+	... 21 more
+
+Driver stacktrace:
+	at org.apache.spark.scheduler.DAGScheduler.org$apache$spark$scheduler$DAGScheduler$$failJobAndIndependentStages(DAGScheduler.scala:1891)
+	at org.apache.spark.scheduler.DAGScheduler$$anonfun$abortStage$1.apply(DAGScheduler.scala:1879)
+	at org.apache.spark.scheduler.DAGScheduler$$anonfun$abortStage$1.apply(DAGScheduler.scala:1878)
+	at scala.collection.mutable.ResizableArray$class.foreach(ResizableArray.scala:59)
+	at scala.collection.mutable.ArrayBuffer.foreach(ArrayBuffer.scala:48)
+	at org.apache.spark.scheduler.DAGScheduler.abortStage(DAGScheduler.scala:1878)
+	at org.apache.spark.scheduler.DAGScheduler$$anonfun$handleTaskSetFailed$1.apply(DAGScheduler.scala:927)
+	at org.apache.spark.scheduler.DAGScheduler$$anonfun$handleTaskSetFailed$1.apply(DAGScheduler.scala:927)
+	at scala.Option.foreach(Option.scala:257)
+	at org.apache.spark.scheduler.DAGScheduler.handleTaskSetFailed(DAGScheduler.scala:927)
+	at org.apache.spark.scheduler.DAGSchedulerEventProcessLoop.doOnReceive(DAGScheduler.scala:2112)
+	at org.apache.spark.scheduler.DAGSchedulerEventProcessLoop.onReceive(DAGScheduler.scala:2061)
+	at org.apache.spark.scheduler.DAGSchedulerEventProcessLoop.onReceive(DAGScheduler.scala:2050)
+	at org.apache.spark.util.EventLoop$$anon$1.run(EventLoop.scala:49)
+	at org.apache.spark.scheduler.DAGScheduler.runJob(DAGScheduler.scala:738)
+	at org.apache.spark.SparkContext.runJob(SparkContext.scala:2061)
+	at org.apache.spark.SparkContext.runJob(SparkContext.scala:2082)
+	at org.apache.spark.SparkContext.runJob(SparkContext.scala:2101)
+	at org.apache.spark.SparkContext.runJob(SparkContext.scala:2126)
+	at org.apache.spark.rdd.RDD$$anonfun$foreachPartition$1.apply(RDD.scala:980)
+	at org.apache.spark.rdd.RDD$$anonfun$foreachPartition$1.apply(RDD.scala:978)
+	at org.apache.spark.rdd.RDDOperationScope$.withScope(RDDOperationScope.scala:151)
+	at org.apache.spark.rdd.RDDOperationScope$.withScope(RDDOperationScope.scala:112)
+	at org.apache.spark.rdd.RDD.withScope(RDD.scala:385)
+	at org.apache.spark.rdd.RDD.foreachPartition(RDD.scala:978)
+	at org.apache.spark.sql.execution.datasources.jdbc.JdbcUtils$.saveTable(JdbcUtils.scala:838)
+	at org.apache.spark.sql.execution.datasources.jdbc.JdbcRelationProvider.createRelation(JdbcRelationProvider.scala:68)
+	at org.apache.spark.sql.execution.datasources.SaveIntoDataSourceCommand.run(SaveIntoDataSourceCommand.scala:45)
+	at org.apache.spark.sql.execution.command.ExecutedCommandExec.sideEffectResult$lzycompute(commands.scala:70)
+	at org.apache.spark.sql.execution.command.ExecutedCommandExec.sideEffectResult(commands.scala:68)
+	at org.apache.spark.sql.execution.command.ExecutedCommandExec.doExecute(commands.scala:86)
+	at org.apache.spark.sql.execution.SparkPlan$$anonfun$execute$1.apply(SparkPlan.scala:131)
+	at org.apache.spark.sql.execution.SparkPlan$$anonfun$execute$1.apply(SparkPlan.scala:127)
+	at org.apache.spark.sql.execution.SparkPlan$$anonfun$executeQuery$1.apply(SparkPlan.scala:155)
+	at org.apache.spark.rdd.RDDOperationScope$.withScope(RDDOperationScope.scala:151)
+	at org.apache.spark.sql.execution.SparkPlan.executeQuery(SparkPlan.scala:152)
+	at org.apache.spark.sql.execution.SparkPlan.execute(SparkPlan.scala:127)
+	at org.apache.spark.sql.execution.QueryExecution.toRdd$lzycompute(QueryExecution.scala:83)
+	at org.apache.spark.sql.execution.QueryExecution.toRdd(QueryExecution.scala:81)
+	at org.apache.spark.sql.DataFrameWriter$$anonfun$runCommand$1.apply(DataFrameWriter.scala:676)
+	at org.apache.spark.sql.DataFrameWriter$$anonfun$runCommand$1.apply(DataFrameWriter.scala:676)
+	at org.apache.spark.sql.execution.SQLExecution$$anonfun$withNewExecutionId$1.apply(SQLExecution.scala:80)
+	at org.apache.spark.sql.execution.SQLExecution$.withSQLConfPropagated(SQLExecution.scala:127)
+	at org.apache.spark.sql.execution.SQLExecution$.withNewExecutionId(SQLExecution.scala:75)
+	at org.apache.spark.sql.DataFrameWriter.runCommand(DataFrameWriter.scala:676)
+	at org.apache.spark.sql.DataFrameWriter.saveToV1Source(DataFrameWriter.scala:285)
+	at org.apache.spark.sql.DataFrameWriter.save(DataFrameWriter.scala:271)
+	at org.apache.spark.sql.DataFrameWriter.jdbc(DataFrameWriter.scala:515)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at py4j.reflection.MethodInvoker.invoke(MethodInvoker.java:244)
+	at py4j.reflection.ReflectionEngine.invoke(ReflectionEngine.java:357)
+	at py4j.Gateway.invoke(Gateway.java:282)
+	at py4j.commands.AbstractCommand.invokeMethod(AbstractCommand.java:132)
+	at py4j.commands.CallCommand.execute(CallCommand.java:79)
+	at py4j.GatewayConnection.run(GatewayConnection.java:238)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: org.postgresql.util.PSQLException: The connection attempt failed.
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:296)
+	at org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:49)
+	at org.postgresql.jdbc.PgConnection.<init>(PgConnection.java:211)
+	at org.postgresql.Driver.makeConnection(Driver.java:459)
+	at org.postgresql.Driver.connect(Driver.java:261)
+	at org.apache.spark.sql.execution.datasources.jdbc.JdbcUtils$$anonfun$createConnectionFactory$1.apply(JdbcUtils.scala:63)
+	at org.apache.spark.sql.execution.datasources.jdbc.JdbcUtils$$anonfun$createConnectionFactory$1.apply(JdbcUtils.scala:54)
+	at org.apache.spark.sql.execution.datasources.jdbc.JdbcUtils$.savePartition(JdbcUtils.scala:614)
+	at org.apache.spark.sql.execution.datasources.jdbc.JdbcUtils$$anonfun$saveTable$1.apply(JdbcUtils.scala:838)
+	at org.apache.spark.sql.execution.datasources.jdbc.JdbcUtils$$anonfun$saveTable$1.apply(JdbcUtils.scala:838)
+	at org.apache.spark.rdd.RDD$$anonfun$foreachPartition$1$$anonfun$apply$28.apply(RDD.scala:980)
+	at org.apache.spark.rdd.RDD$$anonfun$foreachPartition$1$$anonfun$apply$28.apply(RDD.scala:980)
+	at org.apache.spark.SparkContext$$anonfun$runJob$5.apply(SparkContext.scala:2101)
+	at org.apache.spark.SparkContext$$anonfun$runJob$5.apply(SparkContext.scala:2101)
+	at org.apache.spark.scheduler.ResultTask.runTask(ResultTask.scala:90)
+	at org.apache.spark.scheduler.Task.run(Task.scala:123)
+	at org.apache.spark.executor.Executor$TaskRunner$$anonfun$10.apply(Executor.scala:408)
+	at org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:1360)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:414)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	... 1 more
+Caused by: java.io.EOFException
+	at org.postgresql.core.PGStream.receiveChar(PGStream.java:372)
+	at org.postgresql.core.v3.ConnectionFactoryImpl.doAuthentication(ConnectionFactoryImpl.java:509)
+	at org.postgresql.core.v3.ConnectionFactoryImpl.tryConnect(ConnectionFactoryImpl.java:145)
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:196)
+	... 21 more
+
+20/02/14 11:02:56 INFO SparkContext: Invoking stop() from shutdown hook
+20/02/14 11:02:57 INFO SparkUI: Stopped Spark web UI at http://192.168.1.25:4040
+20/02/14 11:02:59 INFO MapOutputTrackerMasterEndpoint: MapOutputTrackerMasterEndpoint stopped!
+20/02/14 11:03:00 INFO MemoryStore: MemoryStore cleared
+20/02/14 11:03:01 INFO BlockManager: BlockManager stopped
+20/02/14 11:03:01 INFO BlockManagerMaster: BlockManagerMaster stopped
+20/02/14 11:03:01 INFO OutputCommitCoordinator$OutputCommitCoordinatorEndpoint: OutputCommitCoordinator stopped!
+20/02/14 11:03:01 INFO SparkContext: Successfully stopped SparkContext
+20/02/14 11:03:01 INFO ShutdownHookManager: Shutdown hook called
+20/02/14 11:03:01 INFO ShutdownHookManager: Deleting directory /tmp/spark-5771d728-fdd3-498e-9765-708f8bfc2847
+20/02/14 11:03:01 INFO ShutdownHookManager: Deleting directory /tmp/spark-ce52c698-8dad-40c5-a3d3-26721f707a9f
+20/02/14 11:03:01 INFO ShutdownHookManager: Deleting directory /tmp/spark-5771d728-fdd3-498e-9765-708f8bfc2847/pyspark-dd43b121-e009-4c08-8aeb-190d7740984f

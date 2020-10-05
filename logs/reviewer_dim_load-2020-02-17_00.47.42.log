@@ -1,0 +1,102 @@
+###################################################################################################################################
+###################################################################################################################################
+Load to ODS in progress
+###################################################################################################################################
+###################################################################################################################################
+20/02/17 00:47:44 WARN Utils: Your hostname, DESKTOP-502C4I4 resolves to a loopback address: 127.0.1.1; using 192.168.1.25 instead (on interface wifi0)
+20/02/17 00:47:44 WARN Utils: Set SPARK_LOCAL_IP if you need to bind to another address
+20/02/17 00:47:45 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+Using Spark's default log4j profile: org/apache/spark/log4j-defaults.properties
+20/02/17 00:47:46 INFO SparkContext: Running Spark version 2.4.5
+20/02/17 00:47:46 INFO SparkContext: Submitted application: ReviewsOdsSession
+20/02/17 00:47:46 INFO SecurityManager: Changing view acls to: devetluser
+20/02/17 00:47:46 INFO SecurityManager: Changing modify acls to: devetluser
+20/02/17 00:47:46 INFO SecurityManager: Changing view acls groups to: 
+20/02/17 00:47:46 INFO SecurityManager: Changing modify acls groups to: 
+20/02/17 00:47:46 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(devetluser); groups with view permissions: Set(); users  with modify permissions: Set(devetluser); groups with modify permissions: Set()
+20/02/17 00:47:47 INFO Utils: Successfully started service 'sparkDriver' on port 7726.
+20/02/17 00:47:47 INFO SparkEnv: Registering MapOutputTracker
+20/02/17 00:47:47 INFO SparkEnv: Registering BlockManagerMaster
+20/02/17 00:47:47 INFO BlockManagerMasterEndpoint: Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+20/02/17 00:47:47 INFO BlockManagerMasterEndpoint: BlockManagerMasterEndpoint up
+20/02/17 00:47:47 INFO DiskBlockManager: Created local directory at /tmp/blockmgr-c7e07071-e7b7-4085-8c81-a2ea014d8329
+20/02/17 00:47:47 INFO MemoryStore: MemoryStore started with capacity 366.3 MB
+20/02/17 00:47:47 INFO SparkEnv: Registering OutputCommitCoordinator
+20/02/17 00:47:47 INFO Utils: Successfully started service 'SparkUI' on port 4040.
+20/02/17 00:47:47 INFO SparkUI: Bound SparkUI to 0.0.0.0, and started at http://192.168.1.25:4040
+20/02/17 00:47:47 INFO Executor: Starting executor ID driver on host localhost
+20/02/17 00:47:48 INFO Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 7728.
+20/02/17 00:47:48 INFO NettyBlockTransferService: Server created on 192.168.1.25:7728
+20/02/17 00:47:48 INFO BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+20/02/17 00:47:48 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, 192.168.1.25, 7728, None)
+20/02/17 00:47:48 INFO BlockManagerMasterEndpoint: Registering block manager 192.168.1.25:7728 with 366.3 MB RAM, BlockManagerId(driver, 192.168.1.25, 7728, None)
+20/02/17 00:47:48 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, 192.168.1.25, 7728, None)
+20/02/17 00:47:48 INFO BlockManager: Initialized BlockManager: BlockManagerId(driver, 192.168.1.25, 7728, None)
+20/02/17 00:47:48 INFO SharedState: Setting hive.metastore.warehouse.dir ('null') to the value of spark.sql.warehouse.dir ('file:/edw/Reviews/SourceCode/bash/spark-warehouse').
+20/02/17 00:47:48 INFO SharedState: Warehouse path is 'file:/edw/Reviews/SourceCode/bash/spark-warehouse'.
+20/02/17 00:47:49 INFO StateStoreCoordinatorRef: Registered StateStoreCoordinator endpoint
+20/02/17 00:47:53 INFO CodeGenerator: Code generated in 556.0642 ms
+20/02/17 00:47:53 INFO CodeGenerator: Code generated in 43.6953 ms
+20/02/17 00:47:53 INFO SparkContext: Starting job: showString at NativeMethodAccessorImpl.java:0
+20/02/17 00:47:54 INFO DAGScheduler: Got job 0 (showString at NativeMethodAccessorImpl.java:0) with 1 output partitions
+20/02/17 00:47:54 INFO DAGScheduler: Final stage: ResultStage 0 (showString at NativeMethodAccessorImpl.java:0)
+20/02/17 00:47:54 INFO DAGScheduler: Parents of final stage: List()
+20/02/17 00:47:54 INFO DAGScheduler: Missing parents: List()
+20/02/17 00:47:54 INFO DAGScheduler: Submitting ResultStage 0 (MapPartitionsRDD[3] at showString at NativeMethodAccessorImpl.java:0), which has no missing parents
+20/02/17 00:47:54 INFO MemoryStore: Block broadcast_0 stored as values in memory (estimated size 10.5 KB, free 366.3 MB)
+20/02/17 00:47:54 INFO MemoryStore: Block broadcast_0_piece0 stored as bytes in memory (estimated size 5.9 KB, free 366.3 MB)
+20/02/17 00:47:54 INFO BlockManagerInfo: Added broadcast_0_piece0 in memory on 192.168.1.25:7728 (size: 5.9 KB, free: 366.3 MB)
+20/02/17 00:47:54 INFO SparkContext: Created broadcast 0 from broadcast at DAGScheduler.scala:1163
+20/02/17 00:47:54 INFO DAGScheduler: Submitting 1 missing tasks from ResultStage 0 (MapPartitionsRDD[3] at showString at NativeMethodAccessorImpl.java:0) (first 15 tasks are for partitions Vector(0))
+20/02/17 00:47:54 INFO TaskSchedulerImpl: Adding task set 0.0 with 1 tasks
+20/02/17 00:47:54 INFO TaskSetManager: Starting task 0.0 in stage 0.0 (TID 0, localhost, executor driver, partition 0, PROCESS_LOCAL, 7690 bytes)
+20/02/17 00:47:54 INFO Executor: Running task 0.0 in stage 0.0 (TID 0)
+20/02/17 00:48:02 INFO JDBCRDD: closed connection
+20/02/17 00:48:02 INFO Executor: Finished task 0.0 in stage 0.0 (TID 0). 2317 bytes result sent to driver
+20/02/17 00:48:02 INFO TaskSetManager: Finished task 0.0 in stage 0.0 (TID 0) in 7850 ms on localhost (executor driver) (1/1)
+20/02/17 00:48:02 INFO TaskSchedulerImpl: Removed TaskSet 0.0, whose tasks have all completed, from pool 
+20/02/17 00:48:02 INFO DAGScheduler: ResultStage 0 (showString at NativeMethodAccessorImpl.java:0) finished in 8.137 s
+20/02/17 00:48:02 INFO DAGScheduler: Job 0 finished: showString at NativeMethodAccessorImpl.java:0, took 8.218002 s
++--------------------+--------------------+-------------------+-------------------+
+|         reviewer_id|         reviewer_nm|             add_td|        modified_td|
++--------------------+--------------------+-------------------+-------------------+
+|A00039763E5V43M02...|           MsDreinca|2020-02-15 03:53:31|2020-02-16 02:31:43|
+|A00115723IFW2X9CU...|       Mindi Tindall|2020-02-15 05:37:45|2020-02-16 02:31:43|
+|A002425836BHXOS8U...|             Clodagh|2020-02-15 05:37:45|2020-02-16 02:31:43|
+|A00369122K166QHZJ...|bj leah miles-fenton|2020-02-15 03:53:31|2020-02-16 02:31:43|
+|A00517662S37NZAL7...|              Antone|2020-02-15 05:37:45|2020-02-16 02:31:43|
+|A00645222PJZ0DIMP...|             Anthony|2020-02-15 05:37:45|2020-02-16 02:31:43|
+|A00652961QVJY2CGH...|      Shaylin Peters|2020-02-15 03:53:31|2020-02-16 02:31:43|
+|A008483934S118DJU...|       Robert Warner|2020-02-15 03:53:31|2020-02-16 02:31:43|
+|A00882592E5IMSN8F...|         M. Bielanin|2020-02-15 03:53:31|2020-02-16 02:31:43|
+|A0090495K0FTJUG4CPSA|            Serenity|2020-02-15 05:37:45|2020-02-16 02:31:43|
+|A01003393RLOL3357...|     Donald McBurnie|2020-02-15 03:53:31|2020-02-16 02:31:43|
+|A01079131OLTHGTTB...|                  Em|2020-02-15 03:53:31|2020-02-16 02:31:43|
+|A010997525FU27TAP...|Aistis Zidanavici...|2020-02-15 03:53:31|2020-02-16 02:31:43|
+|A011375310EMGKL9Z...|               bg144|2020-02-15 03:53:31|2020-02-16 02:31:43|
+|A011769335YMOT60V...|            Wendelle|2020-02-15 03:53:31|2020-02-16 02:31:43|
+|A01385023DOTO5WGD...|       John Sullivan|2020-02-15 03:53:31|2020-02-16 02:31:43|
+|A014171233FOOGYHV...|       Bernie Dudley|2020-02-15 05:37:45|2020-02-16 02:31:43|
+|A01429441OEFOCYXZ...|              Nicole|2020-02-15 03:53:31|2020-02-16 02:31:43|
+|A0181450OPL6IIRNAJ4R|       Deb Delahunty|2020-02-15 03:53:31|2020-02-16 02:31:43|
+|A01866161OQ1BJPZE...|   Harriet T. Miller|2020-02-15 05:37:45|2020-02-16 02:31:43|
++--------------------+--------------------+-------------------+-------------------+
+only showing top 20 rows
+
+20/02/17 00:48:02 INFO SparkContext: Invoking stop() from shutdown hook
+20/02/17 00:48:02 INFO SparkUI: Stopped Spark web UI at http://192.168.1.25:4040
+20/02/17 00:48:02 INFO MapOutputTrackerMasterEndpoint: MapOutputTrackerMasterEndpoint stopped!
+20/02/17 00:48:02 INFO MemoryStore: MemoryStore cleared
+20/02/17 00:48:02 INFO BlockManager: BlockManager stopped
+20/02/17 00:48:02 INFO BlockManagerMaster: BlockManagerMaster stopped
+20/02/17 00:48:02 INFO OutputCommitCoordinator$OutputCommitCoordinatorEndpoint: OutputCommitCoordinator stopped!
+20/02/17 00:48:02 INFO SparkContext: Successfully stopped SparkContext
+20/02/17 00:48:02 INFO ShutdownHookManager: Shutdown hook called
+20/02/17 00:48:02 INFO ShutdownHookManager: Deleting directory /tmp/spark-f7f829ed-5a84-41b3-b79f-d0b9cf4fe250/pyspark-9d870abd-4ab0-47d0-a53d-a3a366edad36
+20/02/17 00:48:02 INFO ShutdownHookManager: Deleting directory /tmp/spark-f7f829ed-5a84-41b3-b79f-d0b9cf4fe250
+20/02/17 00:48:02 INFO ShutdownHookManager: Deleting directory /tmp/spark-1a73706a-9f3a-43d3-969f-45c3485ca705
+###################################################################################################################################
+###################################################################################################################################
+Job completed successfully
+###################################################################################################################################
+###################################################################################################################################

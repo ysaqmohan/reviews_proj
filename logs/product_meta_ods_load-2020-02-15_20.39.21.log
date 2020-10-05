@@ -1,0 +1,88 @@
+###################################################################################################################################
+###################################################################################################################################
+Load to stage in progress
+###################################################################################################################################
+###################################################################################################################################
+20/02/15 20:39:28 WARN Utils: Your hostname, DESKTOP-502C4I4 resolves to a loopback address: 127.0.1.1; using 192.168.1.25 instead (on interface wifi0)
+20/02/15 20:39:28 WARN Utils: Set SPARK_LOCAL_IP if you need to bind to another address
+20/02/15 20:39:30 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+Using Spark's default log4j profile: org/apache/spark/log4j-defaults.properties
+20/02/15 20:39:44 INFO SparkContext: Running Spark version 2.4.5
+20/02/15 20:39:44 INFO SparkContext: Submitted application: ProdMeta
+20/02/15 20:39:44 INFO SecurityManager: Changing view acls to: devetluser
+20/02/15 20:39:44 INFO SecurityManager: Changing modify acls to: devetluser
+20/02/15 20:39:44 INFO SecurityManager: Changing view acls groups to: 
+20/02/15 20:39:44 INFO SecurityManager: Changing modify acls groups to: 
+20/02/15 20:39:44 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(devetluser); groups with view permissions: Set(); users  with modify permissions: Set(devetluser); groups with modify permissions: Set()
+20/02/15 20:39:45 INFO Utils: Successfully started service 'sparkDriver' on port 4025.
+20/02/15 20:39:45 INFO SparkEnv: Registering MapOutputTracker
+20/02/15 20:39:45 INFO SparkEnv: Registering BlockManagerMaster
+20/02/15 20:39:45 INFO BlockManagerMasterEndpoint: Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+20/02/15 20:39:45 INFO BlockManagerMasterEndpoint: BlockManagerMasterEndpoint up
+20/02/15 20:39:45 INFO DiskBlockManager: Created local directory at /tmp/blockmgr-1bd23cf5-7f24-4609-9303-a2ec73f4a879
+20/02/15 20:39:45 INFO MemoryStore: MemoryStore started with capacity 366.3 MB
+20/02/15 20:39:45 INFO SparkEnv: Registering OutputCommitCoordinator
+20/02/15 20:39:46 INFO Utils: Successfully started service 'SparkUI' on port 4040.
+20/02/15 20:39:46 INFO SparkUI: Bound SparkUI to 0.0.0.0, and started at http://192.168.1.25:4040
+20/02/15 20:39:46 INFO Executor: Starting executor ID driver on host localhost
+20/02/15 20:39:47 INFO Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 4028.
+20/02/15 20:39:47 INFO NettyBlockTransferService: Server created on 192.168.1.25:4028
+20/02/15 20:39:47 INFO BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+20/02/15 20:39:47 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, 192.168.1.25, 4028, None)
+20/02/15 20:39:47 INFO BlockManagerMasterEndpoint: Registering block manager 192.168.1.25:4028 with 366.3 MB RAM, BlockManagerId(driver, 192.168.1.25, 4028, None)
+20/02/15 20:39:47 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, 192.168.1.25, 4028, None)
+20/02/15 20:39:47 INFO BlockManager: Initialized BlockManager: BlockManagerId(driver, 192.168.1.25, 4028, None)
+20/02/15 20:39:48 INFO SharedState: Setting hive.metastore.warehouse.dir ('null') to the value of spark.sql.warehouse.dir ('file:/edw/Reviews/SourceCode/bash/spark-warehouse').
+20/02/15 20:39:48 INFO SharedState: Warehouse path is 'file:/edw/Reviews/SourceCode/bash/spark-warehouse'.
+20/02/15 20:39:50 INFO StateStoreCoordinatorRef: Registered StateStoreCoordinator endpoint
+Traceback (most recent call last):
+  File "/edw/Reviews/spark-2.4.5-bin-hadoop2.7/python/lib/pyspark.zip/pyspark/sql/utils.py", line 63, in deco
+  File "/edw/Reviews/spark-2.4.5-bin-hadoop2.7/python/lib/py4j-0.10.7-src.zip/py4j/protocol.py", line 328, in get_return_value
+py4j.protocol.Py4JJavaError: An error occurred while calling o26.json.
+: org.apache.spark.sql.AnalysisException: Path does not exist: file:/edw/Reviews/SourceCode/data/ProdMeta.json;
+	at org.apache.spark.sql.execution.datasources.DataSource$$anonfun$org$apache$spark$sql$execution$datasources$DataSource$$checkAndGlobPathIfNecessary$1.apply(DataSource.scala:558)
+	at org.apache.spark.sql.execution.datasources.DataSource$$anonfun$org$apache$spark$sql$execution$datasources$DataSource$$checkAndGlobPathIfNecessary$1.apply(DataSource.scala:545)
+	at scala.collection.TraversableLike$$anonfun$flatMap$1.apply(TraversableLike.scala:241)
+	at scala.collection.TraversableLike$$anonfun$flatMap$1.apply(TraversableLike.scala:241)
+	at scala.collection.immutable.List.foreach(List.scala:392)
+	at scala.collection.TraversableLike$class.flatMap(TraversableLike.scala:241)
+	at scala.collection.immutable.List.flatMap(List.scala:355)
+	at org.apache.spark.sql.execution.datasources.DataSource.org$apache$spark$sql$execution$datasources$DataSource$$checkAndGlobPathIfNecessary(DataSource.scala:545)
+	at org.apache.spark.sql.execution.datasources.DataSource.resolveRelation(DataSource.scala:359)
+	at org.apache.spark.sql.DataFrameReader.loadV1Source(DataFrameReader.scala:223)
+	at org.apache.spark.sql.DataFrameReader.load(DataFrameReader.scala:211)
+	at org.apache.spark.sql.DataFrameReader.json(DataFrameReader.scala:392)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at py4j.reflection.MethodInvoker.invoke(MethodInvoker.java:244)
+	at py4j.reflection.ReflectionEngine.invoke(ReflectionEngine.java:357)
+	at py4j.Gateway.invoke(Gateway.java:282)
+	at py4j.commands.AbstractCommand.invokeMethod(AbstractCommand.java:132)
+	at py4j.commands.CallCommand.execute(CallCommand.java:79)
+	at py4j.GatewayConnection.run(GatewayConnection.java:238)
+	at java.lang.Thread.run(Thread.java:748)
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/edw/Reviews/SourceCode/python/product_meta_ods_load.py", line 23, in <module>
+    Prod_df = spark.read.json(ProdMetajson)
+  File "/edw/Reviews/spark-2.4.5-bin-hadoop2.7/python/lib/pyspark.zip/pyspark/sql/readwriter.py", line 274, in json
+  File "/edw/Reviews/spark-2.4.5-bin-hadoop2.7/python/lib/py4j-0.10.7-src.zip/py4j/java_gateway.py", line 1257, in __call__
+  File "/edw/Reviews/spark-2.4.5-bin-hadoop2.7/python/lib/pyspark.zip/pyspark/sql/utils.py", line 69, in deco
+pyspark.sql.utils.AnalysisException: 'Path does not exist: file:/edw/Reviews/SourceCode/data/ProdMeta.json;'
+20/02/15 20:39:52 INFO SparkContext: Invoking stop() from shutdown hook
+20/02/15 20:39:53 INFO SparkUI: Stopped Spark web UI at http://192.168.1.25:4040
+20/02/15 20:39:53 INFO MapOutputTrackerMasterEndpoint: MapOutputTrackerMasterEndpoint stopped!
+20/02/15 20:39:53 INFO MemoryStore: MemoryStore cleared
+20/02/15 20:39:53 INFO BlockManager: BlockManager stopped
+20/02/15 20:39:53 INFO BlockManagerMaster: BlockManagerMaster stopped
+20/02/15 20:39:53 INFO OutputCommitCoordinator$OutputCommitCoordinatorEndpoint: OutputCommitCoordinator stopped!
+20/02/15 20:39:53 INFO SparkContext: Successfully stopped SparkContext
+20/02/15 20:39:53 INFO ShutdownHookManager: Shutdown hook called
+20/02/15 20:39:53 INFO ShutdownHookManager: Deleting directory /tmp/spark-d4473fdc-7f63-4ae4-893e-8b32124defd8/pyspark-9aaee388-58a3-43a2-a03a-6f2cddfd25f3
+20/02/15 20:39:53 INFO ShutdownHookManager: Deleting directory /tmp/spark-ffc0bc5a-f24c-465a-8c94-ea946e205074
+20/02/15 20:39:53 INFO ShutdownHookManager: Deleting directory /tmp/spark-d4473fdc-7f63-4ae4-893e-8b32124defd8

@@ -1,0 +1,226 @@
+###################################################################################################################################
+###################################################################################################################################
+Load to stage in progress
+###################################################################################################################################
+###################################################################################################################################
+20/02/16 19:01:16 WARN Utils: Your hostname, DESKTOP-502C4I4 resolves to a loopback address: 127.0.1.1; using 192.168.1.25 instead (on interface wifi0)
+20/02/16 19:01:16 WARN Utils: Set SPARK_LOCAL_IP if you need to bind to another address
+20/02/16 19:01:17 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+Using Spark's default log4j profile: org/apache/spark/log4j-defaults.properties
+20/02/16 19:01:21 INFO SparkContext: Running Spark version 2.4.5
+20/02/16 19:01:21 INFO SparkContext: Submitted application: ReviewsOdsSession
+20/02/16 19:01:22 INFO SecurityManager: Changing view acls to: devetluser
+20/02/16 19:01:22 INFO SecurityManager: Changing modify acls to: devetluser
+20/02/16 19:01:22 INFO SecurityManager: Changing view acls groups to: 
+20/02/16 19:01:22 INFO SecurityManager: Changing modify acls groups to: 
+20/02/16 19:01:22 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(devetluser); groups with view permissions: Set(); users  with modify permissions: Set(devetluser); groups with modify permissions: Set()
+20/02/16 19:01:22 INFO Utils: Successfully started service 'sparkDriver' on port 12096.
+20/02/16 19:01:22 INFO SparkEnv: Registering MapOutputTracker
+20/02/16 19:01:23 INFO SparkEnv: Registering BlockManagerMaster
+20/02/16 19:01:23 INFO BlockManagerMasterEndpoint: Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+20/02/16 19:01:23 INFO BlockManagerMasterEndpoint: BlockManagerMasterEndpoint up
+20/02/16 19:01:23 INFO DiskBlockManager: Created local directory at /tmp/blockmgr-048af239-e572-4678-938b-37b70d7e08a0
+20/02/16 19:01:23 INFO MemoryStore: MemoryStore started with capacity 366.3 MB
+20/02/16 19:01:23 INFO SparkEnv: Registering OutputCommitCoordinator
+20/02/16 19:01:23 INFO Utils: Successfully started service 'SparkUI' on port 4040.
+20/02/16 19:01:23 INFO SparkUI: Bound SparkUI to 0.0.0.0, and started at http://192.168.1.25:4040
+20/02/16 19:01:23 INFO Executor: Starting executor ID driver on host localhost
+20/02/16 19:01:24 INFO Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 12099.
+20/02/16 19:01:24 INFO NettyBlockTransferService: Server created on 192.168.1.25:12099
+20/02/16 19:01:24 INFO BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+20/02/16 19:01:24 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, 192.168.1.25, 12099, None)
+20/02/16 19:01:24 INFO BlockManagerMasterEndpoint: Registering block manager 192.168.1.25:12099 with 366.3 MB RAM, BlockManagerId(driver, 192.168.1.25, 12099, None)
+20/02/16 19:01:24 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, 192.168.1.25, 12099, None)
+20/02/16 19:01:24 INFO BlockManager: Initialized BlockManager: BlockManagerId(driver, 192.168.1.25, 12099, None)
+20/02/16 19:01:25 INFO SharedState: Setting hive.metastore.warehouse.dir ('null') to the value of spark.sql.warehouse.dir ('file:/edw/Reviews/SourceCode/bash/spark-warehouse').
+20/02/16 19:01:25 INFO SharedState: Warehouse path is 'file:/edw/Reviews/SourceCode/bash/spark-warehouse'.
+20/02/16 19:01:27 INFO StateStoreCoordinatorRef: Registered StateStoreCoordinator endpoint
+20/02/16 19:01:27 INFO InMemoryFileIndex: It took 82 ms to list leaf files for 1 paths.
+20/02/16 19:01:28 INFO InMemoryFileIndex: It took 2 ms to list leaf files for 1 paths.
+20/02/16 19:01:31 INFO FileSourceStrategy: Pruning directories with: 
+20/02/16 19:01:31 INFO FileSourceStrategy: Post-Scan Filters: 
+20/02/16 19:01:31 INFO FileSourceStrategy: Output Data Schema: struct<value: string>
+20/02/16 19:01:31 INFO FileSourceScanExec: Pushed Filters: 
+20/02/16 19:01:32 INFO CodeGenerator: Code generated in 393.6667 ms
+20/02/16 19:01:33 INFO MemoryStore: Block broadcast_0 stored as values in memory (estimated size 282.9 KB, free 366.0 MB)
+20/02/16 19:01:33 INFO MemoryStore: Block broadcast_0_piece0 stored as bytes in memory (estimated size 23.3 KB, free 366.0 MB)
+20/02/16 19:01:33 INFO BlockManagerInfo: Added broadcast_0_piece0 in memory on 192.168.1.25:12099 (size: 23.3 KB, free: 366.3 MB)
+20/02/16 19:01:33 INFO SparkContext: Created broadcast 0 from json at NativeMethodAccessorImpl.java:0
+20/02/16 19:01:33 INFO FileSourceScanExec: Planning scan with bin packing, max size: 134217728 bytes, open cost is considered as scanning 4194304 bytes.
+20/02/16 19:01:33 INFO SparkContext: Starting job: json at NativeMethodAccessorImpl.java:0
+20/02/16 19:01:33 INFO DAGScheduler: Got job 0 (json at NativeMethodAccessorImpl.java:0) with 29 output partitions
+20/02/16 19:01:33 INFO DAGScheduler: Final stage: ResultStage 0 (json at NativeMethodAccessorImpl.java:0)
+20/02/16 19:01:33 INFO DAGScheduler: Parents of final stage: List()
+20/02/16 19:01:33 INFO DAGScheduler: Missing parents: List()
+20/02/16 19:01:33 INFO DAGScheduler: Submitting ResultStage 0 (MapPartitionsRDD[3] at json at NativeMethodAccessorImpl.java:0), which has no missing parents
+20/02/16 19:01:33 INFO MemoryStore: Block broadcast_1 stored as values in memory (estimated size 11.6 KB, free 366.0 MB)
+20/02/16 19:01:33 INFO MemoryStore: Block broadcast_1_piece0 stored as bytes in memory (estimated size 6.7 KB, free 366.0 MB)
+20/02/16 19:01:33 INFO BlockManagerInfo: Added broadcast_1_piece0 in memory on 192.168.1.25:12099 (size: 6.7 KB, free: 366.3 MB)
+20/02/16 19:01:33 INFO SparkContext: Created broadcast 1 from broadcast at DAGScheduler.scala:1163
+20/02/16 19:01:33 INFO DAGScheduler: Submitting 29 missing tasks from ResultStage 0 (MapPartitionsRDD[3] at json at NativeMethodAccessorImpl.java:0) (first 15 tasks are for partitions Vector(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14))
+20/02/16 19:01:33 INFO TaskSchedulerImpl: Adding task set 0.0 with 29 tasks
+20/02/16 19:01:33 INFO TaskSetManager: Starting task 0.0 in stage 0.0 (TID 0, localhost, executor driver, partition 0, PROCESS_LOCAL, 8269 bytes)
+20/02/16 19:01:33 INFO TaskSetManager: Starting task 1.0 in stage 0.0 (TID 1, localhost, executor driver, partition 1, PROCESS_LOCAL, 8269 bytes)
+20/02/16 19:01:33 INFO TaskSetManager: Starting task 2.0 in stage 0.0 (TID 2, localhost, executor driver, partition 2, PROCESS_LOCAL, 8269 bytes)
+20/02/16 19:01:33 INFO TaskSetManager: Starting task 3.0 in stage 0.0 (TID 3, localhost, executor driver, partition 3, PROCESS_LOCAL, 8269 bytes)
+20/02/16 19:01:33 INFO Executor: Running task 3.0 in stage 0.0 (TID 3)
+20/02/16 19:01:33 INFO Executor: Running task 0.0 in stage 0.0 (TID 0)
+20/02/16 19:01:33 INFO Executor: Running task 1.0 in stage 0.0 (TID 1)
+20/02/16 19:01:33 INFO Executor: Running task 2.0 in stage 0.0 (TID 2)
+20/02/16 19:01:34 INFO FileScanRDD: Reading File path: file:///edw/Reviews/SourceCode/data/asin_reviews.json, range: 134217728-268435456, partition values: [empty row]
+20/02/16 19:01:34 INFO FileScanRDD: Reading File path: file:///edw/Reviews/SourceCode/data/asin_reviews.json, range: 402653184-536870912, partition values: [empty row]
+20/02/16 19:01:34 INFO FileScanRDD: Reading File path: file:///edw/Reviews/SourceCode/data/asin_reviews.json, range: 268435456-402653184, partition values: [empty row]
+20/02/16 19:01:34 INFO FileScanRDD: Reading File path: file:///edw/Reviews/SourceCode/data/asin_reviews.json, range: 0-134217728, partition values: [empty row]
+20/02/16 19:01:34 INFO CodeGenerator: Code generated in 28.3339 ms
+20/02/16 19:01:54 INFO Executor: Finished task 3.0 in stage 0.0 (TID 3). 2350 bytes result sent to driver
+20/02/16 19:01:54 INFO Executor: Finished task 1.0 in stage 0.0 (TID 1). 2307 bytes result sent to driver
+20/02/16 19:01:54 INFO Executor: Finished task 2.0 in stage 0.0 (TID 2). 2307 bytes result sent to driver
+20/02/16 19:01:54 INFO TaskSetManager: Starting task 4.0 in stage 0.0 (TID 4, localhost, executor driver, partition 4, PROCESS_LOCAL, 8269 bytes)
+20/02/16 19:01:54 INFO Executor: Running task 4.0 in stage 0.0 (TID 4)
+20/02/16 19:01:54 INFO TaskSetManager: Starting task 5.0 in stage 0.0 (TID 5, localhost, executor driver, partition 5, PROCESS_LOCAL, 8269 bytes)
+20/02/16 19:01:54 INFO FileScanRDD: Reading File path: file:///edw/Reviews/SourceCode/data/asin_reviews.json, range: 536870912-671088640, partition values: [empty row]
+20/02/16 19:01:54 INFO Executor: Running task 5.0 in stage 0.0 (TID 5)
+20/02/16 19:01:54 INFO TaskSetManager: Starting task 6.0 in stage 0.0 (TID 6, localhost, executor driver, partition 6, PROCESS_LOCAL, 8269 bytes)
+20/02/16 19:01:54 INFO FileScanRDD: Reading File path: file:///edw/Reviews/SourceCode/data/asin_reviews.json, range: 671088640-805306368, partition values: [empty row]
+20/02/16 19:01:54 INFO Executor: Running task 6.0 in stage 0.0 (TID 6)
+20/02/16 19:01:54 INFO Executor: Finished task 0.0 in stage 0.0 (TID 0). 2307 bytes result sent to driver
+20/02/16 19:01:54 INFO FileScanRDD: Reading File path: file:///edw/Reviews/SourceCode/data/asin_reviews.json, range: 805306368-939524096, partition values: [empty row]
+20/02/16 19:01:54 INFO TaskSetManager: Finished task 3.0 in stage 0.0 (TID 3) in 20242 ms on localhost (executor driver) (1/29)
+20/02/16 19:01:54 INFO TaskSetManager: Finished task 2.0 in stage 0.0 (TID 2) in 20273 ms on localhost (executor driver) (2/29)
+20/02/16 19:01:54 INFO TaskSetManager: Finished task 1.0 in stage 0.0 (TID 1) in 20275 ms on localhost (executor driver) (3/29)
+20/02/16 19:01:54 INFO TaskSetManager: Starting task 7.0 in stage 0.0 (TID 7, localhost, executor driver, partition 7, PROCESS_LOCAL, 8269 bytes)
+20/02/16 19:01:54 INFO TaskSetManager: Finished task 0.0 in stage 0.0 (TID 0) in 20300 ms on localhost (executor driver) (4/29)
+20/02/16 19:01:54 INFO Executor: Running task 7.0 in stage 0.0 (TID 7)
+20/02/16 19:01:54 INFO FileScanRDD: Reading File path: file:///edw/Reviews/SourceCode/data/asin_reviews.json, range: 939524096-1073741824, partition values: [empty row]
+20/02/16 19:02:13 INFO Executor: Finished task 5.0 in stage 0.0 (TID 5). 2264 bytes result sent to driver
+20/02/16 19:02:13 INFO TaskSetManager: Starting task 8.0 in stage 0.0 (TID 8, localhost, executor driver, partition 8, PROCESS_LOCAL, 8269 bytes)
+20/02/16 19:02:13 INFO Executor: Running task 8.0 in stage 0.0 (TID 8)
+20/02/16 19:02:13 INFO TaskSetManager: Finished task 5.0 in stage 0.0 (TID 5) in 19218 ms on localhost (executor driver) (5/29)
+20/02/16 19:02:13 INFO FileScanRDD: Reading File path: file:///edw/Reviews/SourceCode/data/asin_reviews.json, range: 1073741824-1207959552, partition values: [empty row]
+20/02/16 19:02:13 INFO Executor: Finished task 4.0 in stage 0.0 (TID 4). 2307 bytes result sent to driver
+20/02/16 19:02:13 INFO TaskSetManager: Starting task 9.0 in stage 0.0 (TID 9, localhost, executor driver, partition 9, PROCESS_LOCAL, 8269 bytes)
+20/02/16 19:02:13 INFO TaskSetManager: Finished task 4.0 in stage 0.0 (TID 4) in 19412 ms on localhost (executor driver) (6/29)
+20/02/16 19:02:13 INFO Executor: Running task 9.0 in stage 0.0 (TID 9)
+20/02/16 19:02:13 INFO FileScanRDD: Reading File path: file:///edw/Reviews/SourceCode/data/asin_reviews.json, range: 1207959552-1342177280, partition values: [empty row]
+20/02/16 19:02:14 INFO Executor: Finished task 7.0 in stage 0.0 (TID 7). 2307 bytes result sent to driver
+20/02/16 19:02:14 INFO TaskSetManager: Starting task 10.0 in stage 0.0 (TID 10, localhost, executor driver, partition 10, PROCESS_LOCAL, 8269 bytes)
+20/02/16 19:02:14 INFO Executor: Running task 10.0 in stage 0.0 (TID 10)
+20/02/16 19:02:14 INFO TaskSetManager: Finished task 7.0 in stage 0.0 (TID 7) in 19865 ms on localhost (executor driver) (7/29)
+20/02/16 19:02:14 INFO FileScanRDD: Reading File path: file:///edw/Reviews/SourceCode/data/asin_reviews.json, range: 1342177280-1476395008, partition values: [empty row]
+20/02/16 19:02:14 INFO Executor: Finished task 6.0 in stage 0.0 (TID 6). 2307 bytes result sent to driver
+20/02/16 19:02:14 INFO TaskSetManager: Starting task 11.0 in stage 0.0 (TID 11, localhost, executor driver, partition 11, PROCESS_LOCAL, 8269 bytes)
+20/02/16 19:02:14 INFO TaskSetManager: Finished task 6.0 in stage 0.0 (TID 6) in 19969 ms on localhost (executor driver) (8/29)
+20/02/16 19:02:14 INFO Executor: Running task 11.0 in stage 0.0 (TID 11)
+20/02/16 19:02:14 INFO FileScanRDD: Reading File path: file:///edw/Reviews/SourceCode/data/asin_reviews.json, range: 1476395008-1610612736, partition values: [empty row]
+20/02/16 19:02:29 INFO Executor: Finished task 9.0 in stage 0.0 (TID 9). 2350 bytes result sent to driver
+20/02/16 19:02:29 INFO TaskSetManager: Starting task 12.0 in stage 0.0 (TID 12, localhost, executor driver, partition 12, PROCESS_LOCAL, 8269 bytes)
+20/02/16 19:02:29 INFO Executor: Running task 12.0 in stage 0.0 (TID 12)
+20/02/16 19:02:29 INFO TaskSetManager: Finished task 9.0 in stage 0.0 (TID 9) in 16450 ms on localhost (executor driver) (9/29)
+20/02/16 19:02:29 INFO FileScanRDD: Reading File path: file:///edw/Reviews/SourceCode/data/asin_reviews.json, range: 1610612736-1744830464, partition values: [empty row]
+20/02/16 19:02:30 INFO Executor: Finished task 8.0 in stage 0.0 (TID 8). 2307 bytes result sent to driver
+20/02/16 19:02:30 INFO TaskSetManager: Starting task 13.0 in stage 0.0 (TID 13, localhost, executor driver, partition 13, PROCESS_LOCAL, 8269 bytes)
+20/02/16 19:02:30 INFO Executor: Running task 13.0 in stage 0.0 (TID 13)
+20/02/16 19:02:30 INFO TaskSetManager: Finished task 8.0 in stage 0.0 (TID 8) in 17624 ms on localhost (executor driver) (10/29)
+20/02/16 19:02:30 INFO FileScanRDD: Reading File path: file:///edw/Reviews/SourceCode/data/asin_reviews.json, range: 1744830464-1879048192, partition values: [empty row]
+20/02/16 19:02:37 INFO Executor: Finished task 11.0 in stage 0.0 (TID 11). 2307 bytes result sent to driver
+20/02/16 19:02:37 INFO TaskSetManager: Starting task 14.0 in stage 0.0 (TID 14, localhost, executor driver, partition 14, PROCESS_LOCAL, 8269 bytes)
+20/02/16 19:02:37 INFO TaskSetManager: Finished task 11.0 in stage 0.0 (TID 11) in 23495 ms on localhost (executor driver) (11/29)
+20/02/16 19:02:37 INFO Executor: Running task 14.0 in stage 0.0 (TID 14)
+20/02/16 19:02:37 INFO FileScanRDD: Reading File path: file:///edw/Reviews/SourceCode/data/asin_reviews.json, range: 1879048192-2013265920, partition values: [empty row]
+20/02/16 19:02:40 INFO Executor: Finished task 10.0 in stage 0.0 (TID 10). 2307 bytes result sent to driver
+20/02/16 19:02:40 INFO TaskSetManager: Starting task 15.0 in stage 0.0 (TID 15, localhost, executor driver, partition 15, PROCESS_LOCAL, 8269 bytes)
+20/02/16 19:02:40 INFO TaskSetManager: Finished task 10.0 in stage 0.0 (TID 10) in 26217 ms on localhost (executor driver) (12/29)
+20/02/16 19:02:40 INFO Executor: Running task 15.0 in stage 0.0 (TID 15)
+20/02/16 19:02:40 INFO FileScanRDD: Reading File path: file:///edw/Reviews/SourceCode/data/asin_reviews.json, range: 2013265920-2147483648, partition values: [empty row]
+20/02/16 19:02:49 INFO Executor: Finished task 13.0 in stage 0.0 (TID 13). 2264 bytes result sent to driver
+20/02/16 19:02:49 INFO TaskSetManager: Starting task 16.0 in stage 0.0 (TID 16, localhost, executor driver, partition 16, PROCESS_LOCAL, 8269 bytes)
+20/02/16 19:02:49 INFO Executor: Running task 16.0 in stage 0.0 (TID 16)
+20/02/16 19:02:49 INFO TaskSetManager: Finished task 13.0 in stage 0.0 (TID 13) in 18344 ms on localhost (executor driver) (13/29)
+20/02/16 19:02:49 INFO FileScanRDD: Reading File path: file:///edw/Reviews/SourceCode/data/asin_reviews.json, range: 2147483648-2281701376, partition values: [empty row]
+20/02/16 19:02:51 INFO Executor: Finished task 12.0 in stage 0.0 (TID 12). 2307 bytes result sent to driver
+20/02/16 19:02:51 INFO TaskSetManager: Starting task 17.0 in stage 0.0 (TID 17, localhost, executor driver, partition 17, PROCESS_LOCAL, 8269 bytes)
+20/02/16 19:02:51 INFO TaskSetManager: Finished task 12.0 in stage 0.0 (TID 12) in 21948 ms on localhost (executor driver) (14/29)
+20/02/16 19:02:51 INFO Executor: Running task 17.0 in stage 0.0 (TID 17)
+20/02/16 19:02:51 INFO FileScanRDD: Reading File path: file:///edw/Reviews/SourceCode/data/asin_reviews.json, range: 2281701376-2415919104, partition values: [empty row]
+20/02/16 19:02:54 INFO Executor: Finished task 15.0 in stage 0.0 (TID 15). 2307 bytes result sent to driver
+20/02/16 19:02:54 INFO TaskSetManager: Starting task 18.0 in stage 0.0 (TID 18, localhost, executor driver, partition 18, PROCESS_LOCAL, 8269 bytes)
+20/02/16 19:02:54 INFO TaskSetManager: Finished task 15.0 in stage 0.0 (TID 15) in 13737 ms on localhost (executor driver) (15/29)
+20/02/16 19:02:54 INFO Executor: Running task 18.0 in stage 0.0 (TID 18)
+20/02/16 19:02:54 INFO FileScanRDD: Reading File path: file:///edw/Reviews/SourceCode/data/asin_reviews.json, range: 2415919104-2550136832, partition values: [empty row]
+20/02/16 19:03:00 INFO Executor: Finished task 14.0 in stage 0.0 (TID 14). 2264 bytes result sent to driver
+20/02/16 19:03:00 INFO TaskSetManager: Starting task 19.0 in stage 0.0 (TID 19, localhost, executor driver, partition 19, PROCESS_LOCAL, 8269 bytes)
+20/02/16 19:03:00 INFO Executor: Running task 19.0 in stage 0.0 (TID 19)
+20/02/16 19:03:00 INFO TaskSetManager: Finished task 14.0 in stage 0.0 (TID 14) in 23251 ms on localhost (executor driver) (16/29)
+20/02/16 19:03:00 INFO FileScanRDD: Reading File path: file:///edw/Reviews/SourceCode/data/asin_reviews.json, range: 2550136832-2684354560, partition values: [empty row]
+20/02/16 19:03:08 INFO Executor: Finished task 17.0 in stage 0.0 (TID 17). 2264 bytes result sent to driver
+20/02/16 19:03:08 INFO TaskSetManager: Starting task 20.0 in stage 0.0 (TID 20, localhost, executor driver, partition 20, PROCESS_LOCAL, 8269 bytes)
+20/02/16 19:03:08 INFO Executor: Running task 20.0 in stage 0.0 (TID 20)
+20/02/16 19:03:08 INFO TaskSetManager: Finished task 17.0 in stage 0.0 (TID 17) in 16449 ms on localhost (executor driver) (17/29)
+20/02/16 19:03:08 INFO FileScanRDD: Reading File path: file:///edw/Reviews/SourceCode/data/asin_reviews.json, range: 2684354560-2818572288, partition values: [empty row]
+20/02/16 19:03:13 INFO Executor: Finished task 18.0 in stage 0.0 (TID 18). 2307 bytes result sent to driver
+20/02/16 19:03:13 INFO TaskSetManager: Starting task 21.0 in stage 0.0 (TID 21, localhost, executor driver, partition 21, PROCESS_LOCAL, 8269 bytes)
+20/02/16 19:03:13 INFO Executor: Running task 21.0 in stage 0.0 (TID 21)
+20/02/16 19:03:13 INFO TaskSetManager: Finished task 18.0 in stage 0.0 (TID 18) in 19375 ms on localhost (executor driver) (18/29)
+20/02/16 19:03:13 INFO FileScanRDD: Reading File path: file:///edw/Reviews/SourceCode/data/asin_reviews.json, range: 2818572288-2952790016, partition values: [empty row]
+20/02/16 19:03:21 INFO Executor: Finished task 16.0 in stage 0.0 (TID 16). 2307 bytes result sent to driver
+20/02/16 19:03:21 INFO TaskSetManager: Starting task 22.0 in stage 0.0 (TID 22, localhost, executor driver, partition 22, PROCESS_LOCAL, 8269 bytes)
+20/02/16 19:03:21 INFO Executor: Running task 22.0 in stage 0.0 (TID 22)
+20/02/16 19:03:21 INFO TaskSetManager: Finished task 16.0 in stage 0.0 (TID 16) in 32395 ms on localhost (executor driver) (19/29)
+20/02/16 19:03:21 INFO FileScanRDD: Reading File path: file:///edw/Reviews/SourceCode/data/asin_reviews.json, range: 2952790016-3087007744, partition values: [empty row]
+20/02/16 19:03:21 INFO Executor: Finished task 19.0 in stage 0.0 (TID 19). 2264 bytes result sent to driver
+20/02/16 19:03:21 INFO TaskSetManager: Starting task 23.0 in stage 0.0 (TID 23, localhost, executor driver, partition 23, PROCESS_LOCAL, 8269 bytes)
+20/02/16 19:03:21 INFO TaskSetManager: Finished task 19.0 in stage 0.0 (TID 19) in 21017 ms on localhost (executor driver) (20/29)
+20/02/16 19:03:21 INFO Executor: Running task 23.0 in stage 0.0 (TID 23)
+20/02/16 19:03:21 INFO FileScanRDD: Reading File path: file:///edw/Reviews/SourceCode/data/asin_reviews.json, range: 3087007744-3221225472, partition values: [empty row]
+20/02/16 19:03:34 INFO Executor: Finished task 22.0 in stage 0.0 (TID 22). 2307 bytes result sent to driver
+20/02/16 19:03:34 INFO TaskSetManager: Starting task 24.0 in stage 0.0 (TID 24, localhost, executor driver, partition 24, PROCESS_LOCAL, 8269 bytes)
+20/02/16 19:03:34 INFO TaskSetManager: Finished task 22.0 in stage 0.0 (TID 22) in 13129 ms on localhost (executor driver) (21/29)
+20/02/16 19:03:34 INFO Executor: Running task 24.0 in stage 0.0 (TID 24)
+20/02/16 19:03:34 INFO FileScanRDD: Reading File path: file:///edw/Reviews/SourceCode/data/asin_reviews.json, range: 3221225472-3355443200, partition values: [empty row]
+20/02/16 19:03:34 INFO Executor: Finished task 23.0 in stage 0.0 (TID 23). 2307 bytes result sent to driver
+20/02/16 19:03:34 INFO TaskSetManager: Starting task 25.0 in stage 0.0 (TID 25, localhost, executor driver, partition 25, PROCESS_LOCAL, 8269 bytes)
+20/02/16 19:03:34 INFO TaskSetManager: Finished task 23.0 in stage 0.0 (TID 23) in 13067 ms on localhost (executor driver) (22/29)
+20/02/16 19:03:34 INFO Executor: Running task 25.0 in stage 0.0 (TID 25)
+20/02/16 19:03:34 INFO FileScanRDD: Reading File path: file:///edw/Reviews/SourceCode/data/asin_reviews.json, range: 3355443200-3489660928, partition values: [empty row]
+20/02/16 19:03:43 INFO Executor: Finished task 21.0 in stage 0.0 (TID 21). 2307 bytes result sent to driver
+20/02/16 19:03:43 INFO TaskSetManager: Starting task 26.0 in stage 0.0 (TID 26, localhost, executor driver, partition 26, PROCESS_LOCAL, 8269 bytes)
+20/02/16 19:03:43 INFO TaskSetManager: Finished task 21.0 in stage 0.0 (TID 21) in 30050 ms on localhost (executor driver) (23/29)
+20/02/16 19:03:43 INFO Executor: Running task 26.0 in stage 0.0 (TID 26)
+20/02/16 19:03:43 INFO FileScanRDD: Reading File path: file:///edw/Reviews/SourceCode/data/asin_reviews.json, range: 3489660928-3623878656, partition values: [empty row]
+20/02/16 19:03:51 INFO Executor: Finished task 25.0 in stage 0.0 (TID 25). 2264 bytes result sent to driver
+20/02/16 19:03:51 INFO TaskSetManager: Starting task 27.0 in stage 0.0 (TID 27, localhost, executor driver, partition 27, PROCESS_LOCAL, 8269 bytes)
+20/02/16 19:03:51 INFO TaskSetManager: Finished task 25.0 in stage 0.0 (TID 25) in 16767 ms on localhost (executor driver) (24/29)
+20/02/16 19:03:51 INFO Executor: Running task 27.0 in stage 0.0 (TID 27)
+20/02/16 19:03:51 INFO FileScanRDD: Reading File path: file:///edw/Reviews/SourceCode/data/asin_reviews.json, range: 3623878656-3758096384, partition values: [empty row]
+20/02/16 19:03:53 INFO Executor: Finished task 20.0 in stage 0.0 (TID 20). 2264 bytes result sent to driver
+20/02/16 19:03:53 INFO TaskSetManager: Starting task 28.0 in stage 0.0 (TID 28, localhost, executor driver, partition 28, PROCESS_LOCAL, 8269 bytes)
+20/02/16 19:03:53 INFO Executor: Running task 28.0 in stage 0.0 (TID 28)
+20/02/16 19:03:53 INFO TaskSetManager: Finished task 20.0 in stage 0.0 (TID 20) in 45630 ms on localhost (executor driver) (25/29)
+20/02/16 19:03:54 INFO FileScanRDD: Reading File path: file:///edw/Reviews/SourceCode/data/asin_reviews.json, range: 3758096384-3845556797, partition values: [empty row]
+20/02/16 19:03:57 INFO Executor: Finished task 26.0 in stage 0.0 (TID 26). 2264 bytes result sent to driver
+20/02/16 19:03:57 INFO TaskSetManager: Finished task 26.0 in stage 0.0 (TID 26) in 13958 ms on localhost (executor driver) (26/29)
+20/02/16 19:03:58 INFO Executor: Finished task 24.0 in stage 0.0 (TID 24). 2307 bytes result sent to driver
+20/02/16 19:03:58 INFO TaskSetManager: Finished task 24.0 in stage 0.0 (TID 24) in 23255 ms on localhost (executor driver) (27/29)
+20/02/16 19:04:05 INFO Executor: Finished task 28.0 in stage 0.0 (TID 28). 2264 bytes result sent to driver
+20/02/16 19:04:05 INFO TaskSetManager: Finished task 28.0 in stage 0.0 (TID 28) in 11735 ms on localhost (executor driver) (28/29)
+20/02/16 19:04:06 INFO Executor: Finished task 27.0 in stage 0.0 (TID 27). 2264 bytes result sent to driver
+20/02/16 19:04:06 INFO TaskSetManager: Finished task 27.0 in stage 0.0 (TID 27) in 14591 ms on localhost (executor driver) (29/29)
+20/02/16 19:04:06 INFO DAGScheduler: ResultStage 0 (json at NativeMethodAccessorImpl.java:0) finished in 152.669 s
+20/02/16 19:04:06 INFO TaskSchedulerImpl: Removed TaskSet 0.0, whose tasks have all completed, from pool 
+20/02/16 19:04:06 INFO DAGScheduler: Job 0 finished: json at NativeMethodAccessorImpl.java:0, took 152.933237 s
+Traceback (most recent call last):
+  File "/edw/Reviews/SourceCode/python/rating_ods_load.py", line 33, in <module>
+    Cl_Reviews_df.write.option.jdbc(url=url, table=table, mode=mode, properties=properties)
+AttributeError: 'function' object has no attribute 'jdbc'
+20/02/16 19:04:08 INFO SparkContext: Invoking stop() from shutdown hook
+20/02/16 19:04:08 INFO SparkUI: Stopped Spark web UI at http://192.168.1.25:4040
+20/02/16 19:04:09 INFO MapOutputTrackerMasterEndpoint: MapOutputTrackerMasterEndpoint stopped!
+20/02/16 19:04:09 INFO MemoryStore: MemoryStore cleared
+20/02/16 19:04:09 INFO BlockManager: BlockManager stopped
+20/02/16 19:04:09 INFO BlockManagerMaster: BlockManagerMaster stopped
+20/02/16 19:04:09 INFO OutputCommitCoordinator$OutputCommitCoordinatorEndpoint: OutputCommitCoordinator stopped!
+20/02/16 19:04:09 INFO SparkContext: Successfully stopped SparkContext
+20/02/16 19:04:09 INFO ShutdownHookManager: Shutdown hook called
+20/02/16 19:04:09 INFO ShutdownHookManager: Deleting directory /tmp/spark-1cc2479a-923f-4334-82a6-c8cceb44bdc5
+20/02/16 19:04:09 INFO ShutdownHookManager: Deleting directory /tmp/spark-436d4e0d-c0df-4ff7-bbb0-9932b178cb8d/pyspark-239eb04e-f5b1-4082-9fe8-0bb1b172e1c5
+20/02/16 19:04:09 INFO ShutdownHookManager: Deleting directory /tmp/spark-436d4e0d-c0df-4ff7-bbb0-9932b178cb8d

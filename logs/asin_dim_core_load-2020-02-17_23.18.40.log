@@ -1,0 +1,43 @@
+###################################################################################################################################
+###################################################################################################################################
+Load to ODS in progress
+###################################################################################################################################
+###################################################################################################################################
+begin;
+BEGIN
+	CREATE TEMPORARY TABLE ASINTEMP AS
+	SELECT asin, title, brand, odsaddtd
+	FROM "STAGE_DB".prodmeta
+	WHERE odsaddtd > (SELECT LAST_LOAD_TD
+		FROM "META_DB".CONTROL_TBL
+		WHERE SCHEMA_NM = 'CORE_DB'
+		AND TABLE_NM = 'ASIN_DIM');
+SELECT 8403388
+	CREATE INDEX ASINTEMP_LOAD ON ASINTEMP(asin);
+CREATE INDEX
+	ANALYZE ASINTEMP_LOAD;
+WARNING:  skipping "asintemp_load" --- cannot analyze non-tables or special system tables
+ANALYZE
+	UPDATE "CORE_DB".ASIN_DIM
+	SET ASIN_NM = ASINTEMP.title
+	, BRAND_NM = ASINTEMP.brand
+	, MODIFIED_TD = current_timestamp(0)
+	FROM ASINTEMP
+	WHERE ASIN_DIM.ASIN_ID = ASINTEMP.asin;
+UPDATE 8403388
+	INSERT INTO "CORE_DB".ASIN_DIM
+	SELECT ASINTEMP.asin, ASINTEMP.title, ASINTEMP.brand, current_timestamp(0), current_timestamp(0)
+	FROM ASINTEMP
+	LEFT OUTER JOIN "CORE_DB".ASIN_DIM
+	ON ASIN_DIM.ASIN_ID = ASINTEMP.asin
+	WHERE ASIN_DIM.ASIN_ID IS NULL	;
+INSERT 0 0
+	UPDATE "META_DB".CONTROL_TBL
+	SET LAST_LOAD_TD = MAXASINTEMP.maxodsaddtd
+	FROM (SELECT max(odsaddtd) as maxaddtd , count(*) as cnt FROM ASINTEMP) MAXASINTEMP
+	WHERE SCHEMA_NM = 'CORE_DB' AND TABLE_NM = 'ASIN_DIM'
+	AND MAXASINTEMP.cnt <> 0;
+ERROR:  column maxasintemp.maxodsaddtd does not exist
+LINE 2:  SET LAST_LOAD_TD = MAXASINTEMP.maxodsaddtd
+                            ^
+HINT:  Perhaps you meant to reference the column "maxasintemp.maxaddtd".

@@ -1,0 +1,167 @@
+Load to stage in progress
+20/02/14 03:31:06 WARN Utils: Your hostname, DESKTOP-502C4I4 resolves to a loopback address: 127.0.1.1; using 192.168.1.25 instead (on interface wifi0)
+20/02/14 03:31:06 WARN Utils: Set SPARK_LOCAL_IP if you need to bind to another address
+20/02/14 03:31:06 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+Using Spark's default log4j profile: org/apache/spark/log4j-defaults.properties
+20/02/14 03:31:07 INFO SparkContext: Running Spark version 2.4.5
+20/02/14 03:31:07 INFO SparkContext: Submitted application: Basics
+20/02/14 03:31:08 INFO SecurityManager: Changing view acls to: devetluser
+20/02/14 03:31:08 INFO SecurityManager: Changing modify acls to: devetluser
+20/02/14 03:31:08 INFO SecurityManager: Changing view acls groups to: 
+20/02/14 03:31:08 INFO SecurityManager: Changing modify acls groups to: 
+20/02/14 03:31:08 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(devetluser); groups with view permissions: Set(); users  with modify permissions: Set(devetluser); groups with modify permissions: Set()
+20/02/14 03:31:08 INFO Utils: Successfully started service 'sparkDriver' on port 2121.
+20/02/14 03:31:08 INFO SparkEnv: Registering MapOutputTracker
+20/02/14 03:31:08 INFO SparkEnv: Registering BlockManagerMaster
+20/02/14 03:31:08 INFO BlockManagerMasterEndpoint: Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+20/02/14 03:31:08 INFO BlockManagerMasterEndpoint: BlockManagerMasterEndpoint up
+20/02/14 03:31:08 INFO DiskBlockManager: Created local directory at /tmp/blockmgr-0e194fed-4642-45f6-aef0-2d54cd18acce
+20/02/14 03:31:08 INFO MemoryStore: MemoryStore started with capacity 366.3 MB
+20/02/14 03:31:08 INFO SparkEnv: Registering OutputCommitCoordinator
+20/02/14 03:31:08 INFO Utils: Successfully started service 'SparkUI' on port 4040.
+20/02/14 03:31:08 INFO SparkUI: Bound SparkUI to 0.0.0.0, and started at http://192.168.1.25:4040
+20/02/14 03:31:09 INFO Executor: Starting executor ID driver on host localhost
+20/02/14 03:31:09 INFO Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 2124.
+20/02/14 03:31:09 INFO NettyBlockTransferService: Server created on 192.168.1.25:2124
+20/02/14 03:31:09 INFO BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+20/02/14 03:31:09 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, 192.168.1.25, 2124, None)
+20/02/14 03:31:09 INFO BlockManagerMasterEndpoint: Registering block manager 192.168.1.25:2124 with 366.3 MB RAM, BlockManagerId(driver, 192.168.1.25, 2124, None)
+20/02/14 03:31:09 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, 192.168.1.25, 2124, None)
+20/02/14 03:31:09 INFO BlockManager: Initialized BlockManager: BlockManagerId(driver, 192.168.1.25, 2124, None)
+20/02/14 03:31:09 INFO SharedState: Setting hive.metastore.warehouse.dir ('null') to the value of spark.sql.warehouse.dir ('file:/edw/Reviews/SourceCode/bash/spark-warehouse').
+20/02/14 03:31:09 INFO SharedState: Warehouse path is 'file:/edw/Reviews/SourceCode/bash/spark-warehouse'.
+20/02/14 03:31:10 INFO StateStoreCoordinatorRef: Registered StateStoreCoordinator endpoint
+20/02/14 03:31:11 INFO InMemoryFileIndex: It took 81 ms to list leaf files for 1 paths.
+20/02/14 03:31:11 INFO InMemoryFileIndex: It took 2 ms to list leaf files for 1 paths.
+20/02/14 03:31:14 INFO FileSourceStrategy: Pruning directories with: 
+20/02/14 03:31:14 INFO FileSourceStrategy: Post-Scan Filters: 
+20/02/14 03:31:14 INFO FileSourceStrategy: Output Data Schema: struct<value: string>
+20/02/14 03:31:14 INFO FileSourceScanExec: Pushed Filters: 
+20/02/14 03:31:15 INFO CodeGenerator: Code generated in 281.8836 ms
+20/02/14 03:31:15 INFO MemoryStore: Block broadcast_0 stored as values in memory (estimated size 282.5 KB, free 366.0 MB)
+20/02/14 03:31:15 INFO MemoryStore: Block broadcast_0_piece0 stored as bytes in memory (estimated size 23.2 KB, free 366.0 MB)
+20/02/14 03:31:15 INFO BlockManagerInfo: Added broadcast_0_piece0 in memory on 192.168.1.25:2124 (size: 23.2 KB, free: 366.3 MB)
+20/02/14 03:31:15 INFO SparkContext: Created broadcast 0 from json at NativeMethodAccessorImpl.java:0
+20/02/14 03:31:15 INFO FileSourceScanExec: Planning scan with bin packing, max size: 22011312 bytes, open cost is considered as scanning 4194304 bytes.
+20/02/14 03:31:16 INFO SparkContext: Starting job: json at NativeMethodAccessorImpl.java:0
+20/02/14 03:31:16 INFO DAGScheduler: Got job 0 (json at NativeMethodAccessorImpl.java:0) with 4 output partitions
+20/02/14 03:31:16 INFO DAGScheduler: Final stage: ResultStage 0 (json at NativeMethodAccessorImpl.java:0)
+20/02/14 03:31:16 INFO DAGScheduler: Parents of final stage: List()
+20/02/14 03:31:16 INFO DAGScheduler: Missing parents: List()
+20/02/14 03:31:16 INFO DAGScheduler: Submitting ResultStage 0 (MapPartitionsRDD[3] at json at NativeMethodAccessorImpl.java:0), which has no missing parents
+20/02/14 03:31:16 INFO MemoryStore: Block broadcast_1 stored as values in memory (estimated size 11.6 KB, free 366.0 MB)
+20/02/14 03:31:16 INFO MemoryStore: Block broadcast_1_piece0 stored as bytes in memory (estimated size 6.7 KB, free 366.0 MB)
+20/02/14 03:31:16 INFO BlockManagerInfo: Added broadcast_1_piece0 in memory on 192.168.1.25:2124 (size: 6.7 KB, free: 366.3 MB)
+20/02/14 03:31:16 INFO SparkContext: Created broadcast 1 from broadcast at DAGScheduler.scala:1163
+20/02/14 03:31:16 INFO DAGScheduler: Submitting 4 missing tasks from ResultStage 0 (MapPartitionsRDD[3] at json at NativeMethodAccessorImpl.java:0) (first 15 tasks are for partitions Vector(0, 1, 2, 3))
+20/02/14 03:31:16 INFO TaskSchedulerImpl: Adding task set 0.0 with 4 tasks
+20/02/14 03:31:16 INFO TaskSetManager: Starting task 0.0 in stage 0.0 (TID 0, localhost, executor driver, partition 0, PROCESS_LOCAL, 8267 bytes)
+20/02/14 03:31:16 INFO TaskSetManager: Starting task 1.0 in stage 0.0 (TID 1, localhost, executor driver, partition 1, PROCESS_LOCAL, 8267 bytes)
+20/02/14 03:31:16 INFO TaskSetManager: Starting task 2.0 in stage 0.0 (TID 2, localhost, executor driver, partition 2, PROCESS_LOCAL, 8267 bytes)
+20/02/14 03:31:16 INFO TaskSetManager: Starting task 3.0 in stage 0.0 (TID 3, localhost, executor driver, partition 3, PROCESS_LOCAL, 8267 bytes)
+20/02/14 03:31:16 INFO Executor: Running task 2.0 in stage 0.0 (TID 2)
+20/02/14 03:31:16 INFO Executor: Running task 0.0 in stage 0.0 (TID 0)
+20/02/14 03:31:16 INFO Executor: Running task 1.0 in stage 0.0 (TID 1)
+20/02/14 03:31:16 INFO Executor: Running task 3.0 in stage 0.0 (TID 3)
+20/02/14 03:31:16 INFO FileScanRDD: Reading File path: file:///edw/Reviews/SourceCode/data/AmzReviews.json, range: 66033936-83850945, partition values: [empty row]
+20/02/14 03:31:16 INFO FileScanRDD: Reading File path: file:///edw/Reviews/SourceCode/data/AmzReviews.json, range: 0-22011312, partition values: [empty row]
+20/02/14 03:31:16 INFO FileScanRDD: Reading File path: file:///edw/Reviews/SourceCode/data/AmzReviews.json, range: 44022624-66033936, partition values: [empty row]
+20/02/14 03:31:16 INFO FileScanRDD: Reading File path: file:///edw/Reviews/SourceCode/data/AmzReviews.json, range: 22011312-44022624, partition values: [empty row]
+20/02/14 03:31:16 INFO CodeGenerator: Code generated in 18.1976 ms
+20/02/14 03:31:17 INFO Executor: Finished task 3.0 in stage 0.0 (TID 3). 2350 bytes result sent to driver
+20/02/14 03:31:17 INFO Executor: Finished task 0.0 in stage 0.0 (TID 0). 2307 bytes result sent to driver
+20/02/14 03:31:17 INFO Executor: Finished task 2.0 in stage 0.0 (TID 2). 2350 bytes result sent to driver
+20/02/14 03:31:17 INFO Executor: Finished task 1.0 in stage 0.0 (TID 1). 2307 bytes result sent to driver
+20/02/14 03:31:17 INFO TaskSetManager: Finished task 3.0 in stage 0.0 (TID 3) in 1132 ms on localhost (executor driver) (1/4)
+20/02/14 03:31:17 INFO TaskSetManager: Finished task 2.0 in stage 0.0 (TID 2) in 1142 ms on localhost (executor driver) (2/4)
+20/02/14 03:31:17 INFO TaskSetManager: Finished task 0.0 in stage 0.0 (TID 0) in 1157 ms on localhost (executor driver) (3/4)
+20/02/14 03:31:17 INFO TaskSetManager: Finished task 1.0 in stage 0.0 (TID 1) in 1144 ms on localhost (executor driver) (4/4)
+20/02/14 03:31:17 INFO TaskSchedulerImpl: Removed TaskSet 0.0, whose tasks have all completed, from pool 
+20/02/14 03:31:17 INFO DAGScheduler: ResultStage 0 (json at NativeMethodAccessorImpl.java:0) finished in 1.318 s
+20/02/14 03:31:17 INFO DAGScheduler: Job 0 finished: json at NativeMethodAccessorImpl.java:0, took 1.433663 s
+20/02/14 03:31:18 INFO FileSourceStrategy: Pruning directories with: 
+20/02/14 03:31:18 INFO FileSourceStrategy: Post-Scan Filters: 
+20/02/14 03:31:18 INFO FileSourceStrategy: Output Data Schema: struct<asin: string, overall: double, reviewerID: string, unixReviewTime: bigint ... 2 more fields>
+20/02/14 03:31:18 INFO FileSourceScanExec: Pushed Filters: 
+20/02/14 03:31:18 INFO CodeGenerator: Code generated in 37.2444 ms
+20/02/14 03:31:18 INFO MemoryStore: Block broadcast_2 stored as values in memory (estimated size 282.5 KB, free 365.7 MB)
+20/02/14 03:31:18 INFO MemoryStore: Block broadcast_2_piece0 stored as bytes in memory (estimated size 23.2 KB, free 365.7 MB)
+20/02/14 03:31:18 INFO BlockManagerInfo: Added broadcast_2_piece0 in memory on 192.168.1.25:2124 (size: 23.2 KB, free: 366.2 MB)
+20/02/14 03:31:18 INFO SparkContext: Created broadcast 2 from jdbc at NativeMethodAccessorImpl.java:0
+20/02/14 03:31:18 INFO FileSourceScanExec: Planning scan with bin packing, max size: 22011312 bytes, open cost is considered as scanning 4194304 bytes.
+20/02/14 03:31:18 INFO SparkContext: Starting job: jdbc at NativeMethodAccessorImpl.java:0
+20/02/14 03:31:18 INFO DAGScheduler: Got job 1 (jdbc at NativeMethodAccessorImpl.java:0) with 4 output partitions
+20/02/14 03:31:18 INFO DAGScheduler: Final stage: ResultStage 1 (jdbc at NativeMethodAccessorImpl.java:0)
+20/02/14 03:31:18 INFO DAGScheduler: Parents of final stage: List()
+20/02/14 03:31:18 INFO DAGScheduler: Missing parents: List()
+20/02/14 03:31:18 INFO DAGScheduler: Submitting ResultStage 1 (MapPartitionsRDD[8] at jdbc at NativeMethodAccessorImpl.java:0), which has no missing parents
+20/02/14 03:31:18 INFO MemoryStore: Block broadcast_3 stored as values in memory (estimated size 62.0 KB, free 365.6 MB)
+20/02/14 03:31:18 INFO MemoryStore: Block broadcast_3_piece0 stored as bytes in memory (estimated size 28.4 KB, free 365.6 MB)
+20/02/14 03:31:18 INFO BlockManagerInfo: Added broadcast_3_piece0 in memory on 192.168.1.25:2124 (size: 28.4 KB, free: 366.2 MB)
+20/02/14 03:31:18 INFO SparkContext: Created broadcast 3 from broadcast at DAGScheduler.scala:1163
+20/02/14 03:31:18 INFO DAGScheduler: Submitting 4 missing tasks from ResultStage 1 (MapPartitionsRDD[8] at jdbc at NativeMethodAccessorImpl.java:0) (first 15 tasks are for partitions Vector(0, 1, 2, 3))
+20/02/14 03:31:18 INFO TaskSchedulerImpl: Adding task set 1.0 with 4 tasks
+20/02/14 03:31:18 INFO TaskSetManager: Starting task 0.0 in stage 1.0 (TID 4, localhost, executor driver, partition 0, PROCESS_LOCAL, 8267 bytes)
+20/02/14 03:31:18 INFO TaskSetManager: Starting task 1.0 in stage 1.0 (TID 5, localhost, executor driver, partition 1, PROCESS_LOCAL, 8267 bytes)
+20/02/14 03:31:18 INFO TaskSetManager: Starting task 2.0 in stage 1.0 (TID 6, localhost, executor driver, partition 2, PROCESS_LOCAL, 8267 bytes)
+20/02/14 03:31:18 INFO TaskSetManager: Starting task 3.0 in stage 1.0 (TID 7, localhost, executor driver, partition 3, PROCESS_LOCAL, 8267 bytes)
+20/02/14 03:31:18 INFO Executor: Running task 0.0 in stage 1.0 (TID 4)
+20/02/14 03:31:18 INFO Executor: Running task 2.0 in stage 1.0 (TID 6)
+20/02/14 03:31:18 INFO Executor: Running task 3.0 in stage 1.0 (TID 7)
+20/02/14 03:31:18 INFO Executor: Running task 1.0 in stage 1.0 (TID 5)
+20/02/14 03:31:18 INFO CodeGenerator: Code generated in 35.1211 ms
+20/02/14 03:31:18 INFO FileScanRDD: Reading File path: file:///edw/Reviews/SourceCode/data/AmzReviews.json, range: 22011312-44022624, partition values: [empty row]
+20/02/14 03:31:18 INFO FileScanRDD: Reading File path: file:///edw/Reviews/SourceCode/data/AmzReviews.json, range: 66033936-83850945, partition values: [empty row]
+20/02/14 03:31:18 INFO FileScanRDD: Reading File path: file:///edw/Reviews/SourceCode/data/AmzReviews.json, range: 0-22011312, partition values: [empty row]
+20/02/14 03:31:18 INFO FileScanRDD: Reading File path: file:///edw/Reviews/SourceCode/data/AmzReviews.json, range: 44022624-66033936, partition values: [empty row]
+20/02/14 03:31:18 INFO CodeGenerator: Code generated in 17.7233 ms
+20/02/14 03:31:19 INFO ContextCleaner: Cleaned accumulator 20
+20/02/14 03:31:19 INFO ContextCleaner: Cleaned accumulator 9
+20/02/14 03:31:19 INFO ContextCleaner: Cleaned accumulator 14
+20/02/14 03:31:19 INFO ContextCleaner: Cleaned accumulator 24
+20/02/14 03:31:19 INFO ContextCleaner: Cleaned accumulator 26
+20/02/14 03:31:19 INFO ContextCleaner: Cleaned accumulator 10
+20/02/14 03:31:19 INFO ContextCleaner: Cleaned accumulator 25
+20/02/14 03:31:19 INFO ContextCleaner: Cleaned accumulator 22
+20/02/14 03:31:19 INFO ContextCleaner: Cleaned accumulator 28
+20/02/14 03:31:19 INFO ContextCleaner: Cleaned accumulator 29
+20/02/14 03:31:19 INFO ContextCleaner: Cleaned accumulator 21
+20/02/14 03:31:19 INFO ContextCleaner: Cleaned accumulator 17
+20/02/14 03:31:19 INFO ContextCleaner: Cleaned accumulator 27
+20/02/14 03:31:19 INFO ContextCleaner: Cleaned accumulator 6
+20/02/14 03:31:19 INFO BlockManagerInfo: Removed broadcast_1_piece0 on 192.168.1.25:2124 in memory (size: 6.7 KB, free: 366.2 MB)
+20/02/14 03:31:19 INFO ContextCleaner: Cleaned accumulator 15
+20/02/14 03:31:19 INFO ContextCleaner: Cleaned accumulator 18
+20/02/14 03:31:19 INFO ContextCleaner: Cleaned accumulator 13
+20/02/14 03:31:19 INFO ContextCleaner: Cleaned accumulator 12
+20/02/14 03:31:19 INFO ContextCleaner: Cleaned accumulator 23
+20/02/14 03:31:19 INFO ContextCleaner: Cleaned accumulator 8
+20/02/14 03:31:19 INFO ContextCleaner: Cleaned accumulator 30
+20/02/14 03:31:19 INFO ContextCleaner: Cleaned accumulator 11
+20/02/14 03:31:19 INFO ContextCleaner: Cleaned accumulator 7
+20/02/14 03:31:19 INFO ContextCleaner: Cleaned accumulator 19
+20/02/14 03:31:19 INFO ContextCleaner: Cleaned accumulator 16
+20/02/14 03:31:21 INFO Executor: Finished task 1.0 in stage 1.0 (TID 5). 1480 bytes result sent to driver
+20/02/14 03:31:21 INFO TaskSetManager: Finished task 1.0 in stage 1.0 (TID 5) in 2760 ms on localhost (executor driver) (1/4)
+20/02/14 03:31:21 INFO Executor: Finished task 2.0 in stage 1.0 (TID 6). 1437 bytes result sent to driver
+20/02/14 03:31:21 INFO TaskSetManager: Finished task 2.0 in stage 1.0 (TID 6) in 2908 ms on localhost (executor driver) (2/4)
+20/02/14 03:31:21 INFO Executor: Finished task 0.0 in stage 1.0 (TID 4). 1480 bytes result sent to driver
+20/02/14 03:31:21 INFO Executor: Finished task 3.0 in stage 1.0 (TID 7). 1437 bytes result sent to driver
+20/02/14 03:31:21 INFO TaskSetManager: Finished task 0.0 in stage 1.0 (TID 4) in 3001 ms on localhost (executor driver) (3/4)
+20/02/14 03:31:21 INFO TaskSetManager: Finished task 3.0 in stage 1.0 (TID 7) in 2999 ms on localhost (executor driver) (4/4)
+20/02/14 03:31:21 INFO TaskSchedulerImpl: Removed TaskSet 1.0, whose tasks have all completed, from pool 
+20/02/14 03:31:21 INFO DAGScheduler: ResultStage 1 (jdbc at NativeMethodAccessorImpl.java:0) finished in 3.084 s
+20/02/14 03:31:21 INFO DAGScheduler: Job 1 finished: jdbc at NativeMethodAccessorImpl.java:0, took 3.093401 s
+20/02/14 03:31:21 INFO SparkContext: Invoking stop() from shutdown hook
+20/02/14 03:31:21 INFO SparkUI: Stopped Spark web UI at http://192.168.1.25:4040
+20/02/14 03:31:21 INFO MapOutputTrackerMasterEndpoint: MapOutputTrackerMasterEndpoint stopped!
+20/02/14 03:31:21 INFO MemoryStore: MemoryStore cleared
+20/02/14 03:31:21 INFO BlockManager: BlockManager stopped
+20/02/14 03:31:21 INFO BlockManagerMaster: BlockManagerMaster stopped
+20/02/14 03:31:21 INFO OutputCommitCoordinator$OutputCommitCoordinatorEndpoint: OutputCommitCoordinator stopped!
+20/02/14 03:31:21 INFO SparkContext: Successfully stopped SparkContext
+20/02/14 03:31:21 INFO ShutdownHookManager: Shutdown hook called
+20/02/14 03:31:21 INFO ShutdownHookManager: Deleting directory /tmp/spark-3f7f337a-1992-48d5-857b-e08e996191e0/pyspark-c9c103ad-813f-42df-a696-f0a7a88d6a2b
+20/02/14 03:31:21 INFO ShutdownHookManager: Deleting directory /tmp/spark-5bf9d81d-25d9-42df-81ae-4fa936c3aba8
+20/02/14 03:31:21 INFO ShutdownHookManager: Deleting directory /tmp/spark-3f7f337a-1992-48d5-857b-e08e996191e0
+Load to ODS in progress

@@ -1,0 +1,151 @@
+###################################################################################################################################
+###################################################################################################################################
+Load to stage in progress
+###################################################################################################################################
+###################################################################################################################################
+20/02/14 20:24:23 WARN Utils: Your hostname, DESKTOP-502C4I4 resolves to a loopback address: 127.0.1.1; using 192.168.1.25 instead (on interface wifi0)
+20/02/14 20:24:23 WARN Utils: Set SPARK_LOCAL_IP if you need to bind to another address
+20/02/14 20:24:24 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+Using Spark's default log4j profile: org/apache/spark/log4j-defaults.properties
+20/02/14 20:24:25 INFO SparkContext: Running Spark version 2.4.5
+20/02/14 20:24:25 INFO SparkContext: Submitted application: MySession
+20/02/14 20:24:25 INFO SecurityManager: Changing view acls to: devetluser
+20/02/14 20:24:25 INFO SecurityManager: Changing modify acls to: devetluser
+20/02/14 20:24:25 INFO SecurityManager: Changing view acls groups to: 
+20/02/14 20:24:25 INFO SecurityManager: Changing modify acls groups to: 
+20/02/14 20:24:25 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(devetluser); groups with view permissions: Set(); users  with modify permissions: Set(devetluser); groups with modify permissions: Set()
+20/02/14 20:24:26 INFO Utils: Successfully started service 'sparkDriver' on port 8271.
+20/02/14 20:24:26 INFO SparkEnv: Registering MapOutputTracker
+20/02/14 20:24:26 INFO SparkEnv: Registering BlockManagerMaster
+20/02/14 20:24:26 INFO BlockManagerMasterEndpoint: Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+20/02/14 20:24:26 INFO BlockManagerMasterEndpoint: BlockManagerMasterEndpoint up
+20/02/14 20:24:26 INFO DiskBlockManager: Created local directory at /tmp/blockmgr-4998c497-9c9e-4691-b46b-7b54e9f0121c
+20/02/14 20:24:26 INFO MemoryStore: MemoryStore started with capacity 366.3 MB
+20/02/14 20:24:26 INFO SparkEnv: Registering OutputCommitCoordinator
+20/02/14 20:24:26 INFO Utils: Successfully started service 'SparkUI' on port 4040.
+20/02/14 20:24:26 INFO SparkUI: Bound SparkUI to 0.0.0.0, and started at http://192.168.1.25:4040
+20/02/14 20:24:27 INFO Executor: Starting executor ID driver on host localhost
+20/02/14 20:24:27 INFO Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 8274.
+20/02/14 20:24:27 INFO NettyBlockTransferService: Server created on 192.168.1.25:8274
+20/02/14 20:24:27 INFO BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+20/02/14 20:24:27 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, 192.168.1.25, 8274, None)
+20/02/14 20:24:27 INFO BlockManagerMasterEndpoint: Registering block manager 192.168.1.25:8274 with 366.3 MB RAM, BlockManagerId(driver, 192.168.1.25, 8274, None)
+20/02/14 20:24:27 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, 192.168.1.25, 8274, None)
+20/02/14 20:24:27 INFO BlockManager: Initialized BlockManager: BlockManagerId(driver, 192.168.1.25, 8274, None)
+20/02/14 20:24:27 INFO SharedState: Setting hive.metastore.warehouse.dir ('null') to the value of spark.sql.warehouse.dir ('file:/edw/Reviews/SourceCode/python/spark-warehouse').
+20/02/14 20:24:27 INFO SharedState: Warehouse path is 'file:/edw/Reviews/SourceCode/python/spark-warehouse'.
+20/02/14 20:24:28 INFO StateStoreCoordinatorRef: Registered StateStoreCoordinator endpoint
+20/02/14 20:24:29 INFO InMemoryFileIndex: It took 54 ms to list leaf files for 1 paths.
+20/02/14 20:24:29 INFO InMemoryFileIndex: It took 2 ms to list leaf files for 1 paths.
+20/02/14 20:24:32 INFO FileSourceStrategy: Pruning directories with: 
+20/02/14 20:24:32 INFO FileSourceStrategy: Post-Scan Filters: 
+20/02/14 20:24:32 INFO FileSourceStrategy: Output Data Schema: struct<value: string>
+20/02/14 20:24:32 INFO FileSourceScanExec: Pushed Filters: 
+20/02/14 20:24:33 INFO CodeGenerator: Code generated in 340.8332 ms
+20/02/14 20:24:33 INFO MemoryStore: Block broadcast_0 stored as values in memory (estimated size 282.7 KB, free 366.0 MB)
+20/02/14 20:24:33 INFO MemoryStore: Block broadcast_0_piece0 stored as bytes in memory (estimated size 23.3 KB, free 366.0 MB)
+20/02/14 20:24:33 INFO BlockManagerInfo: Added broadcast_0_piece0 in memory on 192.168.1.25:8274 (size: 23.3 KB, free: 366.3 MB)
+20/02/14 20:24:33 INFO SparkContext: Created broadcast 0 from json at NativeMethodAccessorImpl.java:0
+20/02/14 20:24:33 INFO FileSourceScanExec: Planning scan with bin packing, max size: 22011312 bytes, open cost is considered as scanning 4194304 bytes.
+20/02/14 20:24:33 INFO SparkContext: Starting job: json at NativeMethodAccessorImpl.java:0
+20/02/14 20:24:33 INFO DAGScheduler: Got job 0 (json at NativeMethodAccessorImpl.java:0) with 4 output partitions
+20/02/14 20:24:33 INFO DAGScheduler: Final stage: ResultStage 0 (json at NativeMethodAccessorImpl.java:0)
+20/02/14 20:24:33 INFO DAGScheduler: Parents of final stage: List()
+20/02/14 20:24:33 INFO DAGScheduler: Missing parents: List()
+20/02/14 20:24:33 INFO DAGScheduler: Submitting ResultStage 0 (MapPartitionsRDD[3] at json at NativeMethodAccessorImpl.java:0), which has no missing parents
+20/02/14 20:24:33 INFO MemoryStore: Block broadcast_1 stored as values in memory (estimated size 11.6 KB, free 366.0 MB)
+20/02/14 20:24:33 INFO MemoryStore: Block broadcast_1_piece0 stored as bytes in memory (estimated size 6.7 KB, free 366.0 MB)
+20/02/14 20:24:33 INFO BlockManagerInfo: Added broadcast_1_piece0 in memory on 192.168.1.25:8274 (size: 6.7 KB, free: 366.3 MB)
+20/02/14 20:24:33 INFO SparkContext: Created broadcast 1 from broadcast at DAGScheduler.scala:1163
+20/02/14 20:24:33 INFO DAGScheduler: Submitting 4 missing tasks from ResultStage 0 (MapPartitionsRDD[3] at json at NativeMethodAccessorImpl.java:0) (first 15 tasks are for partitions Vector(0, 1, 2, 3))
+20/02/14 20:24:33 INFO TaskSchedulerImpl: Adding task set 0.0 with 4 tasks
+20/02/14 20:24:33 INFO TaskSetManager: Starting task 0.0 in stage 0.0 (TID 0, localhost, executor driver, partition 0, PROCESS_LOCAL, 8267 bytes)
+20/02/14 20:24:33 INFO TaskSetManager: Starting task 1.0 in stage 0.0 (TID 1, localhost, executor driver, partition 1, PROCESS_LOCAL, 8267 bytes)
+20/02/14 20:24:33 INFO TaskSetManager: Starting task 2.0 in stage 0.0 (TID 2, localhost, executor driver, partition 2, PROCESS_LOCAL, 8267 bytes)
+20/02/14 20:24:33 INFO TaskSetManager: Starting task 3.0 in stage 0.0 (TID 3, localhost, executor driver, partition 3, PROCESS_LOCAL, 8267 bytes)
+20/02/14 20:24:33 INFO Executor: Running task 2.0 in stage 0.0 (TID 2)
+20/02/14 20:24:33 INFO Executor: Running task 0.0 in stage 0.0 (TID 0)
+20/02/14 20:24:33 INFO Executor: Running task 3.0 in stage 0.0 (TID 3)
+20/02/14 20:24:33 INFO Executor: Running task 1.0 in stage 0.0 (TID 1)
+20/02/14 20:24:34 INFO FileScanRDD: Reading File path: file:///edw/Reviews/SourceCode/data/AmzReviews.json, range: 22011312-44022624, partition values: [empty row]
+20/02/14 20:24:34 INFO FileScanRDD: Reading File path: file:///edw/Reviews/SourceCode/data/AmzReviews.json, range: 44022624-66033936, partition values: [empty row]
+20/02/14 20:24:34 INFO FileScanRDD: Reading File path: file:///edw/Reviews/SourceCode/data/AmzReviews.json, range: 66033936-83850945, partition values: [empty row]
+20/02/14 20:24:34 INFO FileScanRDD: Reading File path: file:///edw/Reviews/SourceCode/data/AmzReviews.json, range: 0-22011312, partition values: [empty row]
+20/02/14 20:24:34 INFO CodeGenerator: Code generated in 17.4549 ms
+20/02/14 20:24:35 INFO Executor: Finished task 2.0 in stage 0.0 (TID 2). 2350 bytes result sent to driver
+20/02/14 20:24:35 INFO Executor: Finished task 0.0 in stage 0.0 (TID 0). 2350 bytes result sent to driver
+20/02/14 20:24:35 INFO Executor: Finished task 3.0 in stage 0.0 (TID 3). 2350 bytes result sent to driver
+20/02/14 20:24:35 INFO Executor: Finished task 1.0 in stage 0.0 (TID 1). 2350 bytes result sent to driver
+20/02/14 20:24:35 INFO TaskSetManager: Finished task 2.0 in stage 0.0 (TID 2) in 1196 ms on localhost (executor driver) (1/4)
+20/02/14 20:24:35 INFO TaskSetManager: Finished task 1.0 in stage 0.0 (TID 1) in 1206 ms on localhost (executor driver) (2/4)
+20/02/14 20:24:35 INFO TaskSetManager: Finished task 0.0 in stage 0.0 (TID 0) in 1221 ms on localhost (executor driver) (3/4)
+20/02/14 20:24:35 INFO TaskSetManager: Finished task 3.0 in stage 0.0 (TID 3) in 1205 ms on localhost (executor driver) (4/4)
+20/02/14 20:24:35 INFO TaskSchedulerImpl: Removed TaskSet 0.0, whose tasks have all completed, from pool 
+20/02/14 20:24:35 INFO DAGScheduler: ResultStage 0 (json at NativeMethodAccessorImpl.java:0) finished in 1.374 s
+20/02/14 20:24:35 INFO DAGScheduler: Job 0 finished: json at NativeMethodAccessorImpl.java:0, took 1.458685 s
+Traceback (most recent call last):
+  File "/edw/Reviews/SourceCode/python/rating_ods_load.py", line 32, in <module>
+    Cl_Reviews_df.write.option("truncate","true").jdbc(url=url, table=table, mode=mode, properties=properties)
+  File "/edw/Reviews/spark-2.4.5-bin-hadoop2.7/python/lib/pyspark.zip/pyspark/sql/readwriter.py", line 987, in jdbc
+  File "/edw/Reviews/spark-2.4.5-bin-hadoop2.7/python/lib/py4j-0.10.7-src.zip/py4j/java_gateway.py", line 1257, in __call__
+  File "/edw/Reviews/spark-2.4.5-bin-hadoop2.7/python/lib/pyspark.zip/pyspark/sql/utils.py", line 63, in deco
+  File "/edw/Reviews/spark-2.4.5-bin-hadoop2.7/python/lib/py4j-0.10.7-src.zip/py4j/protocol.py", line 328, in get_return_value
+py4j.protocol.Py4JJavaError: An error occurred while calling o53.jdbc.
+: org.postgresql.util.PSQLException: ERROR: schema "work_db" does not exist
+  Position: 14
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2510)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2245)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:311)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:447)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:368)
+	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:309)
+	at org.postgresql.jdbc.PgStatement.executeCachedSql(PgStatement.java:295)
+	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:272)
+	at org.postgresql.jdbc.PgStatement.executeUpdate(PgStatement.java:246)
+	at org.apache.spark.sql.execution.datasources.jdbc.JdbcUtils$.createTable(JdbcUtils.scala:863)
+	at org.apache.spark.sql.execution.datasources.jdbc.JdbcRelationProvider.createRelation(JdbcRelationProvider.scala:81)
+	at org.apache.spark.sql.execution.datasources.SaveIntoDataSourceCommand.run(SaveIntoDataSourceCommand.scala:45)
+	at org.apache.spark.sql.execution.command.ExecutedCommandExec.sideEffectResult$lzycompute(commands.scala:70)
+	at org.apache.spark.sql.execution.command.ExecutedCommandExec.sideEffectResult(commands.scala:68)
+	at org.apache.spark.sql.execution.command.ExecutedCommandExec.doExecute(commands.scala:86)
+	at org.apache.spark.sql.execution.SparkPlan$$anonfun$execute$1.apply(SparkPlan.scala:131)
+	at org.apache.spark.sql.execution.SparkPlan$$anonfun$execute$1.apply(SparkPlan.scala:127)
+	at org.apache.spark.sql.execution.SparkPlan$$anonfun$executeQuery$1.apply(SparkPlan.scala:155)
+	at org.apache.spark.rdd.RDDOperationScope$.withScope(RDDOperationScope.scala:151)
+	at org.apache.spark.sql.execution.SparkPlan.executeQuery(SparkPlan.scala:152)
+	at org.apache.spark.sql.execution.SparkPlan.execute(SparkPlan.scala:127)
+	at org.apache.spark.sql.execution.QueryExecution.toRdd$lzycompute(QueryExecution.scala:83)
+	at org.apache.spark.sql.execution.QueryExecution.toRdd(QueryExecution.scala:81)
+	at org.apache.spark.sql.DataFrameWriter$$anonfun$runCommand$1.apply(DataFrameWriter.scala:676)
+	at org.apache.spark.sql.DataFrameWriter$$anonfun$runCommand$1.apply(DataFrameWriter.scala:676)
+	at org.apache.spark.sql.execution.SQLExecution$$anonfun$withNewExecutionId$1.apply(SQLExecution.scala:80)
+	at org.apache.spark.sql.execution.SQLExecution$.withSQLConfPropagated(SQLExecution.scala:127)
+	at org.apache.spark.sql.execution.SQLExecution$.withNewExecutionId(SQLExecution.scala:75)
+	at org.apache.spark.sql.DataFrameWriter.runCommand(DataFrameWriter.scala:676)
+	at org.apache.spark.sql.DataFrameWriter.saveToV1Source(DataFrameWriter.scala:285)
+	at org.apache.spark.sql.DataFrameWriter.save(DataFrameWriter.scala:271)
+	at org.apache.spark.sql.DataFrameWriter.jdbc(DataFrameWriter.scala:515)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at py4j.reflection.MethodInvoker.invoke(MethodInvoker.java:244)
+	at py4j.reflection.ReflectionEngine.invoke(ReflectionEngine.java:357)
+	at py4j.Gateway.invoke(Gateway.java:282)
+	at py4j.commands.AbstractCommand.invokeMethod(AbstractCommand.java:132)
+	at py4j.commands.CallCommand.execute(CallCommand.java:79)
+	at py4j.GatewayConnection.run(GatewayConnection.java:238)
+	at java.lang.Thread.run(Thread.java:748)
+
+20/02/14 20:24:36 INFO SparkContext: Invoking stop() from shutdown hook
+20/02/14 20:24:36 INFO SparkUI: Stopped Spark web UI at http://192.168.1.25:4040
+20/02/14 20:24:36 INFO MapOutputTrackerMasterEndpoint: MapOutputTrackerMasterEndpoint stopped!
+20/02/14 20:24:36 INFO MemoryStore: MemoryStore cleared
+20/02/14 20:24:36 INFO BlockManager: BlockManager stopped
+20/02/14 20:24:36 INFO BlockManagerMaster: BlockManagerMaster stopped
+20/02/14 20:24:36 INFO OutputCommitCoordinator$OutputCommitCoordinatorEndpoint: OutputCommitCoordinator stopped!
+20/02/14 20:24:36 INFO SparkContext: Successfully stopped SparkContext
+20/02/14 20:24:36 INFO ShutdownHookManager: Shutdown hook called
+20/02/14 20:24:36 INFO ShutdownHookManager: Deleting directory /tmp/spark-3965fef8-1662-42d4-a137-7433790c91f2
+20/02/14 20:24:36 INFO ShutdownHookManager: Deleting directory /tmp/spark-3965fef8-1662-42d4-a137-7433790c91f2/pyspark-293c1b36-1d91-42cf-8808-1584749b33a0
+20/02/14 20:24:36 INFO ShutdownHookManager: Deleting directory /tmp/spark-e8773fa3-c318-46a6-a1df-58882fd9607b

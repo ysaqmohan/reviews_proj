@@ -1,0 +1,120 @@
+###################################################################################################################################
+###################################################################################################################################
+Load to ODS in progress
+###################################################################################################################################
+###################################################################################################################################
+20/02/17 00:12:57 WARN Utils: Your hostname, DESKTOP-502C4I4 resolves to a loopback address: 127.0.1.1; using 192.168.1.25 instead (on interface wifi0)
+20/02/17 00:12:57 WARN Utils: Set SPARK_LOCAL_IP if you need to bind to another address
+20/02/17 00:12:58 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+Using Spark's default log4j profile: org/apache/spark/log4j-defaults.properties
+20/02/17 00:12:59 INFO SparkContext: Running Spark version 2.4.5
+20/02/17 00:12:59 INFO SparkContext: Submitted application: ReviewsOdsSession
+20/02/17 00:12:59 INFO SecurityManager: Changing view acls to: devetluser
+20/02/17 00:12:59 INFO SecurityManager: Changing modify acls to: devetluser
+20/02/17 00:12:59 INFO SecurityManager: Changing view acls groups to: 
+20/02/17 00:12:59 INFO SecurityManager: Changing modify acls groups to: 
+20/02/17 00:12:59 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(devetluser); groups with view permissions: Set(); users  with modify permissions: Set(devetluser); groups with modify permissions: Set()
+20/02/17 00:13:00 INFO Utils: Successfully started service 'sparkDriver' on port 5872.
+20/02/17 00:13:00 INFO SparkEnv: Registering MapOutputTracker
+20/02/17 00:13:00 INFO SparkEnv: Registering BlockManagerMaster
+20/02/17 00:13:00 INFO BlockManagerMasterEndpoint: Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+20/02/17 00:13:00 INFO BlockManagerMasterEndpoint: BlockManagerMasterEndpoint up
+20/02/17 00:13:00 INFO DiskBlockManager: Created local directory at /tmp/blockmgr-8d2af7c9-ac30-4610-b0b0-46603a2867ce
+20/02/17 00:13:00 INFO MemoryStore: MemoryStore started with capacity 366.3 MB
+20/02/17 00:13:00 INFO SparkEnv: Registering OutputCommitCoordinator
+20/02/17 00:13:00 INFO Utils: Successfully started service 'SparkUI' on port 4040.
+20/02/17 00:13:01 INFO SparkUI: Bound SparkUI to 0.0.0.0, and started at http://192.168.1.25:4040
+20/02/17 00:13:01 INFO Executor: Starting executor ID driver on host localhost
+20/02/17 00:13:01 INFO Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 5875.
+20/02/17 00:13:01 INFO NettyBlockTransferService: Server created on 192.168.1.25:5875
+20/02/17 00:13:01 INFO BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+20/02/17 00:13:01 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, 192.168.1.25, 5875, None)
+20/02/17 00:13:01 INFO BlockManagerMasterEndpoint: Registering block manager 192.168.1.25:5875 with 366.3 MB RAM, BlockManagerId(driver, 192.168.1.25, 5875, None)
+20/02/17 00:13:01 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, 192.168.1.25, 5875, None)
+20/02/17 00:13:01 INFO BlockManager: Initialized BlockManager: BlockManagerId(driver, 192.168.1.25, 5875, None)
+20/02/17 00:13:02 INFO SharedState: Setting hive.metastore.warehouse.dir ('null') to the value of spark.sql.warehouse.dir ('file:/edw/Reviews/SourceCode/bash/spark-warehouse').
+20/02/17 00:13:02 INFO SharedState: Warehouse path is 'file:/edw/Reviews/SourceCode/bash/spark-warehouse'.
+20/02/17 00:13:02 INFO StateStoreCoordinatorRef: Registered StateStoreCoordinator endpoint
+Traceback (most recent call last):
+  File "/edw/Reviews/spark-2.4.5-bin-hadoop2.7/python/lib/pyspark.zip/pyspark/sql/utils.py", line 63, in deco
+  File "/edw/Reviews/spark-2.4.5-bin-hadoop2.7/python/lib/py4j-0.10.7-src.zip/py4j/protocol.py", line 328, in get_return_value
+py4j.protocol.Py4JJavaError: An error occurred while calling o31.select.
+: org.apache.spark.sql.AnalysisException: cannot resolve '`reviwername`' given input columns: [asin, reviewdate, odsaddtd, reviewername, reviewerid, reviewrating];;
+'Project [reviewerid#8, 'reviwername]
++- Relation[reviewerid#8,asin#9,reviewername#10,reviewrating#11,reviewdate#12,odsaddtd#13] JDBCRelation("STAGE_DB".REVIEWS) [numPartitions=1]
+
+	at org.apache.spark.sql.catalyst.analysis.package$AnalysisErrorAt.failAnalysis(package.scala:42)
+	at org.apache.spark.sql.catalyst.analysis.CheckAnalysis$$anonfun$checkAnalysis$1$$anonfun$apply$3.applyOrElse(CheckAnalysis.scala:111)
+	at org.apache.spark.sql.catalyst.analysis.CheckAnalysis$$anonfun$checkAnalysis$1$$anonfun$apply$3.applyOrElse(CheckAnalysis.scala:108)
+	at org.apache.spark.sql.catalyst.trees.TreeNode$$anonfun$transformUp$1.apply(TreeNode.scala:280)
+	at org.apache.spark.sql.catalyst.trees.TreeNode$$anonfun$transformUp$1.apply(TreeNode.scala:280)
+	at org.apache.spark.sql.catalyst.trees.CurrentOrigin$.withOrigin(TreeNode.scala:69)
+	at org.apache.spark.sql.catalyst.trees.TreeNode.transformUp(TreeNode.scala:279)
+	at org.apache.spark.sql.catalyst.plans.QueryPlan$$anonfun$transformExpressionsUp$1.apply(QueryPlan.scala:93)
+	at org.apache.spark.sql.catalyst.plans.QueryPlan$$anonfun$transformExpressionsUp$1.apply(QueryPlan.scala:93)
+	at org.apache.spark.sql.catalyst.plans.QueryPlan$$anonfun$1.apply(QueryPlan.scala:105)
+	at org.apache.spark.sql.catalyst.plans.QueryPlan$$anonfun$1.apply(QueryPlan.scala:105)
+	at org.apache.spark.sql.catalyst.trees.CurrentOrigin$.withOrigin(TreeNode.scala:69)
+	at org.apache.spark.sql.catalyst.plans.QueryPlan.transformExpression$1(QueryPlan.scala:104)
+	at org.apache.spark.sql.catalyst.plans.QueryPlan.org$apache$spark$sql$catalyst$plans$QueryPlan$$recursiveTransform$1(QueryPlan.scala:116)
+	at org.apache.spark.sql.catalyst.plans.QueryPlan$$anonfun$org$apache$spark$sql$catalyst$plans$QueryPlan$$recursiveTransform$1$2.apply(QueryPlan.scala:121)
+	at scala.collection.TraversableLike$$anonfun$map$1.apply(TraversableLike.scala:234)
+	at scala.collection.TraversableLike$$anonfun$map$1.apply(TraversableLike.scala:234)
+	at scala.collection.mutable.ResizableArray$class.foreach(ResizableArray.scala:59)
+	at scala.collection.mutable.ArrayBuffer.foreach(ArrayBuffer.scala:48)
+	at scala.collection.TraversableLike$class.map(TraversableLike.scala:234)
+	at scala.collection.AbstractTraversable.map(Traversable.scala:104)
+	at org.apache.spark.sql.catalyst.plans.QueryPlan.org$apache$spark$sql$catalyst$plans$QueryPlan$$recursiveTransform$1(QueryPlan.scala:121)
+	at org.apache.spark.sql.catalyst.plans.QueryPlan$$anonfun$2.apply(QueryPlan.scala:126)
+	at org.apache.spark.sql.catalyst.trees.TreeNode.mapProductIterator(TreeNode.scala:186)
+	at org.apache.spark.sql.catalyst.plans.QueryPlan.mapExpressions(QueryPlan.scala:126)
+	at org.apache.spark.sql.catalyst.plans.QueryPlan.transformExpressionsUp(QueryPlan.scala:93)
+	at org.apache.spark.sql.catalyst.analysis.CheckAnalysis$$anonfun$checkAnalysis$1.apply(CheckAnalysis.scala:108)
+	at org.apache.spark.sql.catalyst.analysis.CheckAnalysis$$anonfun$checkAnalysis$1.apply(CheckAnalysis.scala:86)
+	at org.apache.spark.sql.catalyst.trees.TreeNode.foreachUp(TreeNode.scala:126)
+	at org.apache.spark.sql.catalyst.analysis.CheckAnalysis$class.checkAnalysis(CheckAnalysis.scala:86)
+	at org.apache.spark.sql.catalyst.analysis.Analyzer.checkAnalysis(Analyzer.scala:95)
+	at org.apache.spark.sql.catalyst.analysis.Analyzer$$anonfun$executeAndCheck$1.apply(Analyzer.scala:108)
+	at org.apache.spark.sql.catalyst.analysis.Analyzer$$anonfun$executeAndCheck$1.apply(Analyzer.scala:105)
+	at org.apache.spark.sql.catalyst.plans.logical.AnalysisHelper$.markInAnalyzer(AnalysisHelper.scala:201)
+	at org.apache.spark.sql.catalyst.analysis.Analyzer.executeAndCheck(Analyzer.scala:105)
+	at org.apache.spark.sql.execution.QueryExecution.analyzed$lzycompute(QueryExecution.scala:58)
+	at org.apache.spark.sql.execution.QueryExecution.analyzed(QueryExecution.scala:56)
+	at org.apache.spark.sql.execution.QueryExecution.assertAnalyzed(QueryExecution.scala:48)
+	at org.apache.spark.sql.Dataset$.ofRows(Dataset.scala:78)
+	at org.apache.spark.sql.Dataset.org$apache$spark$sql$Dataset$$withPlan(Dataset.scala:3412)
+	at org.apache.spark.sql.Dataset.select(Dataset.scala:1340)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at py4j.reflection.MethodInvoker.invoke(MethodInvoker.java:244)
+	at py4j.reflection.ReflectionEngine.invoke(ReflectionEngine.java:357)
+	at py4j.Gateway.invoke(Gateway.java:282)
+	at py4j.commands.AbstractCommand.invokeMethod(AbstractCommand.java:132)
+	at py4j.commands.CallCommand.execute(CallCommand.java:79)
+	at py4j.GatewayConnection.run(GatewayConnection.java:238)
+	at java.lang.Thread.run(Thread.java:748)
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/edw/Reviews/SourceCode/python/reviewer_dim_load.py", line 31, in <module>
+    Reviews_Ods_df = Reviews_Ods_df.select("reviewerid","reviwername").distinct()
+  File "/edw/Reviews/spark-2.4.5-bin-hadoop2.7/python/lib/pyspark.zip/pyspark/sql/dataframe.py", line 1324, in select
+  File "/edw/Reviews/spark-2.4.5-bin-hadoop2.7/python/lib/py4j-0.10.7-src.zip/py4j/java_gateway.py", line 1257, in __call__
+  File "/edw/Reviews/spark-2.4.5-bin-hadoop2.7/python/lib/pyspark.zip/pyspark/sql/utils.py", line 69, in deco
+pyspark.sql.utils.AnalysisException: 'cannot resolve \'`reviwername`\' given input columns: [asin, reviewdate, odsaddtd, reviewername, reviewerid, reviewrating];;\n\'Project [reviewerid#8, \'reviwername]\n+- Relation[reviewerid#8,asin#9,reviewername#10,reviewrating#11,reviewdate#12,odsaddtd#13] JDBCRelation("STAGE_DB".REVIEWS) [numPartitions=1]\n'
+20/02/17 00:13:07 INFO SparkContext: Invoking stop() from shutdown hook
+20/02/17 00:13:07 INFO SparkUI: Stopped Spark web UI at http://192.168.1.25:4040
+20/02/17 00:13:07 INFO MapOutputTrackerMasterEndpoint: MapOutputTrackerMasterEndpoint stopped!
+20/02/17 00:13:07 INFO MemoryStore: MemoryStore cleared
+20/02/17 00:13:07 INFO BlockManager: BlockManager stopped
+20/02/17 00:13:07 INFO BlockManagerMaster: BlockManagerMaster stopped
+20/02/17 00:13:07 INFO OutputCommitCoordinator$OutputCommitCoordinatorEndpoint: OutputCommitCoordinator stopped!
+20/02/17 00:13:07 INFO SparkContext: Successfully stopped SparkContext
+20/02/17 00:13:07 INFO ShutdownHookManager: Shutdown hook called
+20/02/17 00:13:07 INFO ShutdownHookManager: Deleting directory /tmp/spark-51d14463-0b12-4d5e-b43f-608ff5524da8
+20/02/17 00:13:07 INFO ShutdownHookManager: Deleting directory /tmp/spark-c307fd4e-7f5a-460f-9571-fbeaa233397a
+20/02/17 00:13:07 INFO ShutdownHookManager: Deleting directory /tmp/spark-51d14463-0b12-4d5e-b43f-608ff5524da8/pyspark-bc0f7daf-f0ee-456b-8fcd-26053ac95386

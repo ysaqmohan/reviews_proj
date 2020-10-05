@@ -1,0 +1,17 @@
+###################################################################################################################################
+###################################################################################################################################
+Load to core in progress
+###################################################################################################################################
+###################################################################################################################################
+begin;
+BEGIN
+--	copy "WORK_DB".PRICE_BUCKET_WT(price_bucket_nm, category_nm, bucket_floor_am, bucket_ceiling_am) 
+--	FROM '/edw/Reviews/SourceCode/data/price_bucket_load.csv' DELIMITER '|' CSV HEADER;
+	CREATE TEMPORARY TABLE PRICE_BUCKET_TEMP AS
+	SELECT PB.price_bucket_nm, c_dim.category_id, PB.bucket_floor_am, PB.bucket_ceiling_am
+	FROM "WORK_DB".PRICE_BUCKET_WT PB
+	INNER JOIN category_dim c_dim
+	ON PB.category_nm = c_dim.category_nm;
+ERROR:  relation "category_dim" does not exist
+LINE 4:  INNER JOIN category_dim c_dim
+                    ^

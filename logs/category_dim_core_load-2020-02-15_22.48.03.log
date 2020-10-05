@@ -1,0 +1,34 @@
+###################################################################################################################################
+###################################################################################################################################
+Load to ODS in progress
+###################################################################################################################################
+###################################################################################################################################
+begin;
+BEGIN
+        CREATE TEMPORARY TABLE CATEGORYTEMP AS
+	SELECT  CASE WHEN trim(categories) = '' THEN 'UNCATEGORIZED' ELSE categories END AS categories
+	, odsupdatetd
+        FROM "STAGE_DB".prodmeta
+        WHERE odsupdatetd > (SELECT LAST_LOAD_TD
+                FROM "META_DB".CONTROL_TBL
+                WHERE SCHEMA_NM = 'CORE_DB'
+                AND TABLE_NM = 'CATEGORY_DIM')
+		AND categories IS NOT NULL;
+SELECT 0
+        INSERT INTO "CORE_DB".CATEGORY_DIM (CATEGORY_NM, ADD_TD, MODIFIED_TD)
+        SELECT distinct CT.categories, current_timestamp(0), current_timestamp(0)
+        FROM (SELECT categories FROM CATEGORYTEMP EXCEPT SELECT category_nm from "CORE_DB".CATEGORY_DIM) CT;
+INSERT 0 0
+        UPDATE "META_DB".CONTROL_TBL
+        SET LAST_LOAD_TD = MAXASINTEMP.maxodsupdatetd
+        FROM (SELECT max(odsupdatetd) as maxodsupdatetd, count(*) as cnt FROM CATEGORYTEMP) MAXASINTEMP
+        WHERE SCHEMA_NM = 'CORE_DB' AND TABLE_NM = 'CATEGORY_DIM'
+	AND MAXASINTEMP.cnt <> 0;
+UPDATE 0
+commit;
+COMMIT
+###################################################################################################################################
+###################################################################################################################################
+Job completed successfully
+###################################################################################################################################
+###################################################################################################################################

@@ -1,0 +1,41 @@
+#!/bin/bash
+
+PGPASSWORD=${PGPASSWD} psql -h ${PGHOST} -p ${PGPORT} -U ${PGUSER} -d ${DB_DWH} -a --set AUTOCOMMIT=off --set ON_ERROR_STOP=on  << EOF &>> $log_file
+
+begin;
+        CREATE TEMPORARY TABLE REVIEWTEMP_FCT AS
+		SELECT reviewerid, asin, reviewrating, reviewdate, odsaddtd 
+		FROM ${SCHEMA_STG}.reviews
+		WHERE odsaddtd > (SELECT LAST_LOAD_TD FROM ${SCHEMA_META}.CONTROL_TBL 
+						WHERE SCHEMA_NM = 'CORE_DB' 
+						AND TABLE_NM = 'PRODUCT_REVIEWS');
+								
+		CREATE INDEX REVIEWTEMP_INDX ON REVIEWTEMP_FCT(asin);
+
+		ANALYZE REVIEWTEMP_FCT;
+		
+		DELETE FROM REVIEWTEMP_FCT TMP
+		USING ${SCHEMA_CORE}.PRODUCT_REVIEWS PRD
+		WHERE TMP.reviewerid = PRD.REVIEWER_ID 
+		AND TMP.asin = PRD.ASIN_ID
+		AND TMP.reviewdate = PRD.REVIEW_DT;
+
+		INSERT INTO ${SCHEMA_CORE}.PRODUCT_REVIEWS
+		( REVIEWER_ID, ASIN_ID, REVIEW_DT, REVIEW_VL, PRICE_AM, CATEGORY_ID, ADD_TD, MODIFIED_TD, UNMATCHED_IN )
+		SELECT RV.reviewerid, RV.asin, rv.reviewdate, COALESCE(rv.reviewrating, 0)
+		, COALESCE(prod.price, 0.0), cat.category_id, current_timestamp(0), current_timestamp(0),
+		CASE WHEN PROD.ASIN IS NULL THEN 'Y' ELSE 'N' END
+		FROM REVIEWTEMP_FCT RV 
+		LEFT OUTER JOIN ${SCHEMA_STG}.prodmeta PROD
+		ON RV.ASIN = PROD.ASIN
+		LEFT JOIN ${SCHEMA_CORE}.CATEGORY_DIM CAT
+		ON PROD.categories = CAT.CATEGORY_NM;
+
+        	UPDATE ${SCHEMA_META}.CONTROL_TBL
+	        SET LAST_LOAD_TD = MAXREVIEWTEMP.maxodsaddtd
+		FROM (SELECT max(odsaddtd) as maxodsaddtd, count(*) as cnt FROM REVIEWTEMP_FCT) MAXREVIEWTEMP
+		        WHERE SCHEMA_NM = 'CORE_DB' AND TABLE_NM = 'PRODUCT_REVIEWS'
+		        AND MAXREVIEWTEMP.cnt <> 0;
+commit;
+
+EOF

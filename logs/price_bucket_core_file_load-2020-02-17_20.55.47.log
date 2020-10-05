@@ -1,0 +1,27 @@
+###################################################################################################################################
+###################################################################################################################################
+Load to core in progress
+###################################################################################################################################
+###################################################################################################################################
+begin;
+BEGIN
+--	copy "WORK_DB".PRICE_BUCKET_WT(price_bucket_nm, category_nm, bucket_floor_am, bucket_ceiling_am) 
+--	FROM '/edw/Reviews/SourceCode/data/price_bucket_load.csv' DELIMITER '|' CSV HEADER;
+	CREATE TEMPORARY TABLE PRICE_BUCKET_TEMP AS
+	SELECT PB.price_bucket_nm, c_dim.category_id, PB.bucket_floor_am, PB.bucket_ceiling_am
+	FROM "WORK_DB".PRICE_BUCKET_WT PB
+	INNER JOIN "CORE_DB".category_dim c_dim
+	ON trim(PB.category_nm) = trim(c_dim.category_nm);
+SELECT 0
+	UPDATE "CORE_DB".price_bucket_dim
+	SET bucket_floor_am = tmp.bucket_floor_am 
+	, bucket_ceiling_am = tmp.bucket_ceiling_am
+	, effective_end_dt = current_date - 1
+	, active_in = 'N'
+	, modified_td = current_timestamp(0)
+	FROM PRICE_BUCKET_TEMP tmp 
+	WHERE trim("CORE_DB".price_bucket_dim.price_bucket_nm) = trim(tmp.price_bucket_nm)
+	AND category_id = tmp.category_id;
+ERROR:  column reference "category_id" is ambiguous
+LINE 9:  AND category_id = tmp.category_id;
+             ^

@@ -1,0 +1,22 @@
+###################################################################################################################################
+###################################################################################################################################
+Load to ODS in progress
+###################################################################################################################################
+###################################################################################################################################
+begin;
+BEGIN
+        CREATE TEMPORARY TABLE CATEGORYTEMP AS
+        SELECT  categories, odsupdatetd
+        FROM "STAGE_DB".prodmeta
+        WHERE odsupdatetd > (SELECT LAST_LOAD_TD
+                FROM "META_DB".CONTROL_TBL
+                WHERE SCHEMA_NM = 'CORE_DB'
+                AND TABLE_NM = 'CATEGORY_DIM')
+		AND categories IS NOT NULL;
+SELECT 0
+        INSERT INTO "CORE_DB".CATEGORY_DIM (CATEGORY_NM, ADD_TD, MODIFIED_TD)
+        SELECT distinct CT.categories, current_timestamp(0), current_timestamp(0)
+        FROM (SELECT categories FROM CATEGORYTEMP MINUS SELECT category_nm from "CORE_DB".CATEGORY_DIM) CT;
+ERROR:  syntax error at or near "SELECT"
+LINE 3: ...  FROM (SELECT categories FROM CATEGORYTEMP MINUS SELECT cat...
+                                                             ^

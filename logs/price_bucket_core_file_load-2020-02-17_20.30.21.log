@@ -1,0 +1,11 @@
+###################################################################################################################################
+###################################################################################################################################
+Load to core in progress
+###################################################################################################################################
+###################################################################################################################################
+begin;
+BEGIN
+	COPY "WORK_DB".PRICE_BUCKET_WT(price_bucket_nm, category_nm, bucket_floor_am, bucket_ceiling_am) 
+	FROM '/edw/Reviews/SourceCode/data/price_bucket_load.csv' DELIMITER '|' CSV HEADER;
+ERROR:  could not open file "/edw/Reviews/SourceCode/data/price_bucket_load.csv" for reading: No such file or directory
+HINT:  COPY FROM instructs the PostgreSQL server process to read a file. You may want a client-side facility such as psql's \copy.

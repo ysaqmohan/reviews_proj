@@ -1,0 +1,62 @@
+###################################################################################################################################
+###################################################################################################################################
+Load to core in progress
+###################################################################################################################################
+###################################################################################################################################
+begin;
+BEGIN
+	COPY "CORE_DB".PRICE_BUCKET_WT(price_bucket_nm, category_nm, bucket_floor_am, bucket_ceiling_am) 
+	FROM '"/edw/Reviews/SourceCode/data/price_bucket_load.csv'" DELIMITER '|' CSV HEADER;
+
+	CREATE TEMPORARY TABLE PRICE_BUCKET_TEMP AS
+	SELECT PB.price_bucket_nm, c_dim.category_id, PB.bucket_floor_am, PB.bucket_ceiling_am
+	FROM "WORK_DB".PRICE_BUCKET_WT PB
+	INNER JOIN category_dim c_dim
+	ON PB.category_nm = c_dim.category_nm;
+
+	UPDATE "CORE_DB".price_bucket_dim
+	SET bucket_floor_am = bucket_floor_am 
+	, bucket_ceiling_am = bucket_ceiling_am
+	, effective_end_dt = current_date - 1
+	, active_in = 'N'
+	, modified_td = current_timestamp(0)
+	FROM PRICE_BUCKET_TEMP 
+	WHERE price_bucket_nm = PRICE_BUCKET_TEMP.price_bucket_nm
+	AND category_id = PRICE_BUCKET_TEMP.category_id;
+
+	INSERT INTO "CORE_DB".price_bucket_dim
+	SELECT PB.price_bucket_id, PB.price_bucket_nm, PB.category_id, TMP.bucket_floor_am, 
+	TMP.bucket_ceiling_am, current_date, '2045-12-31' ,'Y', current_timestamp(0), current_timestamp(0)
+	FROM PRICE_BUCKET_TEMP TMP
+	INNER JOIN "CORE_DB".price_bucket_dim PB
+	ON TMP.price_bucket_nm = PB.price_bucket_nm
+	AND TMP.category_id = PB.category_id;
+
+	INSERT INTO "CORE_DB".price_bucket_dim
+	SELECT CLK.MAX_PRICE_BUCKET_ID + ROW_NUMBER() OVER(ORDER BY TMP.price_bucket_nm, TMP.category_id) AS price_bucket_id
+	, TMP.price_bucket_nm, TMP.category_id, TMP.bucket_floor_am
+	, TMP.bucket_ceiling_am, current_date, '2045-12-31' ,'Y', current_timestamp(0), current_timestamp(0)
+	FROM PRICE_BUCKET_TEMP TMP
+	LEFT OUTER JOIN "CORE_DB".price_bucket_dim PB
+	ON TMP.price_bucket_nm = PB.price_bucket_nm
+	AND TMP.category_id = PB.category_id
+	INNER JOIN "META_DB".CLOCK_PRICE_BUCKET
+	ON MAX_PRICE_BUCKET_ID >= 0
+	WHERE price_bucket_dim PB IS NULL;
+
+commit;
+
+NOTICE:  identifier " DELIMITER '|' CSV HEADER;
+
+	CREATE TEMPORARY TABLE PRICE_BUCKET_TEMP AS
+	SELECT PB.price_bucket_nm, c_dim.category_id, PB.bucket_floor_am, PB.bucket_ceiling_am
+	FROM " will be truncated to " DELIMITER '|' CSV HEADER;
+
+	CREATE TEMPORARY TABLE PRICE_BUCKE"
+ERROR:  syntax error at or near "" DELIMITER '|' CSV HEADER;
+
+	CREATE TEMPORARY TABLE PRICE_BUCKET_TEMP AS
+	SELECT PB.price_bucket_nm, c_dim.category_id, PB.bucket_floor_am, PB.bucket_ceiling_am
+	FROM ""
+LINE 2: ...edw/Reviews/SourceCode/data/price_bucket_load.csv'" DELIMITE...
+                                                             ^

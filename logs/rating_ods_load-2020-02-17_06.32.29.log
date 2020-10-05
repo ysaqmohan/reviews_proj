@@ -1,0 +1,15 @@
+###################################################################################################################################
+###################################################################################################################################
+Load to stage in progress
+###################################################################################################################################
+###################################################################################################################################
+20/02/17 06:32:39 WARN Utils: Your hostname, DESKTOP-502C4I4 resolves to a loopback address: 127.0.1.1; using 192.168.1.25 instead (on interface wifi0)
+20/02/17 06:32:39 WARN Utils: Set SPARK_LOCAL_IP if you need to bind to another address
+20/02/17 06:32:40 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+  File "/edw/Reviews/SourceCode/python/rating_ods_load.py", line 49
+    Update_Reviewer_df = Cl_Reviews_df.join(Reviewer_Core_df, Cl_Reviews_df.reviewerID == Reviewer_Core_df.reviewer_id).filter((col('reviewer_nm') != col('reviewerName')) AND col('reviewerName').isNotNull()).select(col('reviewerID').alias("reviewer_id"),col('reviewerName').alias("reviewer_nm"),'add_td').withColumn("modified_td", current_timestamp())
+                                                                                                                                                                             ^
+SyntaxError: invalid syntax
+log4j:WARN No appenders could be found for logger (org.apache.spark.util.ShutdownHookManager).
+log4j:WARN Please initialize the log4j system properly.
+log4j:WARN See http://logging.apache.org/log4j/1.2/faq.html#noconfig for more info.

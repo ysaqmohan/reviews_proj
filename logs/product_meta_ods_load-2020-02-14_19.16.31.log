@@ -1,0 +1,529 @@
+###################################################################################################################################
+###################################################################################################################################
+Load to stage in progress
+###################################################################################################################################
+###################################################################################################################################
+20/02/14 19:16:32 WARN Utils: Your hostname, DESKTOP-502C4I4 resolves to a loopback address: 127.0.1.1; using 192.168.1.25 instead (on interface wifi0)
+20/02/14 19:16:32 WARN Utils: Set SPARK_LOCAL_IP if you need to bind to another address
+20/02/14 19:16:33 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+Using Spark's default log4j profile: org/apache/spark/log4j-defaults.properties
+20/02/14 19:16:34 INFO SparkContext: Running Spark version 2.4.5
+20/02/14 19:16:34 INFO SparkContext: Submitted application: ProdMeta
+20/02/14 19:16:34 INFO SecurityManager: Changing view acls to: devetluser
+20/02/14 19:16:34 INFO SecurityManager: Changing modify acls to: devetluser
+20/02/14 19:16:34 INFO SecurityManager: Changing view acls groups to: 
+20/02/14 19:16:34 INFO SecurityManager: Changing modify acls groups to: 
+20/02/14 19:16:34 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(devetluser); groups with view permissions: Set(); users  with modify permissions: Set(devetluser); groups with modify permissions: Set()
+20/02/14 19:16:35 INFO Utils: Successfully started service 'sparkDriver' on port 14197.
+20/02/14 19:16:35 INFO SparkEnv: Registering MapOutputTracker
+20/02/14 19:16:35 INFO SparkEnv: Registering BlockManagerMaster
+20/02/14 19:16:35 INFO BlockManagerMasterEndpoint: Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+20/02/14 19:16:35 INFO BlockManagerMasterEndpoint: BlockManagerMasterEndpoint up
+20/02/14 19:16:35 INFO DiskBlockManager: Created local directory at /tmp/blockmgr-63a3850c-8ec7-47d4-aa3d-95fdf88a2394
+20/02/14 19:16:35 INFO MemoryStore: MemoryStore started with capacity 366.3 MB
+20/02/14 19:16:35 INFO SparkEnv: Registering OutputCommitCoordinator
+20/02/14 19:16:35 INFO Utils: Successfully started service 'SparkUI' on port 4040.
+20/02/14 19:16:36 INFO SparkUI: Bound SparkUI to 0.0.0.0, and started at http://192.168.1.25:4040
+20/02/14 19:16:36 INFO Executor: Starting executor ID driver on host localhost
+20/02/14 19:16:36 INFO Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 14200.
+20/02/14 19:16:36 INFO NettyBlockTransferService: Server created on 192.168.1.25:14200
+20/02/14 19:16:36 INFO BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+20/02/14 19:16:36 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, 192.168.1.25, 14200, None)
+20/02/14 19:16:36 INFO BlockManagerMasterEndpoint: Registering block manager 192.168.1.25:14200 with 366.3 MB RAM, BlockManagerId(driver, 192.168.1.25, 14200, None)
+20/02/14 19:16:36 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, 192.168.1.25, 14200, None)
+20/02/14 19:16:36 INFO BlockManager: Initialized BlockManager: BlockManagerId(driver, 192.168.1.25, 14200, None)
+20/02/14 19:16:37 INFO SharedState: Setting hive.metastore.warehouse.dir ('null') to the value of spark.sql.warehouse.dir ('file:/edw/Reviews/SourceCode/bash/spark-warehouse').
+20/02/14 19:16:37 INFO SharedState: Warehouse path is 'file:/edw/Reviews/SourceCode/bash/spark-warehouse'.
+20/02/14 19:16:37 INFO StateStoreCoordinatorRef: Registered StateStoreCoordinator endpoint
+20/02/14 19:16:38 INFO InMemoryFileIndex: It took 51 ms to list leaf files for 1 paths.
+20/02/14 19:16:38 INFO InMemoryFileIndex: It took 2 ms to list leaf files for 1 paths.
+20/02/14 19:16:41 INFO FileSourceStrategy: Pruning directories with: 
+20/02/14 19:16:41 INFO FileSourceStrategy: Post-Scan Filters: 
+20/02/14 19:16:41 INFO FileSourceStrategy: Output Data Schema: struct<value: string>
+20/02/14 19:16:41 INFO FileSourceScanExec: Pushed Filters: 
+20/02/14 19:16:42 INFO CodeGenerator: Code generated in 341.6993 ms
+20/02/14 19:16:42 INFO MemoryStore: Block broadcast_0 stored as values in memory (estimated size 282.6 KB, free 366.0 MB)
+20/02/14 19:16:42 INFO MemoryStore: Block broadcast_0_piece0 stored as bytes in memory (estimated size 23.3 KB, free 366.0 MB)
+20/02/14 19:16:42 INFO BlockManagerInfo: Added broadcast_0_piece0 in memory on 192.168.1.25:14200 (size: 23.3 KB, free: 366.3 MB)
+20/02/14 19:16:42 INFO SparkContext: Created broadcast 0 from json at NativeMethodAccessorImpl.java:0
+20/02/14 19:16:42 INFO FileSourceScanExec: Planning scan with bin packing, max size: 37736794 bytes, open cost is considered as scanning 4194304 bytes.
+20/02/14 19:16:42 INFO SparkContext: Starting job: json at NativeMethodAccessorImpl.java:0
+20/02/14 19:16:43 INFO DAGScheduler: Got job 0 (json at NativeMethodAccessorImpl.java:0) with 4 output partitions
+20/02/14 19:16:43 INFO DAGScheduler: Final stage: ResultStage 0 (json at NativeMethodAccessorImpl.java:0)
+20/02/14 19:16:43 INFO DAGScheduler: Parents of final stage: List()
+20/02/14 19:16:43 INFO DAGScheduler: Missing parents: List()
+20/02/14 19:16:43 INFO DAGScheduler: Submitting ResultStage 0 (MapPartitionsRDD[3] at json at NativeMethodAccessorImpl.java:0), which has no missing parents
+20/02/14 19:16:43 INFO MemoryStore: Block broadcast_1 stored as values in memory (estimated size 11.6 KB, free 366.0 MB)
+20/02/14 19:16:43 INFO MemoryStore: Block broadcast_1_piece0 stored as bytes in memory (estimated size 6.7 KB, free 366.0 MB)
+20/02/14 19:16:43 INFO BlockManagerInfo: Added broadcast_1_piece0 in memory on 192.168.1.25:14200 (size: 6.7 KB, free: 366.3 MB)
+20/02/14 19:16:43 INFO SparkContext: Created broadcast 1 from broadcast at DAGScheduler.scala:1163
+20/02/14 19:16:43 INFO DAGScheduler: Submitting 4 missing tasks from ResultStage 0 (MapPartitionsRDD[3] at json at NativeMethodAccessorImpl.java:0) (first 15 tasks are for partitions Vector(0, 1, 2, 3))
+20/02/14 19:16:43 INFO TaskSchedulerImpl: Adding task set 0.0 with 4 tasks
+20/02/14 19:16:43 INFO TaskSetManager: Starting task 0.0 in stage 0.0 (TID 0, localhost, executor driver, partition 0, PROCESS_LOCAL, 8265 bytes)
+20/02/14 19:16:43 INFO TaskSetManager: Starting task 1.0 in stage 0.0 (TID 1, localhost, executor driver, partition 1, PROCESS_LOCAL, 8265 bytes)
+20/02/14 19:16:43 INFO TaskSetManager: Starting task 2.0 in stage 0.0 (TID 2, localhost, executor driver, partition 2, PROCESS_LOCAL, 8265 bytes)
+20/02/14 19:16:43 INFO TaskSetManager: Starting task 3.0 in stage 0.0 (TID 3, localhost, executor driver, partition 3, PROCESS_LOCAL, 8265 bytes)
+20/02/14 19:16:43 INFO Executor: Running task 0.0 in stage 0.0 (TID 0)
+20/02/14 19:16:43 INFO Executor: Running task 3.0 in stage 0.0 (TID 3)
+20/02/14 19:16:43 INFO Executor: Running task 2.0 in stage 0.0 (TID 2)
+20/02/14 19:16:43 INFO Executor: Running task 1.0 in stage 0.0 (TID 1)
+20/02/14 19:16:43 INFO FileScanRDD: Reading File path: file:///edw/Reviews/SourceCode/data/ProdMeta.json, range: 0-37736794, partition values: [empty row]
+20/02/14 19:16:43 INFO FileScanRDD: Reading File path: file:///edw/Reviews/SourceCode/data/ProdMeta.json, range: 113210382-146752875, partition values: [empty row]
+20/02/14 19:16:43 INFO FileScanRDD: Reading File path: file:///edw/Reviews/SourceCode/data/ProdMeta.json, range: 37736794-75473588, partition values: [empty row]
+20/02/14 19:16:43 INFO FileScanRDD: Reading File path: file:///edw/Reviews/SourceCode/data/ProdMeta.json, range: 75473588-113210382, partition values: [empty row]
+20/02/14 19:16:43 INFO CodeGenerator: Code generated in 22.2625 ms
+20/02/14 19:16:44 INFO Executor: Finished task 3.0 in stage 0.0 (TID 3). 2727 bytes result sent to driver
+20/02/14 19:16:44 INFO Executor: Finished task 1.0 in stage 0.0 (TID 1). 2690 bytes result sent to driver
+20/02/14 19:16:44 INFO Executor: Finished task 2.0 in stage 0.0 (TID 2). 2760 bytes result sent to driver
+20/02/14 19:16:44 INFO TaskSetManager: Finished task 3.0 in stage 0.0 (TID 3) in 1535 ms on localhost (executor driver) (1/4)
+20/02/14 19:16:44 INFO Executor: Finished task 0.0 in stage 0.0 (TID 0). 2781 bytes result sent to driver
+20/02/14 19:16:44 INFO TaskSetManager: Finished task 1.0 in stage 0.0 (TID 1) in 1550 ms on localhost (executor driver) (2/4)
+20/02/14 19:16:44 INFO TaskSetManager: Finished task 0.0 in stage 0.0 (TID 0) in 1569 ms on localhost (executor driver) (3/4)
+20/02/14 19:16:44 INFO TaskSetManager: Finished task 2.0 in stage 0.0 (TID 2) in 1554 ms on localhost (executor driver) (4/4)
+20/02/14 19:16:44 INFO TaskSchedulerImpl: Removed TaskSet 0.0, whose tasks have all completed, from pool 
+20/02/14 19:16:44 INFO DAGScheduler: ResultStage 0 (json at NativeMethodAccessorImpl.java:0) finished in 1.720 s
+20/02/14 19:16:44 INFO DAGScheduler: Job 0 finished: json at NativeMethodAccessorImpl.java:0, took 1.824335 s
+20/02/14 19:16:45 INFO FileSourceStrategy: Pruning directories with: 
+20/02/14 19:16:45 INFO FileSourceStrategy: Post-Scan Filters: isnotnull(asin#7)
+20/02/14 19:16:45 INFO FileSourceStrategy: Output Data Schema: struct<asin: string, brand: string, categories: array<array<string>>, price: double, title: string ... 3 more fields>
+20/02/14 19:16:45 INFO FileSourceScanExec: Pushed Filters: IsNotNull(asin)
+20/02/14 19:16:46 INFO CodeGenerator: Code generated in 46.3556 ms
+20/02/14 19:16:46 INFO MemoryStore: Block broadcast_2 stored as values in memory (estimated size 282.6 KB, free 365.7 MB)
+20/02/14 19:16:46 INFO MemoryStore: Block broadcast_2_piece0 stored as bytes in memory (estimated size 23.3 KB, free 365.7 MB)
+20/02/14 19:16:46 INFO BlockManagerInfo: Added broadcast_2_piece0 in memory on 192.168.1.25:14200 (size: 23.3 KB, free: 366.2 MB)
+20/02/14 19:16:46 INFO SparkContext: Created broadcast 2 from jdbc at NativeMethodAccessorImpl.java:0
+20/02/14 19:16:46 INFO FileSourceScanExec: Planning scan with bin packing, max size: 37736794 bytes, open cost is considered as scanning 4194304 bytes.
+20/02/14 19:16:46 INFO SparkContext: Starting job: jdbc at NativeMethodAccessorImpl.java:0
+20/02/14 19:16:46 INFO DAGScheduler: Got job 1 (jdbc at NativeMethodAccessorImpl.java:0) with 4 output partitions
+20/02/14 19:16:46 INFO DAGScheduler: Final stage: ResultStage 1 (jdbc at NativeMethodAccessorImpl.java:0)
+20/02/14 19:16:46 INFO DAGScheduler: Parents of final stage: List()
+20/02/14 19:16:46 INFO DAGScheduler: Missing parents: List()
+20/02/14 19:16:46 INFO DAGScheduler: Submitting ResultStage 1 (MapPartitionsRDD[8] at jdbc at NativeMethodAccessorImpl.java:0), which has no missing parents
+20/02/14 19:16:46 INFO MemoryStore: Block broadcast_3 stored as values in memory (estimated size 21.0 KB, free 365.7 MB)
+20/02/14 19:16:46 INFO MemoryStore: Block broadcast_3_piece0 stored as bytes in memory (estimated size 10.9 KB, free 365.7 MB)
+20/02/14 19:16:46 INFO BlockManagerInfo: Added broadcast_3_piece0 in memory on 192.168.1.25:14200 (size: 10.9 KB, free: 366.2 MB)
+20/02/14 19:16:46 INFO SparkContext: Created broadcast 3 from broadcast at DAGScheduler.scala:1163
+20/02/14 19:16:46 INFO DAGScheduler: Submitting 4 missing tasks from ResultStage 1 (MapPartitionsRDD[8] at jdbc at NativeMethodAccessorImpl.java:0) (first 15 tasks are for partitions Vector(0, 1, 2, 3))
+20/02/14 19:16:46 INFO TaskSchedulerImpl: Adding task set 1.0 with 4 tasks
+20/02/14 19:16:46 INFO TaskSetManager: Starting task 0.0 in stage 1.0 (TID 4, localhost, executor driver, partition 0, PROCESS_LOCAL, 8265 bytes)
+20/02/14 19:16:46 INFO TaskSetManager: Starting task 1.0 in stage 1.0 (TID 5, localhost, executor driver, partition 1, PROCESS_LOCAL, 8265 bytes)
+20/02/14 19:16:46 INFO TaskSetManager: Starting task 2.0 in stage 1.0 (TID 6, localhost, executor driver, partition 2, PROCESS_LOCAL, 8265 bytes)
+20/02/14 19:16:46 INFO TaskSetManager: Starting task 3.0 in stage 1.0 (TID 7, localhost, executor driver, partition 3, PROCESS_LOCAL, 8265 bytes)
+20/02/14 19:16:46 INFO Executor: Running task 0.0 in stage 1.0 (TID 4)
+20/02/14 19:16:46 INFO Executor: Running task 1.0 in stage 1.0 (TID 5)
+20/02/14 19:16:46 INFO Executor: Running task 2.0 in stage 1.0 (TID 6)
+20/02/14 19:16:46 INFO Executor: Running task 3.0 in stage 1.0 (TID 7)
+20/02/14 19:16:46 INFO CodeGenerator: Code generated in 29.5755 ms
+20/02/14 19:16:46 INFO FileScanRDD: Reading File path: file:///edw/Reviews/SourceCode/data/ProdMeta.json, range: 37736794-75473588, partition values: [empty row]
+20/02/14 19:16:46 INFO FileScanRDD: Reading File path: file:///edw/Reviews/SourceCode/data/ProdMeta.json, range: 0-37736794, partition values: [empty row]
+20/02/14 19:16:46 INFO FileScanRDD: Reading File path: file:///edw/Reviews/SourceCode/data/ProdMeta.json, range: 75473588-113210382, partition values: [empty row]
+20/02/14 19:16:46 INFO FileScanRDD: Reading File path: file:///edw/Reviews/SourceCode/data/ProdMeta.json, range: 113210382-146752875, partition values: [empty row]
+20/02/14 19:16:46 INFO CodeGenerator: Code generated in 32.479 ms
+20/02/14 19:16:47 ERROR Executor: Exception in task 2.0 in stage 1.0 (TID 6)
+java.sql.BatchUpdateException: Batch entry 4 INSERT INTO PRODMETA_STAGING ("asin","brand","price","title","categories") VALUES ('0078111501',NULL,17.5,'Probation, Parole, and Community-Based Corrections: Supervision, Treatment, and Evidence-Based Practices (Connect, Learn, Succeed)','Books') was aborted: ERROR: value too long for type character varying(70)  Call getNextException to see other errors in the batch.
+	at org.postgresql.jdbc.BatchResultHandler.handleError(BatchResultHandler.java:153)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2246)
+	at org.postgresql.core.v3.QueryExecutorImpl.flushIfDeadlockRisk(QueryExecutorImpl.java:1364)
+	at org.postgresql.core.v3.QueryExecutorImpl.sendQuery(QueryExecutorImpl.java:1389)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:495)
+	at org.postgresql.jdbc.PgStatement.internalExecuteBatch(PgStatement.java:850)
+	at org.postgresql.jdbc.PgStatement.executeBatch(PgStatement.java:873)
+	at org.postgresql.jdbc.PgPreparedStatement.executeBatch(PgPreparedStatement.java:1569)
+	at org.apache.spark.sql.execution.datasources.jdbc.JdbcUtils$.savePartition(JdbcUtils.scala:671)
+	at org.apache.spark.sql.execution.datasources.jdbc.JdbcUtils$$anonfun$saveTable$1.apply(JdbcUtils.scala:838)
+	at org.apache.spark.sql.execution.datasources.jdbc.JdbcUtils$$anonfun$saveTable$1.apply(JdbcUtils.scala:838)
+	at org.apache.spark.rdd.RDD$$anonfun$foreachPartition$1$$anonfun$apply$28.apply(RDD.scala:980)
+	at org.apache.spark.rdd.RDD$$anonfun$foreachPartition$1$$anonfun$apply$28.apply(RDD.scala:980)
+	at org.apache.spark.SparkContext$$anonfun$runJob$5.apply(SparkContext.scala:2101)
+	at org.apache.spark.SparkContext$$anonfun$runJob$5.apply(SparkContext.scala:2101)
+	at org.apache.spark.scheduler.ResultTask.runTask(ResultTask.scala:90)
+	at org.apache.spark.scheduler.Task.run(Task.scala:123)
+	at org.apache.spark.executor.Executor$TaskRunner$$anonfun$10.apply(Executor.scala:408)
+	at org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:1360)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:414)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: org.postgresql.util.PSQLException: ERROR: value too long for type character varying(70)
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2510)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2245)
+	... 21 more
+20/02/14 19:16:47 ERROR Executor: Exception in task 0.0 in stage 1.0 (TID 4)
+java.sql.BatchUpdateException: Batch entry 1 INSERT INTO PRODMETA_STAGING ("asin","brand","price","title","categories") VALUES ('0000143561',NULL,12.99,'Everyday Italian (with Giada de Laurentiis), Volume 1 (3 Pack): Italian Classics, Parties, Holidays','Movies & TV') was aborted: ERROR: value too long for type character varying(70)  Call getNextException to see other errors in the batch.
+	at org.postgresql.jdbc.BatchResultHandler.handleError(BatchResultHandler.java:153)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2246)
+	at org.postgresql.core.v3.QueryExecutorImpl.flushIfDeadlockRisk(QueryExecutorImpl.java:1364)
+	at org.postgresql.core.v3.QueryExecutorImpl.sendQuery(QueryExecutorImpl.java:1389)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:495)
+	at org.postgresql.jdbc.PgStatement.internalExecuteBatch(PgStatement.java:850)
+	at org.postgresql.jdbc.PgStatement.executeBatch(PgStatement.java:873)
+	at org.postgresql.jdbc.PgPreparedStatement.executeBatch(PgPreparedStatement.java:1569)
+	at org.apache.spark.sql.execution.datasources.jdbc.JdbcUtils$.savePartition(JdbcUtils.scala:671)
+	at org.apache.spark.sql.execution.datasources.jdbc.JdbcUtils$$anonfun$saveTable$1.apply(JdbcUtils.scala:838)
+	at org.apache.spark.sql.execution.datasources.jdbc.JdbcUtils$$anonfun$saveTable$1.apply(JdbcUtils.scala:838)
+	at org.apache.spark.rdd.RDD$$anonfun$foreachPartition$1$$anonfun$apply$28.apply(RDD.scala:980)
+	at org.apache.spark.rdd.RDD$$anonfun$foreachPartition$1$$anonfun$apply$28.apply(RDD.scala:980)
+	at org.apache.spark.SparkContext$$anonfun$runJob$5.apply(SparkContext.scala:2101)
+	at org.apache.spark.SparkContext$$anonfun$runJob$5.apply(SparkContext.scala:2101)
+	at org.apache.spark.scheduler.ResultTask.runTask(ResultTask.scala:90)
+	at org.apache.spark.scheduler.Task.run(Task.scala:123)
+	at org.apache.spark.executor.Executor$TaskRunner$$anonfun$10.apply(Executor.scala:408)
+	at org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:1360)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:414)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: org.postgresql.util.PSQLException: ERROR: value too long for type character varying(70)
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2510)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2245)
+	... 21 more
+20/02/14 19:16:47 ERROR Executor: Exception in task 3.0 in stage 1.0 (TID 7)
+java.sql.BatchUpdateException: Batch entry 7 INSERT INTO PRODMETA_STAGING ("asin","brand","price","title","categories") VALUES ('0140446583',NULL,9.99,'The Village of Stepanchikovo: And its Inhabitants: From the Notes of an Unknown (Penguin Classics)','Books') was aborted: ERROR: value too long for type character varying(70)  Call getNextException to see other errors in the batch.
+	at org.postgresql.jdbc.BatchResultHandler.handleError(BatchResultHandler.java:153)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2246)
+	at org.postgresql.core.v3.QueryExecutorImpl.flushIfDeadlockRisk(QueryExecutorImpl.java:1364)
+	at org.postgresql.core.v3.QueryExecutorImpl.sendQuery(QueryExecutorImpl.java:1389)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:495)
+	at org.postgresql.jdbc.PgStatement.internalExecuteBatch(PgStatement.java:850)
+	at org.postgresql.jdbc.PgStatement.executeBatch(PgStatement.java:873)
+	at org.postgresql.jdbc.PgPreparedStatement.executeBatch(PgPreparedStatement.java:1569)
+	at org.apache.spark.sql.execution.datasources.jdbc.JdbcUtils$.savePartition(JdbcUtils.scala:671)
+	at org.apache.spark.sql.execution.datasources.jdbc.JdbcUtils$$anonfun$saveTable$1.apply(JdbcUtils.scala:838)
+	at org.apache.spark.sql.execution.datasources.jdbc.JdbcUtils$$anonfun$saveTable$1.apply(JdbcUtils.scala:838)
+	at org.apache.spark.rdd.RDD$$anonfun$foreachPartition$1$$anonfun$apply$28.apply(RDD.scala:980)
+	at org.apache.spark.rdd.RDD$$anonfun$foreachPartition$1$$anonfun$apply$28.apply(RDD.scala:980)
+	at org.apache.spark.SparkContext$$anonfun$runJob$5.apply(SparkContext.scala:2101)
+	at org.apache.spark.SparkContext$$anonfun$runJob$5.apply(SparkContext.scala:2101)
+	at org.apache.spark.scheduler.ResultTask.runTask(ResultTask.scala:90)
+	at org.apache.spark.scheduler.Task.run(Task.scala:123)
+	at org.apache.spark.executor.Executor$TaskRunner$$anonfun$10.apply(Executor.scala:408)
+	at org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:1360)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:414)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: org.postgresql.util.PSQLException: ERROR: value too long for type character varying(70)
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2510)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2245)
+	... 21 more
+20/02/14 19:16:47 ERROR Executor: Exception in task 1.0 in stage 1.0 (TID 5)
+java.sql.BatchUpdateException: Batch entry 20 INSERT INTO PRODMETA_STAGING ("asin","brand","price","title","categories") VALUES ('006196977X',NULL,9.78,'How to Beat Up Anybody: An Instructional and Inspirational Karate Book by the World Champion','Books') was aborted: ERROR: value too long for type character varying(70)  Call getNextException to see other errors in the batch.
+	at org.postgresql.jdbc.BatchResultHandler.handleError(BatchResultHandler.java:153)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2246)
+	at org.postgresql.core.v3.QueryExecutorImpl.flushIfDeadlockRisk(QueryExecutorImpl.java:1364)
+	at org.postgresql.core.v3.QueryExecutorImpl.sendQuery(QueryExecutorImpl.java:1389)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:495)
+	at org.postgresql.jdbc.PgStatement.internalExecuteBatch(PgStatement.java:850)
+	at org.postgresql.jdbc.PgStatement.executeBatch(PgStatement.java:873)
+	at org.postgresql.jdbc.PgPreparedStatement.executeBatch(PgPreparedStatement.java:1569)
+	at org.apache.spark.sql.execution.datasources.jdbc.JdbcUtils$.savePartition(JdbcUtils.scala:671)
+	at org.apache.spark.sql.execution.datasources.jdbc.JdbcUtils$$anonfun$saveTable$1.apply(JdbcUtils.scala:838)
+	at org.apache.spark.sql.execution.datasources.jdbc.JdbcUtils$$anonfun$saveTable$1.apply(JdbcUtils.scala:838)
+	at org.apache.spark.rdd.RDD$$anonfun$foreachPartition$1$$anonfun$apply$28.apply(RDD.scala:980)
+	at org.apache.spark.rdd.RDD$$anonfun$foreachPartition$1$$anonfun$apply$28.apply(RDD.scala:980)
+	at org.apache.spark.SparkContext$$anonfun$runJob$5.apply(SparkContext.scala:2101)
+	at org.apache.spark.SparkContext$$anonfun$runJob$5.apply(SparkContext.scala:2101)
+	at org.apache.spark.scheduler.ResultTask.runTask(ResultTask.scala:90)
+	at org.apache.spark.scheduler.Task.run(Task.scala:123)
+	at org.apache.spark.executor.Executor$TaskRunner$$anonfun$10.apply(Executor.scala:408)
+	at org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:1360)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:414)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: org.postgresql.util.PSQLException: ERROR: value too long for type character varying(70)
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2510)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2245)
+	... 21 more
+20/02/14 19:16:47 WARN TaskSetManager: Lost task 3.0 in stage 1.0 (TID 7, localhost, executor driver): java.sql.BatchUpdateException: Batch entry 7 INSERT INTO PRODMETA_STAGING ("asin","brand","price","title","categories") VALUES ('0140446583',NULL,9.99,'The Village of Stepanchikovo: And its Inhabitants: From the Notes of an Unknown (Penguin Classics)','Books') was aborted: ERROR: value too long for type character varying(70)  Call getNextException to see other errors in the batch.
+	at org.postgresql.jdbc.BatchResultHandler.handleError(BatchResultHandler.java:153)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2246)
+	at org.postgresql.core.v3.QueryExecutorImpl.flushIfDeadlockRisk(QueryExecutorImpl.java:1364)
+	at org.postgresql.core.v3.QueryExecutorImpl.sendQuery(QueryExecutorImpl.java:1389)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:495)
+	at org.postgresql.jdbc.PgStatement.internalExecuteBatch(PgStatement.java:850)
+	at org.postgresql.jdbc.PgStatement.executeBatch(PgStatement.java:873)
+	at org.postgresql.jdbc.PgPreparedStatement.executeBatch(PgPreparedStatement.java:1569)
+	at org.apache.spark.sql.execution.datasources.jdbc.JdbcUtils$.savePartition(JdbcUtils.scala:671)
+	at org.apache.spark.sql.execution.datasources.jdbc.JdbcUtils$$anonfun$saveTable$1.apply(JdbcUtils.scala:838)
+	at org.apache.spark.sql.execution.datasources.jdbc.JdbcUtils$$anonfun$saveTable$1.apply(JdbcUtils.scala:838)
+	at org.apache.spark.rdd.RDD$$anonfun$foreachPartition$1$$anonfun$apply$28.apply(RDD.scala:980)
+	at org.apache.spark.rdd.RDD$$anonfun$foreachPartition$1$$anonfun$apply$28.apply(RDD.scala:980)
+	at org.apache.spark.SparkContext$$anonfun$runJob$5.apply(SparkContext.scala:2101)
+	at org.apache.spark.SparkContext$$anonfun$runJob$5.apply(SparkContext.scala:2101)
+	at org.apache.spark.scheduler.ResultTask.runTask(ResultTask.scala:90)
+	at org.apache.spark.scheduler.Task.run(Task.scala:123)
+	at org.apache.spark.executor.Executor$TaskRunner$$anonfun$10.apply(Executor.scala:408)
+	at org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:1360)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:414)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: org.postgresql.util.PSQLException: ERROR: value too long for type character varying(70)
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2510)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2245)
+	... 21 more
+
+20/02/14 19:16:47 ERROR TaskSetManager: Task 3 in stage 1.0 failed 1 times; aborting job
+20/02/14 19:16:47 INFO TaskSchedulerImpl: Removed TaskSet 1.0, whose tasks have all completed, from pool 
+20/02/14 19:16:47 WARN TaskSetManager: Lost task 0.0 in stage 1.0 (TID 4, localhost, executor driver): java.sql.BatchUpdateException: Batch entry 1 INSERT INTO PRODMETA_STAGING ("asin","brand","price","title","categories") VALUES ('0000143561',NULL,12.99,'Everyday Italian (with Giada de Laurentiis), Volume 1 (3 Pack): Italian Classics, Parties, Holidays','Movies & TV') was aborted: ERROR: value too long for type character varying(70)  Call getNextException to see other errors in the batch.
+	at org.postgresql.jdbc.BatchResultHandler.handleError(BatchResultHandler.java:153)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2246)
+	at org.postgresql.core.v3.QueryExecutorImpl.flushIfDeadlockRisk(QueryExecutorImpl.java:1364)
+	at org.postgresql.core.v3.QueryExecutorImpl.sendQuery(QueryExecutorImpl.java:1389)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:495)
+	at org.postgresql.jdbc.PgStatement.internalExecuteBatch(PgStatement.java:850)
+	at org.postgresql.jdbc.PgStatement.executeBatch(PgStatement.java:873)
+	at org.postgresql.jdbc.PgPreparedStatement.executeBatch(PgPreparedStatement.java:1569)
+	at org.apache.spark.sql.execution.datasources.jdbc.JdbcUtils$.savePartition(JdbcUtils.scala:671)
+	at org.apache.spark.sql.execution.datasources.jdbc.JdbcUtils$$anonfun$saveTable$1.apply(JdbcUtils.scala:838)
+	at org.apache.spark.sql.execution.datasources.jdbc.JdbcUtils$$anonfun$saveTable$1.apply(JdbcUtils.scala:838)
+	at org.apache.spark.rdd.RDD$$anonfun$foreachPartition$1$$anonfun$apply$28.apply(RDD.scala:980)
+	at org.apache.spark.rdd.RDD$$anonfun$foreachPartition$1$$anonfun$apply$28.apply(RDD.scala:980)
+	at org.apache.spark.SparkContext$$anonfun$runJob$5.apply(SparkContext.scala:2101)
+	at org.apache.spark.SparkContext$$anonfun$runJob$5.apply(SparkContext.scala:2101)
+	at org.apache.spark.scheduler.ResultTask.runTask(ResultTask.scala:90)
+	at org.apache.spark.scheduler.Task.run(Task.scala:123)
+	at org.apache.spark.executor.Executor$TaskRunner$$anonfun$10.apply(Executor.scala:408)
+	at org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:1360)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:414)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: org.postgresql.util.PSQLException: ERROR: value too long for type character varying(70)
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2510)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2245)
+	... 21 more
+
+20/02/14 19:16:47 INFO TaskSchedulerImpl: Removed TaskSet 1.0, whose tasks have all completed, from pool 
+20/02/14 19:16:47 WARN TaskSetManager: Lost task 1.0 in stage 1.0 (TID 5, localhost, executor driver): java.sql.BatchUpdateException: Batch entry 20 INSERT INTO PRODMETA_STAGING ("asin","brand","price","title","categories") VALUES ('006196977X',NULL,9.78,'How to Beat Up Anybody: An Instructional and Inspirational Karate Book by the World Champion','Books') was aborted: ERROR: value too long for type character varying(70)  Call getNextException to see other errors in the batch.
+	at org.postgresql.jdbc.BatchResultHandler.handleError(BatchResultHandler.java:153)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2246)
+	at org.postgresql.core.v3.QueryExecutorImpl.flushIfDeadlockRisk(QueryExecutorImpl.java:1364)
+	at org.postgresql.core.v3.QueryExecutorImpl.sendQuery(QueryExecutorImpl.java:1389)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:495)
+	at org.postgresql.jdbc.PgStatement.internalExecuteBatch(PgStatement.java:850)
+	at org.postgresql.jdbc.PgStatement.executeBatch(PgStatement.java:873)
+	at org.postgresql.jdbc.PgPreparedStatement.executeBatch(PgPreparedStatement.java:1569)
+	at org.apache.spark.sql.execution.datasources.jdbc.JdbcUtils$.savePartition(JdbcUtils.scala:671)
+	at org.apache.spark.sql.execution.datasources.jdbc.JdbcUtils$$anonfun$saveTable$1.apply(JdbcUtils.scala:838)
+	at org.apache.spark.sql.execution.datasources.jdbc.JdbcUtils$$anonfun$saveTable$1.apply(JdbcUtils.scala:838)
+	at org.apache.spark.rdd.RDD$$anonfun$foreachPartition$1$$anonfun$apply$28.apply(RDD.scala:980)
+	at org.apache.spark.rdd.RDD$$anonfun$foreachPartition$1$$anonfun$apply$28.apply(RDD.scala:980)
+	at org.apache.spark.SparkContext$$anonfun$runJob$5.apply(SparkContext.scala:2101)
+	at org.apache.spark.SparkContext$$anonfun$runJob$5.apply(SparkContext.scala:2101)
+	at org.apache.spark.scheduler.ResultTask.runTask(ResultTask.scala:90)
+	at org.apache.spark.scheduler.Task.run(Task.scala:123)
+	at org.apache.spark.executor.Executor$TaskRunner$$anonfun$10.apply(Executor.scala:408)
+	at org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:1360)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:414)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: org.postgresql.util.PSQLException: ERROR: value too long for type character varying(70)
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2510)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2245)
+	... 21 more
+
+20/02/14 19:16:47 INFO TaskSchedulerImpl: Removed TaskSet 1.0, whose tasks have all completed, from pool 
+20/02/14 19:16:47 WARN TaskSetManager: Lost task 2.0 in stage 1.0 (TID 6, localhost, executor driver): java.sql.BatchUpdateException: Batch entry 4 INSERT INTO PRODMETA_STAGING ("asin","brand","price","title","categories") VALUES ('0078111501',NULL,17.5,'Probation, Parole, and Community-Based Corrections: Supervision, Treatment, and Evidence-Based Practices (Connect, Learn, Succeed)','Books') was aborted: ERROR: value too long for type character varying(70)  Call getNextException to see other errors in the batch.
+	at org.postgresql.jdbc.BatchResultHandler.handleError(BatchResultHandler.java:153)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2246)
+	at org.postgresql.core.v3.QueryExecutorImpl.flushIfDeadlockRisk(QueryExecutorImpl.java:1364)
+	at org.postgresql.core.v3.QueryExecutorImpl.sendQuery(QueryExecutorImpl.java:1389)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:495)
+	at org.postgresql.jdbc.PgStatement.internalExecuteBatch(PgStatement.java:850)
+	at org.postgresql.jdbc.PgStatement.executeBatch(PgStatement.java:873)
+	at org.postgresql.jdbc.PgPreparedStatement.executeBatch(PgPreparedStatement.java:1569)
+	at org.apache.spark.sql.execution.datasources.jdbc.JdbcUtils$.savePartition(JdbcUtils.scala:671)
+	at org.apache.spark.sql.execution.datasources.jdbc.JdbcUtils$$anonfun$saveTable$1.apply(JdbcUtils.scala:838)
+	at org.apache.spark.sql.execution.datasources.jdbc.JdbcUtils$$anonfun$saveTable$1.apply(JdbcUtils.scala:838)
+	at org.apache.spark.rdd.RDD$$anonfun$foreachPartition$1$$anonfun$apply$28.apply(RDD.scala:980)
+	at org.apache.spark.rdd.RDD$$anonfun$foreachPartition$1$$anonfun$apply$28.apply(RDD.scala:980)
+	at org.apache.spark.SparkContext$$anonfun$runJob$5.apply(SparkContext.scala:2101)
+	at org.apache.spark.SparkContext$$anonfun$runJob$5.apply(SparkContext.scala:2101)
+	at org.apache.spark.scheduler.ResultTask.runTask(ResultTask.scala:90)
+	at org.apache.spark.scheduler.Task.run(Task.scala:123)
+	at org.apache.spark.executor.Executor$TaskRunner$$anonfun$10.apply(Executor.scala:408)
+	at org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:1360)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:414)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: org.postgresql.util.PSQLException: ERROR: value too long for type character varying(70)
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2510)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2245)
+	... 21 more
+
+20/02/14 19:16:47 INFO TaskSchedulerImpl: Removed TaskSet 1.0, whose tasks have all completed, from pool 
+20/02/14 19:16:47 INFO TaskSchedulerImpl: Cancelling stage 1
+20/02/14 19:16:47 INFO TaskSchedulerImpl: Killing all running tasks in stage 1: Stage cancelled
+20/02/14 19:16:47 INFO DAGScheduler: ResultStage 1 (jdbc at NativeMethodAccessorImpl.java:0) failed in 0.968 s due to Job aborted due to stage failure: Task 3 in stage 1.0 failed 1 times, most recent failure: Lost task 3.0 in stage 1.0 (TID 7, localhost, executor driver): java.sql.BatchUpdateException: Batch entry 7 INSERT INTO PRODMETA_STAGING ("asin","brand","price","title","categories") VALUES ('0140446583',NULL,9.99,'The Village of Stepanchikovo: And its Inhabitants: From the Notes of an Unknown (Penguin Classics)','Books') was aborted: ERROR: value too long for type character varying(70)  Call getNextException to see other errors in the batch.
+	at org.postgresql.jdbc.BatchResultHandler.handleError(BatchResultHandler.java:153)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2246)
+	at org.postgresql.core.v3.QueryExecutorImpl.flushIfDeadlockRisk(QueryExecutorImpl.java:1364)
+	at org.postgresql.core.v3.QueryExecutorImpl.sendQuery(QueryExecutorImpl.java:1389)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:495)
+	at org.postgresql.jdbc.PgStatement.internalExecuteBatch(PgStatement.java:850)
+	at org.postgresql.jdbc.PgStatement.executeBatch(PgStatement.java:873)
+	at org.postgresql.jdbc.PgPreparedStatement.executeBatch(PgPreparedStatement.java:1569)
+	at org.apache.spark.sql.execution.datasources.jdbc.JdbcUtils$.savePartition(JdbcUtils.scala:671)
+	at org.apache.spark.sql.execution.datasources.jdbc.JdbcUtils$$anonfun$saveTable$1.apply(JdbcUtils.scala:838)
+	at org.apache.spark.sql.execution.datasources.jdbc.JdbcUtils$$anonfun$saveTable$1.apply(JdbcUtils.scala:838)
+	at org.apache.spark.rdd.RDD$$anonfun$foreachPartition$1$$anonfun$apply$28.apply(RDD.scala:980)
+	at org.apache.spark.rdd.RDD$$anonfun$foreachPartition$1$$anonfun$apply$28.apply(RDD.scala:980)
+	at org.apache.spark.SparkContext$$anonfun$runJob$5.apply(SparkContext.scala:2101)
+	at org.apache.spark.SparkContext$$anonfun$runJob$5.apply(SparkContext.scala:2101)
+	at org.apache.spark.scheduler.ResultTask.runTask(ResultTask.scala:90)
+	at org.apache.spark.scheduler.Task.run(Task.scala:123)
+	at org.apache.spark.executor.Executor$TaskRunner$$anonfun$10.apply(Executor.scala:408)
+	at org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:1360)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:414)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: org.postgresql.util.PSQLException: ERROR: value too long for type character varying(70)
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2510)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2245)
+	... 21 more
+
+Driver stacktrace:
+20/02/14 19:16:47 INFO DAGScheduler: Job 1 failed: jdbc at NativeMethodAccessorImpl.java:0, took 0.977187 s
+Traceback (most recent call last):
+  File "/edw/Reviews/SourceCode/python/product_meta_ods_load.py", line 32, in <module>
+    Prod_Meta_df.write.option("truncate","true").jdbc(url=url, table="PRODMETA_STAGING", mode=mode, properties=properties)
+  File "/edw/Reviews/spark-2.4.5-bin-hadoop2.7/python/lib/pyspark.zip/pyspark/sql/readwriter.py", line 987, in jdbc
+  File "/edw/Reviews/spark-2.4.5-bin-hadoop2.7/python/lib/py4j-0.10.7-src.zip/py4j/java_gateway.py", line 1257, in __call__
+  File "/edw/Reviews/spark-2.4.5-bin-hadoop2.7/python/lib/pyspark.zip/pyspark/sql/utils.py", line 63, in deco
+  File "/edw/Reviews/spark-2.4.5-bin-hadoop2.7/python/lib/py4j-0.10.7-src.zip/py4j/protocol.py", line 328, in get_return_value
+py4j.protocol.Py4JJavaError: An error occurred while calling o47.jdbc.
+: org.apache.spark.SparkException: Job aborted due to stage failure: Task 3 in stage 1.0 failed 1 times, most recent failure: Lost task 3.0 in stage 1.0 (TID 7, localhost, executor driver): java.sql.BatchUpdateException: Batch entry 7 INSERT INTO PRODMETA_STAGING ("asin","brand","price","title","categories") VALUES ('0140446583',NULL,9.99,'The Village of Stepanchikovo: And its Inhabitants: From the Notes of an Unknown (Penguin Classics)','Books') was aborted: ERROR: value too long for type character varying(70)  Call getNextException to see other errors in the batch.
+	at org.postgresql.jdbc.BatchResultHandler.handleError(BatchResultHandler.java:153)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2246)
+	at org.postgresql.core.v3.QueryExecutorImpl.flushIfDeadlockRisk(QueryExecutorImpl.java:1364)
+	at org.postgresql.core.v3.QueryExecutorImpl.sendQuery(QueryExecutorImpl.java:1389)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:495)
+	at org.postgresql.jdbc.PgStatement.internalExecuteBatch(PgStatement.java:850)
+	at org.postgresql.jdbc.PgStatement.executeBatch(PgStatement.java:873)
+	at org.postgresql.jdbc.PgPreparedStatement.executeBatch(PgPreparedStatement.java:1569)
+	at org.apache.spark.sql.execution.datasources.jdbc.JdbcUtils$.savePartition(JdbcUtils.scala:671)
+	at org.apache.spark.sql.execution.datasources.jdbc.JdbcUtils$$anonfun$saveTable$1.apply(JdbcUtils.scala:838)
+	at org.apache.spark.sql.execution.datasources.jdbc.JdbcUtils$$anonfun$saveTable$1.apply(JdbcUtils.scala:838)
+	at org.apache.spark.rdd.RDD$$anonfun$foreachPartition$1$$anonfun$apply$28.apply(RDD.scala:980)
+	at org.apache.spark.rdd.RDD$$anonfun$foreachPartition$1$$anonfun$apply$28.apply(RDD.scala:980)
+	at org.apache.spark.SparkContext$$anonfun$runJob$5.apply(SparkContext.scala:2101)
+	at org.apache.spark.SparkContext$$anonfun$runJob$5.apply(SparkContext.scala:2101)
+	at org.apache.spark.scheduler.ResultTask.runTask(ResultTask.scala:90)
+	at org.apache.spark.scheduler.Task.run(Task.scala:123)
+	at org.apache.spark.executor.Executor$TaskRunner$$anonfun$10.apply(Executor.scala:408)
+	at org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:1360)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:414)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: org.postgresql.util.PSQLException: ERROR: value too long for type character varying(70)
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2510)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2245)
+	... 21 more
+
+Driver stacktrace:
+	at org.apache.spark.scheduler.DAGScheduler.org$apache$spark$scheduler$DAGScheduler$$failJobAndIndependentStages(DAGScheduler.scala:1891)
+	at org.apache.spark.scheduler.DAGScheduler$$anonfun$abortStage$1.apply(DAGScheduler.scala:1879)
+	at org.apache.spark.scheduler.DAGScheduler$$anonfun$abortStage$1.apply(DAGScheduler.scala:1878)
+	at scala.collection.mutable.ResizableArray$class.foreach(ResizableArray.scala:59)
+	at scala.collection.mutable.ArrayBuffer.foreach(ArrayBuffer.scala:48)
+	at org.apache.spark.scheduler.DAGScheduler.abortStage(DAGScheduler.scala:1878)
+	at org.apache.spark.scheduler.DAGScheduler$$anonfun$handleTaskSetFailed$1.apply(DAGScheduler.scala:927)
+	at org.apache.spark.scheduler.DAGScheduler$$anonfun$handleTaskSetFailed$1.apply(DAGScheduler.scala:927)
+	at scala.Option.foreach(Option.scala:257)
+	at org.apache.spark.scheduler.DAGScheduler.handleTaskSetFailed(DAGScheduler.scala:927)
+	at org.apache.spark.scheduler.DAGSchedulerEventProcessLoop.doOnReceive(DAGScheduler.scala:2112)
+	at org.apache.spark.scheduler.DAGSchedulerEventProcessLoop.onReceive(DAGScheduler.scala:2061)
+	at org.apache.spark.scheduler.DAGSchedulerEventProcessLoop.onReceive(DAGScheduler.scala:2050)
+	at org.apache.spark.util.EventLoop$$anon$1.run(EventLoop.scala:49)
+	at org.apache.spark.scheduler.DAGScheduler.runJob(DAGScheduler.scala:738)
+	at org.apache.spark.SparkContext.runJob(SparkContext.scala:2061)
+	at org.apache.spark.SparkContext.runJob(SparkContext.scala:2082)
+	at org.apache.spark.SparkContext.runJob(SparkContext.scala:2101)
+	at org.apache.spark.SparkContext.runJob(SparkContext.scala:2126)
+	at org.apache.spark.rdd.RDD$$anonfun$foreachPartition$1.apply(RDD.scala:980)
+	at org.apache.spark.rdd.RDD$$anonfun$foreachPartition$1.apply(RDD.scala:978)
+	at org.apache.spark.rdd.RDDOperationScope$.withScope(RDDOperationScope.scala:151)
+	at org.apache.spark.rdd.RDDOperationScope$.withScope(RDDOperationScope.scala:112)
+	at org.apache.spark.rdd.RDD.withScope(RDD.scala:385)
+	at org.apache.spark.rdd.RDD.foreachPartition(RDD.scala:978)
+	at org.apache.spark.sql.execution.datasources.jdbc.JdbcUtils$.saveTable(JdbcUtils.scala:838)
+	at org.apache.spark.sql.execution.datasources.jdbc.JdbcRelationProvider.createRelation(JdbcRelationProvider.scala:58)
+	at org.apache.spark.sql.execution.datasources.SaveIntoDataSourceCommand.run(SaveIntoDataSourceCommand.scala:45)
+	at org.apache.spark.sql.execution.command.ExecutedCommandExec.sideEffectResult$lzycompute(commands.scala:70)
+	at org.apache.spark.sql.execution.command.ExecutedCommandExec.sideEffectResult(commands.scala:68)
+	at org.apache.spark.sql.execution.command.ExecutedCommandExec.doExecute(commands.scala:86)
+	at org.apache.spark.sql.execution.SparkPlan$$anonfun$execute$1.apply(SparkPlan.scala:131)
+	at org.apache.spark.sql.execution.SparkPlan$$anonfun$execute$1.apply(SparkPlan.scala:127)
+	at org.apache.spark.sql.execution.SparkPlan$$anonfun$executeQuery$1.apply(SparkPlan.scala:155)
+	at org.apache.spark.rdd.RDDOperationScope$.withScope(RDDOperationScope.scala:151)
+	at org.apache.spark.sql.execution.SparkPlan.executeQuery(SparkPlan.scala:152)
+	at org.apache.spark.sql.execution.SparkPlan.execute(SparkPlan.scala:127)
+	at org.apache.spark.sql.execution.QueryExecution.toRdd$lzycompute(QueryExecution.scala:83)
+	at org.apache.spark.sql.execution.QueryExecution.toRdd(QueryExecution.scala:81)
+	at org.apache.spark.sql.DataFrameWriter$$anonfun$runCommand$1.apply(DataFrameWriter.scala:676)
+	at org.apache.spark.sql.DataFrameWriter$$anonfun$runCommand$1.apply(DataFrameWriter.scala:676)
+	at org.apache.spark.sql.execution.SQLExecution$$anonfun$withNewExecutionId$1.apply(SQLExecution.scala:80)
+	at org.apache.spark.sql.execution.SQLExecution$.withSQLConfPropagated(SQLExecution.scala:127)
+	at org.apache.spark.sql.execution.SQLExecution$.withNewExecutionId(SQLExecution.scala:75)
+	at org.apache.spark.sql.DataFrameWriter.runCommand(DataFrameWriter.scala:676)
+	at org.apache.spark.sql.DataFrameWriter.saveToV1Source(DataFrameWriter.scala:285)
+	at org.apache.spark.sql.DataFrameWriter.save(DataFrameWriter.scala:271)
+	at org.apache.spark.sql.DataFrameWriter.jdbc(DataFrameWriter.scala:515)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at py4j.reflection.MethodInvoker.invoke(MethodInvoker.java:244)
+	at py4j.reflection.ReflectionEngine.invoke(ReflectionEngine.java:357)
+	at py4j.Gateway.invoke(Gateway.java:282)
+	at py4j.commands.AbstractCommand.invokeMethod(AbstractCommand.java:132)
+	at py4j.commands.CallCommand.execute(CallCommand.java:79)
+	at py4j.GatewayConnection.run(GatewayConnection.java:238)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.sql.BatchUpdateException: Batch entry 7 INSERT INTO PRODMETA_STAGING ("asin","brand","price","title","categories") VALUES ('0140446583',NULL,9.99,'The Village of Stepanchikovo: And its Inhabitants: From the Notes of an Unknown (Penguin Classics)','Books') was aborted: ERROR: value too long for type character varying(70)  Call getNextException to see other errors in the batch.
+	at org.postgresql.jdbc.BatchResultHandler.handleError(BatchResultHandler.java:153)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2246)
+	at org.postgresql.core.v3.QueryExecutorImpl.flushIfDeadlockRisk(QueryExecutorImpl.java:1364)
+	at org.postgresql.core.v3.QueryExecutorImpl.sendQuery(QueryExecutorImpl.java:1389)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:495)
+	at org.postgresql.jdbc.PgStatement.internalExecuteBatch(PgStatement.java:850)
+	at org.postgresql.jdbc.PgStatement.executeBatch(PgStatement.java:873)
+	at org.postgresql.jdbc.PgPreparedStatement.executeBatch(PgPreparedStatement.java:1569)
+	at org.apache.spark.sql.execution.datasources.jdbc.JdbcUtils$.savePartition(JdbcUtils.scala:671)
+	at org.apache.spark.sql.execution.datasources.jdbc.JdbcUtils$$anonfun$saveTable$1.apply(JdbcUtils.scala:838)
+	at org.apache.spark.sql.execution.datasources.jdbc.JdbcUtils$$anonfun$saveTable$1.apply(JdbcUtils.scala:838)
+	at org.apache.spark.rdd.RDD$$anonfun$foreachPartition$1$$anonfun$apply$28.apply(RDD.scala:980)
+	at org.apache.spark.rdd.RDD$$anonfun$foreachPartition$1$$anonfun$apply$28.apply(RDD.scala:980)
+	at org.apache.spark.SparkContext$$anonfun$runJob$5.apply(SparkContext.scala:2101)
+	at org.apache.spark.SparkContext$$anonfun$runJob$5.apply(SparkContext.scala:2101)
+	at org.apache.spark.scheduler.ResultTask.runTask(ResultTask.scala:90)
+	at org.apache.spark.scheduler.Task.run(Task.scala:123)
+	at org.apache.spark.executor.Executor$TaskRunner$$anonfun$10.apply(Executor.scala:408)
+	at org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:1360)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:414)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	... 1 more
+Caused by: org.postgresql.util.PSQLException: ERROR: value too long for type character varying(70)
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2510)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2245)
+	... 21 more
+
+20/02/14 19:16:47 INFO SparkContext: Invoking stop() from shutdown hook
+20/02/14 19:16:47 INFO SparkUI: Stopped Spark web UI at http://192.168.1.25:4040
+20/02/14 19:16:47 INFO MapOutputTrackerMasterEndpoint: MapOutputTrackerMasterEndpoint stopped!
+20/02/14 19:16:47 INFO MemoryStore: MemoryStore cleared
+20/02/14 19:16:47 INFO BlockManager: BlockManager stopped
+20/02/14 19:16:47 INFO BlockManagerMaster: BlockManagerMaster stopped
+20/02/14 19:16:47 INFO OutputCommitCoordinator$OutputCommitCoordinatorEndpoint: OutputCommitCoordinator stopped!
+20/02/14 19:16:47 INFO SparkContext: Successfully stopped SparkContext
+20/02/14 19:16:47 INFO ShutdownHookManager: Shutdown hook called
+20/02/14 19:16:47 INFO ShutdownHookManager: Deleting directory /tmp/spark-8c2a0125-5746-4b36-8364-e8ff890ccbbe
+20/02/14 19:16:47 INFO ShutdownHookManager: Deleting directory /tmp/spark-8c2a0125-5746-4b36-8364-e8ff890ccbbe/pyspark-c8e414c9-e658-4df7-9bb0-9d1f497729c1
+20/02/14 19:16:47 INFO ShutdownHookManager: Deleting directory /tmp/spark-df19be20-61cc-4f56-814b-12f3efb74637

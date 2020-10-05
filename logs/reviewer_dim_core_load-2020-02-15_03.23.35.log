@@ -1,0 +1,33 @@
+###################################################################################################################################
+###################################################################################################################################
+Load to ODS in progress
+###################################################################################################################################
+###################################################################################################################################
+begin;
+BEGIN
+        CREATE TEMPORARY TABLE REVIEWTEMP AS
+	SELECT DISTINCT reviewerid, reviewername 
+	FROM "STAGE_DB".reviews
+	WHERE odsupdatetd > (SELECT LAST_LOAD_TD 
+				FROM "META_DB".CONTROL_TBL 
+				WHERE SCHEMA_NM = 'CORE_DB' 
+				AND TABLE_NM = 'REVIEWER_DIM');  
+SELECT 0
+								
+	UPDATE "CORE_DB".REVIEWER_DIM
+	SET REVIEWER_NM = REVIEWTEMP.reviewername
+	, MODIFIED_TD = current_timestamp(0)
+	FROM REVIEWTEMP
+	WHERE REVIEWER_DIM.REVIEWER_ID = REVIEWTEMP.reviewerid;
+UPDATE 0
+		 
+        INSERT INTO "CORE_DB".REVIEWER_DIM
+        SELECT REVIEWTEMP.reviewerid, REVIEWTEMP.reviewername, current_timestamp(0), current_timestamp(0)
+        FROM REVIEWTEMP
+        LEFT OUTER JOIN "CORE_DB".REVIEWER_DIM
+        ON REVIEWER_DIM.REVIEWER_ID = REVIEWTEMP.reviewerid
+        WHERE REVIEWER_DIM.REVIEWER_ID IS NULL
+        ;
+INSERT 0 0
+commit;
+COMMIT

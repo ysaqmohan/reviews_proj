@@ -1,0 +1,30 @@
+###################################################################################################################################
+###################################################################################################################################
+Load to ODS in progress
+###################################################################################################################################
+###################################################################################################################################
+begin;
+BEGIN
+        CREATE TEMPORARY TABLE REVIEWTEMP_FCT AS
+		SELECT reviewerid, asin, reviewrating, reviewdate 
+		FROM "STAGE_DB".reviews
+		WHERE odsupdatetd > (SELECT LAST_LOAD_TD 
+								FROM "META_DB".CONTROL_TBL 
+								WHERE SCHEMA_NM = 'CORE_DB' 
+								AND TABLE_NM = 'PRODUCT_REVIEWS');
+SELECT 200000
+								
+		CREATE INDEX REVIEWTEMP_INDX ON REVIEWTEMP_FCT(asin);
+CREATE INDEX
+		
+		INSERT INTO "CORE_DB".PRODUCT_REVIEWS
+		( REVIEWER_ID, ASIN_ID, REVIEW_DT, REVIEW_VL, PRICE_AM, CATEGORY_ID, ADD_TD, MODIFIED_TD, UNMATCHED_IN )
+		SELECT RV.reviewerid, RV.asin, rv.reviewdate, COALESCE(rv.reviewrating, 0)
+		, COALESCE(prod.price, 0.0), cat.category_id, current_timestamp(0), current_timestamp(0),
+		CASE WHEN PROD.ASIN IS NULL THEN 'Y' ELSE 'N' END
+		FROM REVIEWTEMP_FCT RV 
+		LEFT OUTER JOIN "STAGE_DB".prodmeta PROD
+		ON RV.ASIN = PROD.ASIN
+		LEFT JOIN "CORE_DB".CATEGORY_DIM CAT
+		ON PROD.categories = CAT.CATEGORY_NM;
+ERROR:  value too long for type character varying(20)

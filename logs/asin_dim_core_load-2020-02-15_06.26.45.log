@@ -1,0 +1,36 @@
+###################################################################################################################################
+###################################################################################################################################
+Load to ODS in progress
+###################################################################################################################################
+###################################################################################################################################
+begin;
+BEGIN
+	CREATE TEMPORARY TABLE ASINTEMP AS
+	SELECT distinct asin, title, brand, odsupdatetd
+	FROM "STAGE_DB".prodmeta
+	WHERE odsupdatetd > (SELECT LAST_LOAD_TD
+		FROM "META_DB".CONTROL_TBL
+		WHERE SCHEMA_NM = 'CORE_DB'
+		AND TABLE_NM = 'ASIN_DIM');
+SELECT 2564432
+	UPDATE "CORE_DB".ASIN_DIM
+	SET ASIN_NM = ASINTEMP.title
+	, BRAND_NM = ASINTEMP.brand
+	, MODIFIED_TD = current_timestamp(0)
+	FROM ASINTEMP
+	WHERE ASIN_DIM.ASIN_ID = ASINTEMP.asin;
+UPDATE 76487
+	INSERT INTO "CORE_DB".ASIN_DIM
+	SELECT ASINTEMP.asin, ASINTEMP.title, ASINTEMP.brand, current_timestamp(0), current_timestamp(0)
+	FROM ASINTEMP
+	LEFT OUTER JOIN "CORE_DB".ASIN_DIM
+	ON ASIN_DIM.ASIN_ID = ASINTEMP.asin
+	WHERE ASIN_DIM.ASIN_ID IS NULL	;
+INSERT 0 2487945
+	UPDATE "META_DB".CONTROL_TBL
+	SET LAST_LOAD_TD = MAXASINTEMP.maxodsupdatetd
+	FROM (SELECT max(odsupdatetd) as maxodsupdatetd FROM ASINTEMP) MAXASINTEMP
+	WHERE SCHEMA_NM = 'CORE_DB' AND TABLE_NM = 'ASIN_DIM';
+UPDATE 1
+commit;
+COMMIT

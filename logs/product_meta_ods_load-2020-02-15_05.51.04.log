@@ -1,0 +1,428 @@
+###################################################################################################################################
+###################################################################################################################################
+Load to stage in progress
+###################################################################################################################################
+###################################################################################################################################
+20/02/15 05:51:06 WARN Utils: Your hostname, DESKTOP-502C4I4 resolves to a loopback address: 127.0.1.1; using 192.168.1.25 instead (on interface wifi0)
+20/02/15 05:51:06 WARN Utils: Set SPARK_LOCAL_IP if you need to bind to another address
+20/02/15 05:51:07 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+Using Spark's default log4j profile: org/apache/spark/log4j-defaults.properties
+20/02/15 05:51:10 INFO SparkContext: Running Spark version 2.4.5
+20/02/15 05:51:11 INFO SparkContext: Submitted application: ProdMeta
+20/02/15 05:51:11 INFO SecurityManager: Changing view acls to: devetluser
+20/02/15 05:51:11 INFO SecurityManager: Changing modify acls to: devetluser
+20/02/15 05:51:11 INFO SecurityManager: Changing view acls groups to: 
+20/02/15 05:51:11 INFO SecurityManager: Changing modify acls groups to: 
+20/02/15 05:51:11 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(devetluser); groups with view permissions: Set(); users  with modify permissions: Set(devetluser); groups with modify permissions: Set()
+20/02/15 05:51:11 INFO Utils: Successfully started service 'sparkDriver' on port 10213.
+20/02/15 05:51:11 INFO SparkEnv: Registering MapOutputTracker
+20/02/15 05:51:11 INFO SparkEnv: Registering BlockManagerMaster
+20/02/15 05:51:11 INFO BlockManagerMasterEndpoint: Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+20/02/15 05:51:11 INFO BlockManagerMasterEndpoint: BlockManagerMasterEndpoint up
+20/02/15 05:51:11 INFO DiskBlockManager: Created local directory at /tmp/blockmgr-1a552a19-4cec-400c-91c6-35d42ab41a53
+20/02/15 05:51:11 INFO MemoryStore: MemoryStore started with capacity 366.3 MB
+20/02/15 05:51:11 INFO SparkEnv: Registering OutputCommitCoordinator
+20/02/15 05:51:12 INFO Utils: Successfully started service 'SparkUI' on port 4040.
+20/02/15 05:51:12 INFO SparkUI: Bound SparkUI to 0.0.0.0, and started at http://192.168.1.25:4040
+20/02/15 05:51:12 INFO Executor: Starting executor ID driver on host localhost
+20/02/15 05:51:12 INFO Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 10215.
+20/02/15 05:51:12 INFO NettyBlockTransferService: Server created on 192.168.1.25:10215
+20/02/15 05:51:12 INFO BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+20/02/15 05:51:12 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, 192.168.1.25, 10215, None)
+20/02/15 05:51:12 INFO BlockManagerMasterEndpoint: Registering block manager 192.168.1.25:10215 with 366.3 MB RAM, BlockManagerId(driver, 192.168.1.25, 10215, None)
+20/02/15 05:51:12 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, 192.168.1.25, 10215, None)
+20/02/15 05:51:12 INFO BlockManager: Initialized BlockManager: BlockManagerId(driver, 192.168.1.25, 10215, None)
+20/02/15 05:51:13 INFO SharedState: Setting hive.metastore.warehouse.dir ('null') to the value of spark.sql.warehouse.dir ('file:/edw/Reviews/SourceCode/bash/spark-warehouse').
+20/02/15 05:51:13 INFO SharedState: Warehouse path is 'file:/edw/Reviews/SourceCode/bash/spark-warehouse'.
+20/02/15 05:51:14 INFO StateStoreCoordinatorRef: Registered StateStoreCoordinator endpoint
+20/02/15 05:51:15 INFO InMemoryFileIndex: It took 58 ms to list leaf files for 1 paths.
+20/02/15 05:51:15 INFO InMemoryFileIndex: It took 4 ms to list leaf files for 1 paths.
+20/02/15 05:51:18 INFO FileSourceStrategy: Pruning directories with: 
+20/02/15 05:51:18 INFO FileSourceStrategy: Post-Scan Filters: 
+20/02/15 05:51:18 INFO FileSourceStrategy: Output Data Schema: struct<value: string>
+20/02/15 05:51:18 INFO FileSourceScanExec: Pushed Filters: 
+20/02/15 05:51:19 INFO CodeGenerator: Code generated in 351.2801 ms
+20/02/15 05:51:19 INFO MemoryStore: Block broadcast_0 stored as values in memory (estimated size 282.6 KB, free 366.0 MB)
+20/02/15 05:51:19 INFO MemoryStore: Block broadcast_0_piece0 stored as bytes in memory (estimated size 23.3 KB, free 366.0 MB)
+20/02/15 05:51:19 INFO BlockManagerInfo: Added broadcast_0_piece0 in memory on 192.168.1.25:10215 (size: 23.3 KB, free: 366.3 MB)
+20/02/15 05:51:19 INFO SparkContext: Created broadcast 0 from json at NativeMethodAccessorImpl.java:0
+20/02/15 05:51:19 INFO FileSourceScanExec: Planning scan with bin packing, max size: 37736794 bytes, open cost is considered as scanning 4194304 bytes.
+20/02/15 05:51:20 INFO SparkContext: Starting job: json at NativeMethodAccessorImpl.java:0
+20/02/15 05:51:20 INFO DAGScheduler: Got job 0 (json at NativeMethodAccessorImpl.java:0) with 4 output partitions
+20/02/15 05:51:20 INFO DAGScheduler: Final stage: ResultStage 0 (json at NativeMethodAccessorImpl.java:0)
+20/02/15 05:51:20 INFO DAGScheduler: Parents of final stage: List()
+20/02/15 05:51:20 INFO DAGScheduler: Missing parents: List()
+20/02/15 05:51:20 INFO DAGScheduler: Submitting ResultStage 0 (MapPartitionsRDD[3] at json at NativeMethodAccessorImpl.java:0), which has no missing parents
+20/02/15 05:51:20 INFO MemoryStore: Block broadcast_1 stored as values in memory (estimated size 11.6 KB, free 366.0 MB)
+20/02/15 05:51:20 INFO MemoryStore: Block broadcast_1_piece0 stored as bytes in memory (estimated size 6.7 KB, free 366.0 MB)
+20/02/15 05:51:20 INFO BlockManagerInfo: Added broadcast_1_piece0 in memory on 192.168.1.25:10215 (size: 6.7 KB, free: 366.3 MB)
+20/02/15 05:51:20 INFO SparkContext: Created broadcast 1 from broadcast at DAGScheduler.scala:1163
+20/02/15 05:51:20 INFO DAGScheduler: Submitting 4 missing tasks from ResultStage 0 (MapPartitionsRDD[3] at json at NativeMethodAccessorImpl.java:0) (first 15 tasks are for partitions Vector(0, 1, 2, 3))
+20/02/15 05:51:20 INFO TaskSchedulerImpl: Adding task set 0.0 with 4 tasks
+20/02/15 05:51:20 INFO TaskSetManager: Starting task 0.0 in stage 0.0 (TID 0, localhost, executor driver, partition 0, PROCESS_LOCAL, 8265 bytes)
+20/02/15 05:51:20 INFO TaskSetManager: Starting task 1.0 in stage 0.0 (TID 1, localhost, executor driver, partition 1, PROCESS_LOCAL, 8265 bytes)
+20/02/15 05:51:20 INFO TaskSetManager: Starting task 2.0 in stage 0.0 (TID 2, localhost, executor driver, partition 2, PROCESS_LOCAL, 8265 bytes)
+20/02/15 05:51:20 INFO TaskSetManager: Starting task 3.0 in stage 0.0 (TID 3, localhost, executor driver, partition 3, PROCESS_LOCAL, 8265 bytes)
+20/02/15 05:51:20 INFO Executor: Running task 0.0 in stage 0.0 (TID 0)
+20/02/15 05:51:20 INFO Executor: Running task 2.0 in stage 0.0 (TID 2)
+20/02/15 05:51:20 INFO Executor: Running task 1.0 in stage 0.0 (TID 1)
+20/02/15 05:51:20 INFO Executor: Running task 3.0 in stage 0.0 (TID 3)
+20/02/15 05:51:20 INFO FileScanRDD: Reading File path: file:///edw/Reviews/SourceCode/data/ProdMeta.json, range: 0-37736794, partition values: [empty row]
+20/02/15 05:51:20 INFO FileScanRDD: Reading File path: file:///edw/Reviews/SourceCode/data/ProdMeta.json, range: 37736794-75473588, partition values: [empty row]
+20/02/15 05:51:20 INFO FileScanRDD: Reading File path: file:///edw/Reviews/SourceCode/data/ProdMeta.json, range: 113210382-146752875, partition values: [empty row]
+20/02/15 05:51:20 INFO FileScanRDD: Reading File path: file:///edw/Reviews/SourceCode/data/ProdMeta.json, range: 75473588-113210382, partition values: [empty row]
+20/02/15 05:51:20 INFO CodeGenerator: Code generated in 18.6245 ms
+20/02/15 05:51:26 INFO Executor: Finished task 3.0 in stage 0.0 (TID 3). 2770 bytes result sent to driver
+20/02/15 05:51:26 INFO TaskSetManager: Finished task 3.0 in stage 0.0 (TID 3) in 5731 ms on localhost (executor driver) (1/4)
+20/02/15 05:51:26 INFO Executor: Finished task 1.0 in stage 0.0 (TID 1). 2733 bytes result sent to driver
+20/02/15 05:51:26 INFO TaskSetManager: Finished task 1.0 in stage 0.0 (TID 1) in 5908 ms on localhost (executor driver) (2/4)
+20/02/15 05:51:26 INFO Executor: Finished task 0.0 in stage 0.0 (TID 0). 2781 bytes result sent to driver
+20/02/15 05:51:26 INFO TaskSetManager: Finished task 0.0 in stage 0.0 (TID 0) in 6046 ms on localhost (executor driver) (3/4)
+20/02/15 05:51:26 INFO Executor: Finished task 2.0 in stage 0.0 (TID 2). 2760 bytes result sent to driver
+20/02/15 05:51:26 INFO TaskSetManager: Finished task 2.0 in stage 0.0 (TID 2) in 6066 ms on localhost (executor driver) (4/4)
+20/02/15 05:51:26 INFO TaskSchedulerImpl: Removed TaskSet 0.0, whose tasks have all completed, from pool 
+20/02/15 05:51:26 INFO DAGScheduler: ResultStage 0 (json at NativeMethodAccessorImpl.java:0) finished in 6.255 s
+20/02/15 05:51:26 INFO DAGScheduler: Job 0 finished: json at NativeMethodAccessorImpl.java:0, took 6.336491 s
+20/02/15 05:51:27 INFO FileSourceStrategy: Pruning directories with: 
+20/02/15 05:51:27 INFO FileSourceStrategy: Post-Scan Filters: isnotnull(asin#7)
+20/02/15 05:51:27 INFO FileSourceStrategy: Output Data Schema: struct<asin: string, brand: string, categories: array<array<string>>, price: double, title: string ... 3 more fields>
+20/02/15 05:51:27 INFO FileSourceScanExec: Pushed Filters: IsNotNull(asin)
+20/02/15 05:51:27 INFO CodeGenerator: Code generated in 29.0589 ms
+20/02/15 05:51:27 INFO MemoryStore: Block broadcast_2 stored as values in memory (estimated size 282.6 KB, free 365.7 MB)
+20/02/15 05:51:27 INFO MemoryStore: Block broadcast_2_piece0 stored as bytes in memory (estimated size 23.3 KB, free 365.7 MB)
+20/02/15 05:51:27 INFO BlockManagerInfo: Added broadcast_2_piece0 in memory on 192.168.1.25:10215 (size: 23.3 KB, free: 366.2 MB)
+20/02/15 05:51:27 INFO SparkContext: Created broadcast 2 from jdbc at NativeMethodAccessorImpl.java:0
+20/02/15 05:51:27 INFO FileSourceScanExec: Planning scan with bin packing, max size: 37736794 bytes, open cost is considered as scanning 4194304 bytes.
+20/02/15 05:51:27 INFO SparkContext: Starting job: jdbc at NativeMethodAccessorImpl.java:0
+20/02/15 05:51:27 INFO DAGScheduler: Got job 1 (jdbc at NativeMethodAccessorImpl.java:0) with 4 output partitions
+20/02/15 05:51:27 INFO DAGScheduler: Final stage: ResultStage 1 (jdbc at NativeMethodAccessorImpl.java:0)
+20/02/15 05:51:27 INFO DAGScheduler: Parents of final stage: List()
+20/02/15 05:51:27 INFO DAGScheduler: Missing parents: List()
+20/02/15 05:51:27 INFO DAGScheduler: Submitting ResultStage 1 (MapPartitionsRDD[8] at jdbc at NativeMethodAccessorImpl.java:0), which has no missing parents
+20/02/15 05:51:27 INFO MemoryStore: Block broadcast_3 stored as values in memory (estimated size 21.5 KB, free 365.7 MB)
+20/02/15 05:51:27 INFO MemoryStore: Block broadcast_3_piece0 stored as bytes in memory (estimated size 11.1 KB, free 365.7 MB)
+20/02/15 05:51:27 INFO BlockManagerInfo: Added broadcast_3_piece0 in memory on 192.168.1.25:10215 (size: 11.1 KB, free: 366.2 MB)
+20/02/15 05:51:27 INFO SparkContext: Created broadcast 3 from broadcast at DAGScheduler.scala:1163
+20/02/15 05:51:27 INFO DAGScheduler: Submitting 4 missing tasks from ResultStage 1 (MapPartitionsRDD[8] at jdbc at NativeMethodAccessorImpl.java:0) (first 15 tasks are for partitions Vector(0, 1, 2, 3))
+20/02/15 05:51:27 INFO TaskSchedulerImpl: Adding task set 1.0 with 4 tasks
+20/02/15 05:51:27 INFO TaskSetManager: Starting task 0.0 in stage 1.0 (TID 4, localhost, executor driver, partition 0, PROCESS_LOCAL, 8265 bytes)
+20/02/15 05:51:27 INFO TaskSetManager: Starting task 1.0 in stage 1.0 (TID 5, localhost, executor driver, partition 1, PROCESS_LOCAL, 8265 bytes)
+20/02/15 05:51:27 INFO TaskSetManager: Starting task 2.0 in stage 1.0 (TID 6, localhost, executor driver, partition 2, PROCESS_LOCAL, 8265 bytes)
+20/02/15 05:51:27 INFO TaskSetManager: Starting task 3.0 in stage 1.0 (TID 7, localhost, executor driver, partition 3, PROCESS_LOCAL, 8265 bytes)
+20/02/15 05:51:27 INFO Executor: Running task 0.0 in stage 1.0 (TID 4)
+20/02/15 05:51:27 INFO Executor: Running task 3.0 in stage 1.0 (TID 7)
+20/02/15 05:51:27 INFO Executor: Running task 1.0 in stage 1.0 (TID 5)
+20/02/15 05:51:27 INFO Executor: Running task 2.0 in stage 1.0 (TID 6)
+20/02/15 05:51:27 INFO CodeGenerator: Code generated in 32.3845 ms
+20/02/15 05:51:27 ERROR Executor: Exception in task 0.0 in stage 1.0 (TID 4)
+org.postgresql.util.PSQLException: Connection to 127.0.0.1:5432 refused. Check that the hostname and port are correct and that the postmaster is accepting TCP/IP connections.
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:284)
+	at org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:49)
+	at org.postgresql.jdbc.PgConnection.<init>(PgConnection.java:211)
+	at org.postgresql.Driver.makeConnection(Driver.java:459)
+	at org.postgresql.Driver.connect(Driver.java:261)
+	at org.apache.spark.sql.execution.datasources.jdbc.JdbcUtils$$anonfun$createConnectionFactory$1.apply(JdbcUtils.scala:63)
+	at org.apache.spark.sql.execution.datasources.jdbc.JdbcUtils$$anonfun$createConnectionFactory$1.apply(JdbcUtils.scala:54)
+	at org.apache.spark.sql.execution.datasources.jdbc.JdbcUtils$.savePartition(JdbcUtils.scala:614)
+	at org.apache.spark.sql.execution.datasources.jdbc.JdbcUtils$$anonfun$saveTable$1.apply(JdbcUtils.scala:838)
+	at org.apache.spark.sql.execution.datasources.jdbc.JdbcUtils$$anonfun$saveTable$1.apply(JdbcUtils.scala:838)
+	at org.apache.spark.rdd.RDD$$anonfun$foreachPartition$1$$anonfun$apply$28.apply(RDD.scala:980)
+	at org.apache.spark.rdd.RDD$$anonfun$foreachPartition$1$$anonfun$apply$28.apply(RDD.scala:980)
+	at org.apache.spark.SparkContext$$anonfun$runJob$5.apply(SparkContext.scala:2101)
+	at org.apache.spark.SparkContext$$anonfun$runJob$5.apply(SparkContext.scala:2101)
+	at org.apache.spark.scheduler.ResultTask.runTask(ResultTask.scala:90)
+	at org.apache.spark.scheduler.Task.run(Task.scala:123)
+	at org.apache.spark.executor.Executor$TaskRunner$$anonfun$10.apply(Executor.scala:408)
+	at org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:1360)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:414)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.net.ConnectException: Connection refused (Connection refused)
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:607)
+	at org.postgresql.core.PGStream.<init>(PGStream.java:81)
+	at org.postgresql.core.v3.ConnectionFactoryImpl.tryConnect(ConnectionFactoryImpl.java:92)
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:196)
+	... 21 more
+20/02/15 05:51:27 ERROR Executor: Exception in task 3.0 in stage 1.0 (TID 7)
+org.postgresql.util.PSQLException: Connection to 127.0.0.1:5432 refused. Check that the hostname and port are correct and that the postmaster is accepting TCP/IP connections.
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:284)
+	at org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:49)
+	at org.postgresql.jdbc.PgConnection.<init>(PgConnection.java:211)
+	at org.postgresql.Driver.makeConnection(Driver.java:459)
+	at org.postgresql.Driver.connect(Driver.java:261)
+	at org.apache.spark.sql.execution.datasources.jdbc.JdbcUtils$$anonfun$createConnectionFactory$1.apply(JdbcUtils.scala:63)
+	at org.apache.spark.sql.execution.datasources.jdbc.JdbcUtils$$anonfun$createConnectionFactory$1.apply(JdbcUtils.scala:54)
+	at org.apache.spark.sql.execution.datasources.jdbc.JdbcUtils$.savePartition(JdbcUtils.scala:614)
+	at org.apache.spark.sql.execution.datasources.jdbc.JdbcUtils$$anonfun$saveTable$1.apply(JdbcUtils.scala:838)
+	at org.apache.spark.sql.execution.datasources.jdbc.JdbcUtils$$anonfun$saveTable$1.apply(JdbcUtils.scala:838)
+	at org.apache.spark.rdd.RDD$$anonfun$foreachPartition$1$$anonfun$apply$28.apply(RDD.scala:980)
+	at org.apache.spark.rdd.RDD$$anonfun$foreachPartition$1$$anonfun$apply$28.apply(RDD.scala:980)
+	at org.apache.spark.SparkContext$$anonfun$runJob$5.apply(SparkContext.scala:2101)
+	at org.apache.spark.SparkContext$$anonfun$runJob$5.apply(SparkContext.scala:2101)
+	at org.apache.spark.scheduler.ResultTask.runTask(ResultTask.scala:90)
+	at org.apache.spark.scheduler.Task.run(Task.scala:123)
+	at org.apache.spark.executor.Executor$TaskRunner$$anonfun$10.apply(Executor.scala:408)
+	at org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:1360)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:414)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.net.ConnectException: Connection refused (Connection refused)
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:607)
+	at org.postgresql.core.PGStream.<init>(PGStream.java:81)
+	at org.postgresql.core.v3.ConnectionFactoryImpl.tryConnect(ConnectionFactoryImpl.java:92)
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:196)
+	... 21 more
+20/02/15 05:51:27 INFO FileScanRDD: Reading File path: file:///edw/Reviews/SourceCode/data/ProdMeta.json, range: 75473588-113210382, partition values: [empty row]
+20/02/15 05:51:27 INFO FileScanRDD: Reading File path: file:///edw/Reviews/SourceCode/data/ProdMeta.json, range: 37736794-75473588, partition values: [empty row]
+20/02/15 05:51:28 WARN TaskSetManager: Lost task 3.0 in stage 1.0 (TID 7, localhost, executor driver): org.postgresql.util.PSQLException: Connection to 127.0.0.1:5432 refused. Check that the hostname and port are correct and that the postmaster is accepting TCP/IP connections.
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:284)
+	at org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:49)
+	at org.postgresql.jdbc.PgConnection.<init>(PgConnection.java:211)
+	at org.postgresql.Driver.makeConnection(Driver.java:459)
+	at org.postgresql.Driver.connect(Driver.java:261)
+	at org.apache.spark.sql.execution.datasources.jdbc.JdbcUtils$$anonfun$createConnectionFactory$1.apply(JdbcUtils.scala:63)
+	at org.apache.spark.sql.execution.datasources.jdbc.JdbcUtils$$anonfun$createConnectionFactory$1.apply(JdbcUtils.scala:54)
+	at org.apache.spark.sql.execution.datasources.jdbc.JdbcUtils$.savePartition(JdbcUtils.scala:614)
+	at org.apache.spark.sql.execution.datasources.jdbc.JdbcUtils$$anonfun$saveTable$1.apply(JdbcUtils.scala:838)
+	at org.apache.spark.sql.execution.datasources.jdbc.JdbcUtils$$anonfun$saveTable$1.apply(JdbcUtils.scala:838)
+	at org.apache.spark.rdd.RDD$$anonfun$foreachPartition$1$$anonfun$apply$28.apply(RDD.scala:980)
+	at org.apache.spark.rdd.RDD$$anonfun$foreachPartition$1$$anonfun$apply$28.apply(RDD.scala:980)
+	at org.apache.spark.SparkContext$$anonfun$runJob$5.apply(SparkContext.scala:2101)
+	at org.apache.spark.SparkContext$$anonfun$runJob$5.apply(SparkContext.scala:2101)
+	at org.apache.spark.scheduler.ResultTask.runTask(ResultTask.scala:90)
+	at org.apache.spark.scheduler.Task.run(Task.scala:123)
+	at org.apache.spark.executor.Executor$TaskRunner$$anonfun$10.apply(Executor.scala:408)
+	at org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:1360)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:414)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.net.ConnectException: Connection refused (Connection refused)
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:607)
+	at org.postgresql.core.PGStream.<init>(PGStream.java:81)
+	at org.postgresql.core.v3.ConnectionFactoryImpl.tryConnect(ConnectionFactoryImpl.java:92)
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:196)
+	... 21 more
+
+20/02/15 05:51:28 ERROR TaskSetManager: Task 3 in stage 1.0 failed 1 times; aborting job
+20/02/15 05:51:28 INFO CodeGenerator: Code generated in 70.6138 ms
+20/02/15 05:51:28 INFO TaskSetManager: Lost task 0.0 in stage 1.0 (TID 4) on localhost, executor driver: org.postgresql.util.PSQLException (Connection to 127.0.0.1:5432 refused. Check that the hostname and port are correct and that the postmaster is accepting TCP/IP connections.) [duplicate 1]
+20/02/15 05:51:28 INFO TaskSchedulerImpl: Cancelling stage 1
+20/02/15 05:51:28 INFO TaskSchedulerImpl: Killing all running tasks in stage 1: Stage cancelled
+20/02/15 05:51:28 INFO Executor: Executor is trying to kill task 1.0 in stage 1.0 (TID 5), reason: Stage cancelled
+20/02/15 05:51:28 INFO TaskSchedulerImpl: Stage 1 was cancelled
+20/02/15 05:51:28 INFO Executor: Executor is trying to kill task 2.0 in stage 1.0 (TID 6), reason: Stage cancelled
+20/02/15 05:51:28 INFO DAGScheduler: ResultStage 1 (jdbc at NativeMethodAccessorImpl.java:0) failed in 0.330 s due to Job aborted due to stage failure: Task 3 in stage 1.0 failed 1 times, most recent failure: Lost task 3.0 in stage 1.0 (TID 7, localhost, executor driver): org.postgresql.util.PSQLException: Connection to 127.0.0.1:5432 refused. Check that the hostname and port are correct and that the postmaster is accepting TCP/IP connections.
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:284)
+	at org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:49)
+	at org.postgresql.jdbc.PgConnection.<init>(PgConnection.java:211)
+	at org.postgresql.Driver.makeConnection(Driver.java:459)
+	at org.postgresql.Driver.connect(Driver.java:261)
+	at org.apache.spark.sql.execution.datasources.jdbc.JdbcUtils$$anonfun$createConnectionFactory$1.apply(JdbcUtils.scala:63)
+	at org.apache.spark.sql.execution.datasources.jdbc.JdbcUtils$$anonfun$createConnectionFactory$1.apply(JdbcUtils.scala:54)
+	at org.apache.spark.sql.execution.datasources.jdbc.JdbcUtils$.savePartition(JdbcUtils.scala:614)
+	at org.apache.spark.sql.execution.datasources.jdbc.JdbcUtils$$anonfun$saveTable$1.apply(JdbcUtils.scala:838)
+	at org.apache.spark.sql.execution.datasources.jdbc.JdbcUtils$$anonfun$saveTable$1.apply(JdbcUtils.scala:838)
+	at org.apache.spark.rdd.RDD$$anonfun$foreachPartition$1$$anonfun$apply$28.apply(RDD.scala:980)
+	at org.apache.spark.rdd.RDD$$anonfun$foreachPartition$1$$anonfun$apply$28.apply(RDD.scala:980)
+	at org.apache.spark.SparkContext$$anonfun$runJob$5.apply(SparkContext.scala:2101)
+	at org.apache.spark.SparkContext$$anonfun$runJob$5.apply(SparkContext.scala:2101)
+	at org.apache.spark.scheduler.ResultTask.runTask(ResultTask.scala:90)
+	at org.apache.spark.scheduler.Task.run(Task.scala:123)
+	at org.apache.spark.executor.Executor$TaskRunner$$anonfun$10.apply(Executor.scala:408)
+	at org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:1360)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:414)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.net.ConnectException: Connection refused (Connection refused)
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:607)
+	at org.postgresql.core.PGStream.<init>(PGStream.java:81)
+	at org.postgresql.core.v3.ConnectionFactoryImpl.tryConnect(ConnectionFactoryImpl.java:92)
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:196)
+	... 21 more
+
+Driver stacktrace:
+20/02/15 05:51:28 INFO DAGScheduler: Job 1 failed: jdbc at NativeMethodAccessorImpl.java:0, took 0.342094 s
+20/02/15 05:51:28 INFO Executor: Executor killed task 1.0 in stage 1.0 (TID 5), reason: Stage cancelled
+20/02/15 05:51:28 INFO Executor: Executor killed task 2.0 in stage 1.0 (TID 6), reason: Stage cancelled
+20/02/15 05:51:28 WARN TaskSetManager: Lost task 2.0 in stage 1.0 (TID 6, localhost, executor driver): TaskKilled (Stage cancelled)
+20/02/15 05:51:28 WARN TaskSetManager: Lost task 1.0 in stage 1.0 (TID 5, localhost, executor driver): TaskKilled (Stage cancelled)
+20/02/15 05:51:28 INFO TaskSchedulerImpl: Removed TaskSet 1.0, whose tasks have all completed, from pool 
+Traceback (most recent call last):
+  File "/edw/Reviews/SourceCode/python/product_meta_ods_load.py", line 33, in <module>
+    Prod_Meta_df.write.option("truncate","true").jdbc(url=url, table=table, mode=mode, properties=properties)
+  File "/edw/Reviews/spark-2.4.5-bin-hadoop2.7/python/lib/pyspark.zip/pyspark/sql/readwriter.py", line 987, in jdbc
+  File "/edw/Reviews/spark-2.4.5-bin-hadoop2.7/python/lib/py4j-0.10.7-src.zip/py4j/java_gateway.py", line 1257, in __call__
+  File "/edw/Reviews/spark-2.4.5-bin-hadoop2.7/python/lib/pyspark.zip/pyspark/sql/utils.py", line 63, in deco
+  File "/edw/Reviews/spark-2.4.5-bin-hadoop2.7/python/lib/py4j-0.10.7-src.zip/py4j/protocol.py", line 328, in get_return_value
+py4j.protocol.Py4JJavaError: An error occurred while calling o49.jdbc.
+: org.apache.spark.SparkException: Job aborted due to stage failure: Task 3 in stage 1.0 failed 1 times, most recent failure: Lost task 3.0 in stage 1.0 (TID 7, localhost, executor driver): org.postgresql.util.PSQLException: Connection to 127.0.0.1:5432 refused. Check that the hostname and port are correct and that the postmaster is accepting TCP/IP connections.
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:284)
+	at org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:49)
+	at org.postgresql.jdbc.PgConnection.<init>(PgConnection.java:211)
+	at org.postgresql.Driver.makeConnection(Driver.java:459)
+	at org.postgresql.Driver.connect(Driver.java:261)
+	at org.apache.spark.sql.execution.datasources.jdbc.JdbcUtils$$anonfun$createConnectionFactory$1.apply(JdbcUtils.scala:63)
+	at org.apache.spark.sql.execution.datasources.jdbc.JdbcUtils$$anonfun$createConnectionFactory$1.apply(JdbcUtils.scala:54)
+	at org.apache.spark.sql.execution.datasources.jdbc.JdbcUtils$.savePartition(JdbcUtils.scala:614)
+	at org.apache.spark.sql.execution.datasources.jdbc.JdbcUtils$$anonfun$saveTable$1.apply(JdbcUtils.scala:838)
+	at org.apache.spark.sql.execution.datasources.jdbc.JdbcUtils$$anonfun$saveTable$1.apply(JdbcUtils.scala:838)
+	at org.apache.spark.rdd.RDD$$anonfun$foreachPartition$1$$anonfun$apply$28.apply(RDD.scala:980)
+	at org.apache.spark.rdd.RDD$$anonfun$foreachPartition$1$$anonfun$apply$28.apply(RDD.scala:980)
+	at org.apache.spark.SparkContext$$anonfun$runJob$5.apply(SparkContext.scala:2101)
+	at org.apache.spark.SparkContext$$anonfun$runJob$5.apply(SparkContext.scala:2101)
+	at org.apache.spark.scheduler.ResultTask.runTask(ResultTask.scala:90)
+	at org.apache.spark.scheduler.Task.run(Task.scala:123)
+	at org.apache.spark.executor.Executor$TaskRunner$$anonfun$10.apply(Executor.scala:408)
+	at org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:1360)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:414)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.net.ConnectException: Connection refused (Connection refused)
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:607)
+	at org.postgresql.core.PGStream.<init>(PGStream.java:81)
+	at org.postgresql.core.v3.ConnectionFactoryImpl.tryConnect(ConnectionFactoryImpl.java:92)
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:196)
+	... 21 more
+
+Driver stacktrace:
+	at org.apache.spark.scheduler.DAGScheduler.org$apache$spark$scheduler$DAGScheduler$$failJobAndIndependentStages(DAGScheduler.scala:1891)
+	at org.apache.spark.scheduler.DAGScheduler$$anonfun$abortStage$1.apply(DAGScheduler.scala:1879)
+	at org.apache.spark.scheduler.DAGScheduler$$anonfun$abortStage$1.apply(DAGScheduler.scala:1878)
+	at scala.collection.mutable.ResizableArray$class.foreach(ResizableArray.scala:59)
+	at scala.collection.mutable.ArrayBuffer.foreach(ArrayBuffer.scala:48)
+	at org.apache.spark.scheduler.DAGScheduler.abortStage(DAGScheduler.scala:1878)
+	at org.apache.spark.scheduler.DAGScheduler$$anonfun$handleTaskSetFailed$1.apply(DAGScheduler.scala:927)
+	at org.apache.spark.scheduler.DAGScheduler$$anonfun$handleTaskSetFailed$1.apply(DAGScheduler.scala:927)
+	at scala.Option.foreach(Option.scala:257)
+	at org.apache.spark.scheduler.DAGScheduler.handleTaskSetFailed(DAGScheduler.scala:927)
+	at org.apache.spark.scheduler.DAGSchedulerEventProcessLoop.doOnReceive(DAGScheduler.scala:2112)
+	at org.apache.spark.scheduler.DAGSchedulerEventProcessLoop.onReceive(DAGScheduler.scala:2061)
+	at org.apache.spark.scheduler.DAGSchedulerEventProcessLoop.onReceive(DAGScheduler.scala:2050)
+	at org.apache.spark.util.EventLoop$$anon$1.run(EventLoop.scala:49)
+	at org.apache.spark.scheduler.DAGScheduler.runJob(DAGScheduler.scala:738)
+	at org.apache.spark.SparkContext.runJob(SparkContext.scala:2061)
+	at org.apache.spark.SparkContext.runJob(SparkContext.scala:2082)
+	at org.apache.spark.SparkContext.runJob(SparkContext.scala:2101)
+	at org.apache.spark.SparkContext.runJob(SparkContext.scala:2126)
+	at org.apache.spark.rdd.RDD$$anonfun$foreachPartition$1.apply(RDD.scala:980)
+	at org.apache.spark.rdd.RDD$$anonfun$foreachPartition$1.apply(RDD.scala:978)
+	at org.apache.spark.rdd.RDDOperationScope$.withScope(RDDOperationScope.scala:151)
+	at org.apache.spark.rdd.RDDOperationScope$.withScope(RDDOperationScope.scala:112)
+	at org.apache.spark.rdd.RDD.withScope(RDD.scala:385)
+	at org.apache.spark.rdd.RDD.foreachPartition(RDD.scala:978)
+	at org.apache.spark.sql.execution.datasources.jdbc.JdbcUtils$.saveTable(JdbcUtils.scala:838)
+	at org.apache.spark.sql.execution.datasources.jdbc.JdbcRelationProvider.createRelation(JdbcRelationProvider.scala:58)
+	at org.apache.spark.sql.execution.datasources.SaveIntoDataSourceCommand.run(SaveIntoDataSourceCommand.scala:45)
+	at org.apache.spark.sql.execution.command.ExecutedCommandExec.sideEffectResult$lzycompute(commands.scala:70)
+	at org.apache.spark.sql.execution.command.ExecutedCommandExec.sideEffectResult(commands.scala:68)
+	at org.apache.spark.sql.execution.command.ExecutedCommandExec.doExecute(commands.scala:86)
+	at org.apache.spark.sql.execution.SparkPlan$$anonfun$execute$1.apply(SparkPlan.scala:131)
+	at org.apache.spark.sql.execution.SparkPlan$$anonfun$execute$1.apply(SparkPlan.scala:127)
+	at org.apache.spark.sql.execution.SparkPlan$$anonfun$executeQuery$1.apply(SparkPlan.scala:155)
+	at org.apache.spark.rdd.RDDOperationScope$.withScope(RDDOperationScope.scala:151)
+	at org.apache.spark.sql.execution.SparkPlan.executeQuery(SparkPlan.scala:152)
+	at org.apache.spark.sql.execution.SparkPlan.execute(SparkPlan.scala:127)
+	at org.apache.spark.sql.execution.QueryExecution.toRdd$lzycompute(QueryExecution.scala:83)
+	at org.apache.spark.sql.execution.QueryExecution.toRdd(QueryExecution.scala:81)
+	at org.apache.spark.sql.DataFrameWriter$$anonfun$runCommand$1.apply(DataFrameWriter.scala:676)
+	at org.apache.spark.sql.DataFrameWriter$$anonfun$runCommand$1.apply(DataFrameWriter.scala:676)
+	at org.apache.spark.sql.execution.SQLExecution$$anonfun$withNewExecutionId$1.apply(SQLExecution.scala:80)
+	at org.apache.spark.sql.execution.SQLExecution$.withSQLConfPropagated(SQLExecution.scala:127)
+	at org.apache.spark.sql.execution.SQLExecution$.withNewExecutionId(SQLExecution.scala:75)
+	at org.apache.spark.sql.DataFrameWriter.runCommand(DataFrameWriter.scala:676)
+	at org.apache.spark.sql.DataFrameWriter.saveToV1Source(DataFrameWriter.scala:285)
+	at org.apache.spark.sql.DataFrameWriter.save(DataFrameWriter.scala:271)
+	at org.apache.spark.sql.DataFrameWriter.jdbc(DataFrameWriter.scala:515)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at py4j.reflection.MethodInvoker.invoke(MethodInvoker.java:244)
+	at py4j.reflection.ReflectionEngine.invoke(ReflectionEngine.java:357)
+	at py4j.Gateway.invoke(Gateway.java:282)
+	at py4j.commands.AbstractCommand.invokeMethod(AbstractCommand.java:132)
+	at py4j.commands.CallCommand.execute(CallCommand.java:79)
+	at py4j.GatewayConnection.run(GatewayConnection.java:238)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: org.postgresql.util.PSQLException: Connection to 127.0.0.1:5432 refused. Check that the hostname and port are correct and that the postmaster is accepting TCP/IP connections.
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:284)
+	at org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:49)
+	at org.postgresql.jdbc.PgConnection.<init>(PgConnection.java:211)
+	at org.postgresql.Driver.makeConnection(Driver.java:459)
+	at org.postgresql.Driver.connect(Driver.java:261)
+	at org.apache.spark.sql.execution.datasources.jdbc.JdbcUtils$$anonfun$createConnectionFactory$1.apply(JdbcUtils.scala:63)
+	at org.apache.spark.sql.execution.datasources.jdbc.JdbcUtils$$anonfun$createConnectionFactory$1.apply(JdbcUtils.scala:54)
+	at org.apache.spark.sql.execution.datasources.jdbc.JdbcUtils$.savePartition(JdbcUtils.scala:614)
+	at org.apache.spark.sql.execution.datasources.jdbc.JdbcUtils$$anonfun$saveTable$1.apply(JdbcUtils.scala:838)
+	at org.apache.spark.sql.execution.datasources.jdbc.JdbcUtils$$anonfun$saveTable$1.apply(JdbcUtils.scala:838)
+	at org.apache.spark.rdd.RDD$$anonfun$foreachPartition$1$$anonfun$apply$28.apply(RDD.scala:980)
+	at org.apache.spark.rdd.RDD$$anonfun$foreachPartition$1$$anonfun$apply$28.apply(RDD.scala:980)
+	at org.apache.spark.SparkContext$$anonfun$runJob$5.apply(SparkContext.scala:2101)
+	at org.apache.spark.SparkContext$$anonfun$runJob$5.apply(SparkContext.scala:2101)
+	at org.apache.spark.scheduler.ResultTask.runTask(ResultTask.scala:90)
+	at org.apache.spark.scheduler.Task.run(Task.scala:123)
+	at org.apache.spark.executor.Executor$TaskRunner$$anonfun$10.apply(Executor.scala:408)
+	at org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:1360)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:414)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	... 1 more
+Caused by: java.net.ConnectException: Connection refused (Connection refused)
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:607)
+	at org.postgresql.core.PGStream.<init>(PGStream.java:81)
+	at org.postgresql.core.v3.ConnectionFactoryImpl.tryConnect(ConnectionFactoryImpl.java:92)
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:196)
+	... 21 more
+
+20/02/15 05:51:29 INFO SparkContext: Invoking stop() from shutdown hook
+20/02/15 05:51:29 INFO ContextCleaner: Cleaned accumulator 60
+20/02/15 05:51:29 INFO ContextCleaner: Cleaned accumulator 42
+20/02/15 05:51:29 INFO ContextCleaner: Cleaned accumulator 38
+20/02/15 05:51:29 INFO ContextCleaner: Cleaned accumulator 45
+20/02/15 05:51:29 INFO SparkUI: Stopped Spark web UI at http://192.168.1.25:4040
+20/02/15 05:51:29 INFO BlockManagerInfo: Removed broadcast_2_piece0 on 192.168.1.25:10215 in memory (size: 23.3 KB, free: 366.3 MB)
+20/02/15 05:51:29 INFO MapOutputTrackerMasterEndpoint: MapOutputTrackerMasterEndpoint stopped!
+20/02/15 05:51:29 INFO MemoryStore: MemoryStore cleared
+20/02/15 05:51:29 INFO BlockManager: BlockManager stopped
+20/02/15 05:51:29 INFO BlockManagerMaster: BlockManagerMaster stopped
+20/02/15 05:51:29 INFO OutputCommitCoordinator$OutputCommitCoordinatorEndpoint: OutputCommitCoordinator stopped!
+20/02/15 05:51:29 INFO SparkContext: Successfully stopped SparkContext
+20/02/15 05:51:29 INFO ShutdownHookManager: Shutdown hook called
+20/02/15 05:51:29 INFO ShutdownHookManager: Deleting directory /tmp/spark-62db44ad-9c87-4ea8-b0f7-cde338a177da
+20/02/15 05:51:29 INFO ShutdownHookManager: Deleting directory /tmp/spark-97c36dcc-b3f9-4a36-8edf-1b44da8403fa
+20/02/15 05:51:29 INFO ShutdownHookManager: Deleting directory /tmp/spark-62db44ad-9c87-4ea8-b0f7-cde338a177da/pyspark-8fa3f761-10ba-4aba-8ac6-93ffb8306f3c
