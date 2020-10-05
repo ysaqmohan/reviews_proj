@@ -1,5 +1,5 @@
 export PGUSER="postgres"
-export PGPASSWD="Susi@123"
+export PGPASSWD="Mushi@123"
 export PGHOST="127.0.0.1"
 export PGPORT="5432"
 export SCHEMA_WT="\"WORK_DB\""
